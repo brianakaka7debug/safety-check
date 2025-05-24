@@ -13,9 +13,11 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f9f9f6 0%, #f4f6f4 100%);
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -26,27 +28,39 @@
 
         .header {
             text-align: center;
-            color: white;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding: 40px 20px 20px;
         }
 
         .header h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+            color: #2e2e2e;
+            margin-bottom: 8px;
+            line-height: 1.2;
+            transform: rotate(-0.5deg);
         }
 
         .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+            margin: 0;
+            font-style: italic;
         }
 
         .main-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            overflow: hidden;
+            background: #fcfcfc;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
             margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            transform: rotate(0.3deg);
+            transition: transform 0.3s ease;
+        }
+
+        .main-card:hover {
+            transform: rotate(0deg);
         }
 
         .welcome-section {
@@ -55,38 +69,48 @@
         }
 
         .welcome-section h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            line-height: 1.3;
         }
 
         .welcome-section p {
             color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
+            margin-bottom: 32px;
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .location-btn {
-            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            background: #4caf50;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            border-radius: 50px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 6px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(76,175,80,0.2);
+            transform: rotate(-0.8deg);
         }
 
         .location-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #45a049;
+            transform: rotate(0deg) translateY(-1px);
+            box-shadow: 0 4px 12px rgba(76,175,80,0.3);
         }
 
         .location-btn:disabled {
-            opacity: 0.6;
+            background: #ccc;
             cursor: not-allowed;
-            transform: none;
+            transform: rotate(-0.8deg);
+            box-shadow: none;
         }
 
         .loading {
@@ -94,6 +118,7 @@
             text-align: center;
             padding: 20px;
             color: #666;
+            font-size: 0.9rem;
         }
 
         .loading.show {
@@ -119,16 +144,34 @@
 
         .station-card {
             background: #f8f9fa;
-            border-radius: 10px;
+            border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
             border-left: 4px solid #4ECDC4;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .station-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transform: translateX(5px) rotate(0.3deg);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+        }
+
+        .station-card:nth-child(even) {
+            transform: rotate(-0.2deg);
+        }
+
+        .station-card:nth-child(odd) {
+            transform: rotate(0.1deg);
+        }
+
+        .station-card a {
+            transition: all 0.2s ease;
+        }
+
+        .station-card a:hover {
+            color: #333 !important;
+            border-bottom-style: solid !important;
         }
 
         .station-name {
@@ -151,18 +194,22 @@
             float: right;
             background: #667eea;
             color: white;
-            padding: 2px 8px;
-            border-radius: 15px;
-            font-size: 0.9rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transform: rotate(-2deg);
         }
 
         .error {
-            background: #ff4757;
+            background: #cc5200;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 16px;
+            border-radius: 4px;
             margin: 20px 0;
-            text-align: center;
+            text-align: left;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         @media (max-width: 768px) {
@@ -187,19 +234,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚗 Big Island Safety Check</h1>
-            <p>Find the nearest safety check stations on Hawaii's Big Island</p>
+            <h1>Big Island Safety Check</h1>
+            <p>Find the nearest safety check stations ~ island style</p>
         </div>
 
         <div class="main-card">
             <div class="welcome-section" id="welcomeSection">
                 <h2>Find the nearest safety check for your car</h2>
                 <p>Get your location to discover the closest auto service stations that offer mandatory yearly safety inspections.</p>
-                <button class="location-btn" id="locationBtn">📍 Check Your Location</button>
+                <button class="location-btn" id="locationBtn">Get My Location 🤙🏽</button>
             </div>
 
             <div class="loading" id="loading">
-                <p>🔍 Finding nearby safety check stations...</p>
+                <p>Finding nearby safety check stations...</p>
             </div>
 
             <div class="results-section" id="resultsSection">
@@ -225,6 +272,38 @@
 
         let map;
         let userLocation;
+
+        // Geographic boundaries for Big Island of Hawaii
+        const BIG_ISLAND_BOUNDS = {
+            north: 20.3,    // Northern tip (Upolu Point area)
+            south: 18.9,    // Southern tip (South Point)
+            east: -154.8,   // Eastern shore (Laupahoehoe area)
+            west: -156.1    // Western shore (South Kona)
+        };
+
+        // Broader Hawaiian Islands bounds for more specific messaging
+        const HAWAIIAN_ISLANDS_BOUNDS = {
+            north: 22.3,    // Kauai northern tip
+            south: 18.8,    // Big Island southern tip
+            east: -154.7,   // Big Island eastern shore
+            west: -160.3    // Kauai western shore
+        };
+
+        // Check if coordinates are within Big Island
+        function isWithinBigIsland(lat, lng) {
+            return lat >= BIG_ISLAND_BOUNDS.south && 
+                   lat <= BIG_ISLAND_BOUNDS.north && 
+                   lng >= BIG_ISLAND_BOUNDS.west && 
+                   lng <= BIG_ISLAND_BOUNDS.east;
+        }
+
+        // Check if coordinates are within Hawaiian Islands
+        function isWithinHawaii(lat, lng) {
+            return lat >= HAWAIIAN_ISLANDS_BOUNDS.south && 
+                   lat <= HAWAIIAN_ISLANDS_BOUNDS.north && 
+                   lng >= HAWAIIAN_ISLANDS_BOUNDS.west && 
+                   lng <= HAWAIIAN_ISLANDS_BOUNDS.east;
+        }
 
         // Calculate distance between two points using Haversine formula
         function calculateDistance(lat1, lng1, lat2, lng2) {
@@ -252,34 +331,68 @@
         function initializeMap(userLat, userLng, nearestStations) {
             map = L.map('map');
             
-            // Add tile layer
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
+            // Use Esri satellite imagery for Hawaii
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: '© Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
             }).addTo(map);
 
-            // Add user location marker
+            // Add user location marker with custom styling
             const userIcon = L.divIcon({
-                html: '📍',
-                iconSize: [30, 30],
+                html: `<div style="
+                    background: #FF6B6B; 
+                    border: 3px solid white; 
+                    border-radius: 50%; 
+                    width: 20px; 
+                    height: 20px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                "></div>`,
+                iconSize: [26, 26],
+                iconAnchor: [13, 13],
                 className: 'user-marker'
             });
             L.marker([userLat, userLng], { icon: userIcon })
              .addTo(map)
-             .bindPopup('Your Location')
+             .bindPopup('<strong style="color: #FF6B6B;">📍 Your Location</strong>')
              .openPopup();
 
-            // Add station markers
+            // Add station markers with better visibility
             const stationMarkers = [];
             nearestStations.forEach((station, index) => {
                 const stationIcon = L.divIcon({
-                    html: `🔧`,
-                    iconSize: [25, 25],
+                    html: `<div style="
+                        background: #4ECDC4; 
+                        border: 3px solid white; 
+                        border-radius: 6px; 
+                        width: 18px; 
+                        height: 18px;
+                        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+                        position: relative;
+                    ">
+                        <div style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 8px;
+                            height: 8px;
+                            background: white;
+                            border-radius: 50%;
+                        "></div>
+                    </div>`,
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12],
                     className: 'station-marker'
                 });
                 
                 const marker = L.marker([station.lat, station.lng], { icon: stationIcon })
                     .addTo(map)
-                    .bindPopup(`<strong>${station.name}</strong><br>${station.address}<br>${station.phone}`);
+                    .bindPopup(`
+                        <div style="min-width: 200px;">
+                            <strong style="color: #333; font-size: 14px;">${station.name}</strong><br>
+                            <span style="color: #666; font-size: 12px;">${station.address}</span><br>
+                            <span style="color: #4ECDC4; font-size: 12px; font-weight: 500;">${station.phone}</span>
+                        </div>
+                    `);
                 
                 stationMarkers.push(marker);
             });
@@ -315,13 +428,27 @@
             listContainer.innerHTML = '<h3 style="margin-bottom: 15px; color: #333;">Nearest Safety Check Stations</h3>';
             
             stations.forEach(station => {
+                // Create Google Maps URL for address
+                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`;
+                
+                // Create phone URL
+                const phoneUrl = `tel:${station.phone.replace(/[^\d]/g, '')}`;
+                
                 const stationCard = document.createElement('div');
                 stationCard.className = 'station-card';
                 stationCard.innerHTML = `
                     <div class="station-distance">${station.distance.toFixed(1)} mi</div>
                     <div class="station-name">${station.name}</div>
-                    <div class="station-address">${station.address}</div>
-                    <div class="station-phone">${station.phone}</div>
+                    <div class="station-address">
+                        <a href="${mapsUrl}" target="_blank" style="color: #666; text-decoration: none; border-bottom: 1px dotted #999;">
+                            📍 ${station.address}
+                        </a>
+                    </div>
+                    <div class="station-phone">
+                        <a href="${phoneUrl}" style="color: #4ECDC4; text-decoration: none; font-weight: 500;">
+                            📞 ${station.phone}
+                        </a>
+                    </div>
                 `;
                 listContainer.appendChild(stationCard);
             });
@@ -330,10 +457,60 @@
         // Show error message
         function showError(message) {
             const welcomeSection = document.getElementById('welcomeSection');
+            const loading = document.getElementById('loading');
+            
+            // Remove any existing error messages
+            const existingError = welcomeSection.querySelector('.error');
+            if (existingError) {
+                existingError.remove();
+            }
+            
             const errorDiv = document.createElement('div');
             errorDiv.className = 'error';
-            errorDiv.textContent = message;
+            errorDiv.innerHTML = message;
             welcomeSection.appendChild(errorDiv);
+            
+            loading.classList.remove('show');
+        }
+
+        // Show location-specific error messages
+        function showLocationError(lat, lng) {
+            const btn = document.getElementById('locationBtn');
+            btn.disabled = false;
+            btn.textContent = 'Get My Location';
+
+            if (!isWithinHawaii(lat, lng)) {
+                // Outside Hawaiian Islands entirely
+                showError(`
+                    <strong>Service Area Notice</strong><br><br>
+                    This safety check finder is designed for Hawaii's Big Island residents and visitors. 
+                    It appears you're currently outside of the Hawaiian Islands.<br><br>
+                    <strong>Planning a visit to the Big Island?</strong><br>
+                    When you arrive, this tool will help you find the nearest safety check stations for your rental car or vehicle.
+                `);
+            } else if (!isWithinBigIsland(lat, lng)) {
+                // Within Hawaii but not on Big Island
+                let islandMessage = "another Hawaiian island";
+                
+                // Rough estimates for other major islands
+                if (lat > 21.2 && lng > -158.3) {
+                    islandMessage = "Oahu";
+                } else if (lat > 20.5 && lng < -156.7) {
+                    islandMessage = "Maui";
+                } else if (lat > 21.8) {
+                    islandMessage = "Kauai";
+                } else if (lat > 21.0 && lng < -156.8) {
+                    islandMessage = "Molokai or Lanai";
+                }
+                
+                showError(`
+                    <strong>Service Area Notice</strong><br><br>
+                    You appear to be on ${islandMessage}. This safety check finder is specifically 
+                    designed for Hawaii's Big Island (Island of Hawaii).<br><br>
+                    <strong>Visiting the Big Island?</strong><br>
+                    When you travel to the Big Island, this tool will help you find the nearest safety check stations.
+                `);
+            }
         }
 
         // Get user location and find stations
@@ -369,6 +546,12 @@
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
+
+                    // Check if user is within Big Island bounds
+                    if (!isWithinBigIsland(userLocation.lat, userLocation.lng)) {
+                        showLocationError(userLocation.lat, userLocation.lng);
+                        return;
+                    }
 
                     // Find nearest stations
                     const nearestStations = findNearestStations(userLocation.lat, userLocation.lng);
@@ -407,7 +590,7 @@
                     btn.disabled = false;
                     btn.textContent = '📍 Check Your Location';
                     loading.classList.remove('show');
-                }
+                },
             );
         }
 
