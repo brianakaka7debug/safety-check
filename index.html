@@ -174,16 +174,6 @@
             font-weight: 500;
         }
 
-        .station-distance {
-            float: right;
-            background: #667eea;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
         .error {
             background: #cc5200;
             color: white;
@@ -218,7 +208,7 @@
     <div class="container">
         <div class="header">
             <h1>Big Island Safety Check</h1>
-            <p>Find the nearest safety check stations ~ island style</p>
+            <p>When you mālama your car, it keeps us all safe</p>
         </div>
 
         <div class="main-card">
@@ -319,51 +309,36 @@
                 attribution: '© Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
             }).addTo(map);
 
-            // Add user location marker with custom styling
+            // Add user location marker with red car
             const userIcon = L.divIcon({
                 html: `<div style="
-                    background: #FF6B6B; 
-                    border: 3px solid white; 
-                    border-radius: 50%; 
-                    width: 20px; 
-                    height: 20px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-                "></div>`,
-                iconSize: [26, 26],
-                iconAnchor: [13, 13],
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: 1;
+                    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+                ">🚗</div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
                 className: 'user-marker'
             });
             L.marker([userLat, userLng], { icon: userIcon })
              .addTo(map)
-             .bindPopup('<strong style="color: #FF6B6B;">📍 Your Location</strong>')
+             .bindPopup('<strong style="color: #FF6B6B;">Your Location</strong>')
              .openPopup();
 
-            // Add station markers with better visibility
+            // Add station markers with kalo leaf and name labels
             const stationMarkers = [];
             nearestStations.forEach((station, index) => {
+                // Create kalo leaf marker
                 const stationIcon = L.divIcon({
                     html: `<div style="
-                        background: #4ECDC4; 
-                        border: 3px solid white; 
-                        border-radius: 6px; 
-                        width: 18px; 
-                        height: 18px;
-                        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-                        position: relative;
-                    ">
-                        <div style="
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: 8px;
-                            height: 8px;
-                            background: white;
-                            border-radius: 50%;
-                        "></div>
-                    </div>`,
-                    iconSize: [24, 24],
-                    iconAnchor: [12, 12],
+                        font-size: 18px;
+                        text-align: center;
+                        line-height: 1;
+                        filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+                    ">🌿</div>`,
+                    iconSize: [22, 22],
+                    iconAnchor: [11, 11],
                     className: 'station-marker'
                 });
                 
@@ -376,6 +351,27 @@
                             <span style="color: #4ECDC4; font-size: 12px; font-weight: 500;">${station.phone}</span>
                         </div>
                     `);
+                
+                // Add name label next to marker
+                const labelIcon = L.divIcon({
+                    html: `<div style="
+                        background: rgba(255,255,255,0.9);
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                        font-size: 11px;
+                        font-weight: 500;
+                        color: #333;
+                        white-space: nowrap;
+                        border: 1px solid rgba(0,0,0,0.1);
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+                    ">${station.name}</div>`,
+                    iconSize: [0, 0],
+                    iconAnchor: [-15, 0],
+                    className: 'station-label'
+                });
+                
+                L.marker([station.lat, station.lng], { icon: labelIcon })
+                    .addTo(map);
                 
                 stationMarkers.push(marker);
             });
@@ -412,7 +408,6 @@
                 const stationCard = document.createElement('div');
                 stationCard.className = 'station-card';
                 stationCard.innerHTML = `
-                    <div class="station-distance">${station.distance.toFixed(1)} mi</div>
                     <div class="station-name">${station.name}</div>
                     <div class="station-address">
                         <a href="${mapsUrl}" target="_blank" style="color: #666; text-decoration: none; border-bottom: 1px dotted #999;">
