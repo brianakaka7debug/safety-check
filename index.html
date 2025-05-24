@@ -38,7 +38,6 @@
             color: #2e2e2e;
             margin-bottom: 8px;
             line-height: 1.2;
-            transform: rotate(-0.5deg);
         }
 
         .header p {
@@ -55,12 +54,7 @@
             box-shadow: 0 3px 12px rgba(0,0,0,0.08);
             margin-bottom: 20px;
             border: 1px solid #e0e0e0;
-            transform: rotate(0.3deg);
             transition: transform 0.3s ease;
-        }
-
-        .main-card:hover {
-            transform: rotate(0deg);
         }
 
         .welcome-section {
@@ -97,19 +91,17 @@
             cursor: pointer;
             transition: all 0.2s ease;
             box-shadow: 0 2px 6px rgba(76,175,80,0.2);
-            transform: rotate(-0.8deg);
         }
 
         .location-btn:hover {
             background: #45a049;
-            transform: rotate(0deg) translateY(-1px);
+            transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(76,175,80,0.3);
         }
 
         .location-btn:disabled {
             background: #ccc;
             cursor: not-allowed;
-            transform: rotate(-0.8deg);
             box-shadow: none;
         }
 
@@ -153,16 +145,8 @@
         }
 
         .station-card:hover {
-            transform: translateX(5px) rotate(0.3deg);
+            transform: translateX(5px);
             box-shadow: 0 3px 15px rgba(0,0,0,0.12);
-        }
-
-        .station-card:nth-child(even) {
-            transform: rotate(-0.2deg);
-        }
-
-        .station-card:nth-child(odd) {
-            transform: rotate(0.1deg);
         }
 
         .station-card a {
@@ -198,7 +182,6 @@
             border-radius: 12px;
             font-size: 0.85rem;
             font-weight: 500;
-            transform: rotate(-2deg);
         }
 
         .error {
@@ -397,25 +380,17 @@
                 stationMarkers.push(marker);
             });
 
-            // Determine zoom level and center
+            // Determine zoom level and center based on stations within 10 miles
             const stationsWithin10Miles = nearestStations.filter(s => s.distance <= 10);
             
-            if (stationsWithin10Miles.length >= 4) {
-                // Show user location and nearest 4 stations
-                const allPoints = [[userLat, userLng], ...nearestStations.slice(0, 4).map(s => [s.lat, s.lng])];
-                const group = new L.featureGroup([L.marker([userLat, userLng]), ...stationMarkers.slice(0, 4)]);
+            if (stationsWithin10Miles.length > 0) {
+                // Show user location and all stations within 10 miles, zoomed as close as possible
+                const allPointsWithin10Miles = [[userLat, userLng], ...stationsWithin10Miles.map(s => [s.lat, s.lng])];
+                const markersWithin10Miles = [L.marker([userLat, userLng]), ...stationsWithin10Miles.map(s => L.marker([s.lat, s.lng]))];
+                const group = new L.featureGroup(markersWithin10Miles);
                 map.fitBounds(group.getBounds().pad(0.1));
-            } else if (stationsWithin10Miles.length > 0) {
-                // Show 10-mile radius
-                map.setView([userLat, userLng], 10);
-                L.circle([userLat, userLng], {
-                    color: '#667eea',
-                    fillColor: '#667eea',
-                    fillOpacity: 0.1,
-                    radius: 16093.4 // 10 miles in meters
-                }).addTo(map);
             } else {
-                // Show nearest station regardless of distance
+                // No stations within 10 miles - show user location and closest station, zoomed as close as possible
                 const nearestStation = nearestStations[0];
                 const bounds = L.latLngBounds([[userLat, userLng], [nearestStation.lat, nearestStation.lng]]);
                 map.fitBounds(bounds.pad(0.2));
