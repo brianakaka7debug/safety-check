@@ -24,12 +24,16 @@ body {
 .card .address-link {
   color: #28a391;
   text-decoration: none;
-  border-bottom: 1px dotted #28a391;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(40, 163, 145, 0.1);
   transition: all 0.2s ease;
+  display: inline-block;
 }
 .card .address-link:hover {
-  color: #1f8b73;
-  border-bottom: 1px solid #1f8b73;
+  background: rgba(40, 163, 145, 0.2);
+  transform: translateY(-1px);
 }
 .card .phone-link {
   color: #28a391;
@@ -46,13 +50,28 @@ body {
   transform: translateY(-1px);
 }
 .distance{font-weight:600;color:var(--brand-teal);}
-/* Custom popup styles */
-.custom-popup .leaflet-popup-content-wrapper {
+/* Custom popup styles - override Leaflet defaults */
+.leaflet-popup-content-wrapper {
+  background: white !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  border: none !important;
+  padding: 0 !important;
 }
-.custom-popup .leaflet-popup-tip {
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+.leaflet-popup-tip {
+  background: white !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+.leaflet-popup-close-button {
+  color: #666 !important;
+  font-size: 18px !important;
+  top: 8px !important;
+  right: 8px !important;
 }
 @media (min-width:600px){
   body{font-size:17px;}
