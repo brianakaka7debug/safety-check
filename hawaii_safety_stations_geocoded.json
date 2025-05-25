@@ -1,0 +1,4662 @@
+[
+  {
+    "County":"Hawaii",
+    "ZIP":96704,
+    "Station Name":"DT Customs",
+    "Address":"83-5326 Mamalahoa Highway, Captain Cook HI 96704",
+    "Phone":"(808) 938-6063",
+    "City":"Captain Cook",
+    "Latitude":19.4478643,
+    "Longitude":-155.8794948
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96719,
+    "Station Name":"Cartow Kohala",
+    "Address":"55-510 Hawi Rd., Hawi HI 96719",
+    "Phone":"(808) 889-1061",
+    "City":"Hawi",
+    "Latitude":20.2376651,
+    "Longitude":-155.8309846
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"AKM Performance LLC",
+    "Address":"66 Kukila Street., Hilo HI 96720",
+    "Phone":"(808) 756-4859",
+    "City":"Hilo",
+    "Latitude":19.7023384,
+    "Longitude":-155.0599128
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Aiona Car Sales Repair Shop",
+    "Address":"212 Holomua Street. , Hilo HI 96720",
+    "Phone":"(808) 935-9991",
+    "City":"Hilo",
+    "Latitude":19.6996074,
+    "Longitude":-155.0664888
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Akolea's Classic Repair",
+    "Address":"475 Akolea Rd. , Hilo HI 96720",
+    "Phone":"(808) 933-2152",
+    "City":"Hilo",
+    "Latitude":19.6974833,
+    "Longitude":-155.137124
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Aloha Kia Hilo",
+    "Address":"226 Kanoelehua Avenue, Hilo HI 96720",
+    "Phone":"(808) 935-3500",
+    "City":"Hilo",
+    "Latitude":19.7193486,
+    "Longitude":-155.0647679
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Automotive Solutions Hawaii & Car Rentals LLC",
+    "Address":"60 KuhioStreet. Suite 9, Hilo HI 96720",
+    "Phone":"(808) 315-7229",
+    "City":"Hilo",
+    "Latitude":19.7287913,
+    "Longitude":-155.0526817
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Big Island Brake & Front End Repair",
+    "Address":"23 A Kukila Street, Hilo HI 96720",
+    "Phone":"(808) 961-4466",
+    "City":"Hilo",
+    "Latitude":19.7028549,
+    "Longitude":-155.0617111
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Big Island Honda-Hilo",
+    "Address":"124 Wiwoole Street, Hilo HI 96720",
+    "Phone":"(808) 961-5505",
+    "City":"Hilo",
+    "Latitude":19.7023527,
+    "Longitude":-155.0650399
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Big Island Toyota, Inc.",
+    "Address":"811 Kanoelehua, Hilo HI 96720",
+    "Phone":"(808) 974-2237",
+    "City":"Hilo",
+    "Latitude":19.7061143,
+    "Longitude":-155.0634478
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"CARSS LLC",
+    "Address":"69 Railroad Avenue. A-13, Hilo HI 96720",
+    "Phone":"(808) 969-9819",
+    "City":"Hilo",
+    "Latitude":19.7076805,
+    "Longitude":-155.060279
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Cal's Union Service",
+    "Address":"56 E. Puainako Street, Hilo HI 96720",
+    "Phone":"(808) 959-9860",
+    "City":"Hilo",
+    "Latitude":19.6946705,
+    "Longitude":-155.0665988
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Chika Nakano Repair Shop",
+    "Address":"90 Pookela Street. , Hilo HI 96720",
+    "Phone":"(808) 935-1862",
+    "City":"Hilo",
+    "Latitude":19.7032882,
+    "Longitude":-155.0649788
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Clint's Auto Repair Inc.",
+    "Address":"2190 Kilauea Avenue, Hilo HI 96720",
+    "Phone":"(808) 959-4118",
+    "City":"Hilo",
+    "Latitude":19.6896466,
+    "Longitude":-155.0681365
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Credit Cars Hawaii",
+    "Address":"75 Pohaku Street., Hilo HI 96720",
+    "Phone":"(808) 969-7887",
+    "City":"Hilo",
+    "Latitude":19.7022377,
+    "Longitude":-155.0623059
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Downtown Texaco",
+    "Address":"192 Kinoole Street., Hilo HI 96720",
+    "Phone":"(808) 935-8613",
+    "City":"Hilo",
+    "Latitude":19.7235342,
+    "Longitude":-155.0883261
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"East Hawaii Center LLC",
+    "Address":"204 Silva Street, Hilo HI 96720",
+    "Phone":"(808) 961-9190",
+    "City":"Hilo",
+    "Latitude":19.7245301,
+    "Longitude":-155.0545909
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Firestone Complete Auto Care",
+    "Address":"26 Kekela Street, Hilo HI 96720",
+    "Phone":"(808) 959-7654",
+    "City":"Hilo",
+    "Latitude":19.6959845,
+    "Longitude":-155.0664163
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"G1 Automotive LLC",
+    "Address":"1266 Kamehameha Avenue., Unit A3, Hilo HI 96720",
+    "Phone":"(808) 557-6200",
+    "City":"Hilo",
+    "Latitude":19.7220561,
+    "Longitude":-155.0707938
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Goodyear Tire and Rubber Company",
+    "Address":"475 Kilauea Avenuenue, Hilo HI 96720",
+    "Phone":"(808) 935-9756",
+    "City":"Hilo",
+    "Latitude":19.719744,
+    "Longitude":-155.0818777
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Hawaii Collision Center",
+    "Address":"194 Makaala Street. , Hilo HI 96720",
+    "Phone":"(808) 961-3536",
+    "City":"Hilo",
+    "Latitude":19.7001313,
+    "Longitude":-155.0679904
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Hawaii Kar Care",
+    "Address":"239B Kalanikoa Street., Hilo HI 96720",
+    "Phone":"(808) 238-5421",
+    "City":"Hilo",
+    "Latitude":19.7191684,
+    "Longitude":-155.0653586
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Hilo Mazda Subaru",
+    "Address":"1 Keaa Street, Hilo HI 96720",
+    "Phone":"(808) 329-5274",
+    "City":"Hilo",
+    "Latitude":19.7249023,
+    "Longitude":-155.0589878
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Island Auto Works",
+    "Address":"145 Ponahawai Street, Hilo HI 96720",
+    "Phone":"(808) 969-7516",
+    "City":"Hilo",
+    "Latitude":19.7212959,
+    "Longitude":-155.0849531
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Islandwide Motors",
+    "Address":"1672 Kamehameha Avenue, Hilo HI 96720",
+    "Phone":"(808) 731-3800",
+    "City":"Hilo",
+    "Latitude":19.7223462,
+    "Longitude":-155.0651387
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"JP Automotive, LLC",
+    "Address":"494 Kalanikoa Street, Hilo HI 96720",
+    "Phone":"(808) 935-9000",
+    "City":"Hilo",
+    "Latitude":19.7150395,
+    "Longitude":-155.0660657
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Kailani Auto Repair",
+    "Address":"741A Kanoelehua Avenue., Hilo HI 96720",
+    "Phone":"(808) 217-7731",
+    "City":"Hilo",
+    "Latitude":19.7081068,
+    "Longitude":-155.0638211
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Kalawe's Auto Repair, LLC",
+    "Address":"80 Pohaku Street, Hilo HI 96720",
+    "Phone":"(808) 969-1199",
+    "City":"Hilo",
+    "Latitude":19.7021975,
+    "Longitude":-155.0629138
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Kama'aina Nissan, Inc.",
+    "Address":"471 Kalanianaole Street, Hilo HI 96720",
+    "Phone":"(808) 930-6477",
+    "City":"Hilo",
+    "Latitude":19.7263646,
+    "Longitude":-155.0576677
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Kamaaina Motors",
+    "Address":"400 E Kawili Street, Hilo HI 96720",
+    "Phone":"(808) 935-3741",
+    "City":"Hilo",
+    "Latitude":19.7053856,
+    "Longitude":-155.0653643
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Keoki's Auto Repair",
+    "Address":"812-1 Leilani Street. , Hilo HI 96720",
+    "Phone":"(808) 935-6465",
+    "City":"Hilo",
+    "Latitude":19.7092704,
+    "Longitude":-155.0633626
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Kevin's Auto & Truck Repair",
+    "Address":"177A Makaala Street, Hilo HI 96720",
+    "Phone":"(808) 935-4650",
+    "City":"Hilo",
+    "Latitude":19.7007769,
+    "Longitude":-155.0673636
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Lex Brodie's",
+    "Address":"1095 Kilauea Avenue., Hilo HI 96720",
+    "Phone":"(808) 985-8473",
+    "City":"Hilo",
+    "Latitude":19.7123553,
+    "Longitude":-155.0768369
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Lex Brodie's Fast Lube -Hilo",
+    "Address":"1089 Kilauea Avenue, Hilo HI 96720",
+    "Phone":"(808) 935-5823",
+    "City":"Hilo",
+    "Latitude":19.7128013,
+    "Longitude":-155.0767926
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Lex brodie's Tire Company",
+    "Address":"170-D Wiwoole Street. , Hilo HI 96720",
+    "Phone":"(808) 961-6001",
+    "City":"Hilo",
+    "Latitude":19.7016591,
+    "Longitude":-155.0654435
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Louie's Auto Repair, LLC",
+    "Address":"219 Kalanikoa Street, Hilo HI 96720",
+    "Phone":"(808) 935-8101",
+    "City":"Hilo",
+    "Latitude":19.7194592,
+    "Longitude":-155.0654496
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"MMI Motor Works",
+    "Address":"140-A Holomua Street, Hilo HI 96720",
+    "Phone":"(808) 333-5840",
+    "City":"Hilo",
+    "Latitude":19.7019585,
+    "Longitude":-155.0666127
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Midas Muffler & Brakes",
+    "Address":"480 Kilauea Avenue, Hilo HI 96720",
+    "Phone":"(808) 935-0045",
+    "City":"Hilo",
+    "Latitude":19.7189489,
+    "Longitude":-155.0821014
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Montgomery Powersports Ltd",
+    "Address":"300 E. Kawili Street, Hilo HI 96720",
+    "Phone":"(808) 935-4997",
+    "City":"Hilo",
+    "Latitude":19.7053122,
+    "Longitude":-155.0682548
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Nick's Garage",
+    "Address":"185 Makaala Street, Hilo HI 96720",
+    "Phone":"(808) 935-6838",
+    "City":"Hilo",
+    "Latitude":19.7004604,
+    "Longitude":-155.0672912
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Orchid Isle Auto Center",
+    "Address":"1030 Kanoelehua Avenue, Hilo HI 96720",
+    "Phone":"(808) 935-1191",
+    "City":"Hilo",
+    "Latitude":19.6997056,
+    "Longitude":-155.0659542
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Orchid Isle Hauling & Rentals",
+    "Address":"499 Kulana Kea Drive, Hilo HI 96720",
+    "Phone":"(808) 961-3360",
+    "City":"Hilo",
+    "Latitude":19.744521,
+    "Longitude":-155.102763
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Plan B Automotive",
+    "Address":"117 B Holomua Street., Hilo HI 96720",
+    "Phone":"(808) 731-5317",
+    "City":"Hilo",
+    "Latitude":19.7023598,
+    "Longitude":-155.0657705
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Promachanx, LLC",
+    "Address":"1284 Kilauea Avenuenue, Hilo HI 96720",
+    "Phone":"(808) 961-1212",
+    "City":"Hilo",
+    "Latitude":19.7096894,
+    "Longitude":-155.0768687
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"R & G Tire Center",
+    "Address":"612 Kalanianaole Avenue Bldg B, Hilo HI 96720",
+    "Phone":"(808) 935-2966",
+    "City":"Hilo",
+    "Latitude":19.7260461,
+    "Longitude":-155.0554998
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Rannikks Auto Specialist",
+    "Address":"843 Leilani Street. , Hilo HI 96720",
+    "Phone":"(808) 961-3889",
+    "City":"Hilo",
+    "Latitude":19.7097454,
+    "Longitude":-155.0624502
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Royden's Auto Service",
+    "Address":"230 Kukila Street, Hilo HI 96720",
+    "Phone":"(808) 933-1077",
+    "City":"Hilo",
+    "Latitude":19.7026142,
+    "Longitude":-155.0594461
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Shawnz Muffler & Brake",
+    "Address":"735 Manono Street., Hilo HI 96720",
+    "Phone":"(808) 969-7855",
+    "City":"Hilo",
+    "Latitude":19.7122488,
+    "Longitude":-155.069857
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Speed-o Auto Service, Inc.",
+    "Address":"1135 Kinoole Street, Hilo HI 96720",
+    "Phone":"(808) 935-0924",
+    "City":"Hilo",
+    "Latitude":19.711438,
+    "Longitude":-155.0799504
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Stan's Fast Lube & Repair",
+    "Address":"230 Pohaku Street, Hilo HI 96720",
+    "Phone":"(808) 935-9132",
+    "City":"Hilo",
+    "Latitude":19.7009439,
+    "Longitude":-155.0626372
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"TLS Motorsports",
+    "Address":"851 Leilani Street., Hilo HI 96720",
+    "Phone":"(808) 933-3530",
+    "City":"Hilo",
+    "Latitude":19.7097752,
+    "Longitude":-155.0622489
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Tony Honda Hilo",
+    "Address":"124 Wiwoole Street., Hilo HI 96720",
+    "Phone":"(808) 960-4244",
+    "City":"Hilo",
+    "Latitude":19.7023527,
+    "Longitude":-155.0650399
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Top Notch Automotive LLC",
+    "Address":"430 East Lanikaula Street., Hilo HI 96720",
+    "Phone":"(808) 315-7569",
+    "City":"Hilo",
+    "Latitude":19.7067108,
+    "Longitude":-155.0673976
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Wheel alignment hawaii",
+    "Address":"266-D Kekuanaoa Street. #C, Hilo HI 96720",
+    "Phone":"(808) 969-9995",
+    "City":"Hilo",
+    "Latitude":19.7113647,
+    "Longitude":-155.0745948
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96720,
+    "Station Name":"Z-AUTO Repair LLC",
+    "Address":"845 Iolani Street., Hilo HI 96720",
+    "Phone":"(808) 961-2844",
+    "City":"Hilo",
+    "Latitude":19.710738,
+    "Longitude":-155.0722539
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96722,
+    "Station Name":"Seany B's Auto",
+    "Address":"36 Makaala Street. , Hilo HI 96722",
+    "Phone":"(808) 934-7414",
+    "City":"Hilo",
+    "Latitude":19.7045807,
+    "Longitude":-155.0679199
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96725,
+    "Station Name":"Hualalai garage",
+    "Address":"77-6069 Mamalahoa Highway, Holualoa HI 96725",
+    "Phone":"(808) 324-4772",
+    "City":"Holualoa",
+    "Latitude":19.6096659,
+    "Longitude":-155.9493458
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96738,
+    "Station Name":"Waikoloa automotive",
+    "Address":"68-1897 Pua Melia Street., Waikoloa HI 96738",
+    "Phone":"(808) 883-0888",
+    "City":"Waikoloa",
+    "Latitude":19.9262132,
+    "Longitude":-155.7873643
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"3 B's Auto Repair",
+    "Address":"74-5536 Kaiwi Street., Kailua Kona HI 96740",
+    "Phone":"(808) 331-1166",
+    "City":"Kailua Kona",
+    "Latitude":19.6443208,
+    "Longitude":-156.0017695
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Akua's Automotive Services",
+    "Address":"74-5583 Pawai Place 3 B-100, Kailua Kona HI 96740",
+    "Phone":"(808) 326-1171",
+    "City":"Kailua Kona",
+    "Latitude":19.6439147,
+    "Longitude":-155.9998189
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"All About Autos Hawaii Inc.",
+    "Address":"73-5580 Maiau Street, Kailua Kona HI 96740",
+    "Phone":"(808) 334-1994",
+    "City":"Kailua Kona",
+    "Latitude":19.6864636,
+    "Longitude":-156.0181318
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Aloha Auto Group, Ltd., Big Island Harley Davidson",
+    "Address":"75-5633 Palani Rd., Kailua Kona HI 96740",
+    "Phone":"(808) 329-4464",
+    "City":"Kailua Kona",
+    "Latitude":19.6422303,
+    "Longitude":-155.9955404
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Auto Body Hawaii",
+    "Address":"73-5601 Maiau Street., Kailua Kona HI 96740",
+    "Phone":"(808) 329-2544",
+    "City":"Kailua Kona",
+    "Latitude":19.6877591,
+    "Longitude":-156.0166996
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Ayers' Automotive",
+    "Address":"74-5557 Kaiwi St Unit D, Kailua-Kona, HI 96740",
+    "Phone":"(808) 327-1331",
+    "City":"Kailua Kona",
+    "Latitude":19.6455322,
+    "Longitude":-156.0016134
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"BMW of Hawaii",
+    "Address":"74-5533 Loloku Street., Kailua Kona HI 96740",
+    "Phone":"(808) 930-3400",
+    "City":"Kailua Kona",
+    "Latitude":19.6440738,
+    "Longitude":-156.0027265
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Big Island Toyota Kona",
+    "Address":"74-5504 Kaiwi Street., Kailua Kona HI 96740",
+    "Phone":"(808) 329-4520",
+    "City":"Kailua Kona",
+    "Latitude":19.6462868,
+    "Longitude":-156.0011803
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Cycle Pit LLC",
+    "Address":"74-5605 Alapa Street Streete. 108, Kailua Kona HI 96740",
+    "Phone":"(808) 265-5093",
+    "City":"Kailua Kona",
+    "Latitude":19.6458875,
+    "Longitude":-155.9978445
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Dixson",
+    "Address":"76 75-5756 Hualalai Rd., Kailua Kona HI 96740",
+    "Phone":"(808) 329-9395",
+    "City":"Kailua Kona",
+    "Latitude":19.6382303,
+    "Longitude":-155.990708
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Goodyear Tire and Rubber Company",
+    "Address":"74-5488 Kaiwi Street., Kailua Kona HI 96740",
+    "Phone":"(808) 329-1750",
+    "City":"Kailua Kona",
+    "Latitude":19.6474824,
+    "Longitude":-156.0009577
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Integrity Automotive",
+    "Address":"73-4855 Kanalani Street #3, Kailua Kona HI 96740",
+    "Phone":"(808) 987-4300",
+    "City":"Kailua Kona",
+    "Latitude":19.687173,
+    "Longitude":-156.0206629
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Island Hi Performance Inc.",
+    "Address":"73-5617 Maiau Street., Kailua Kona HI 96740",
+    "Phone":"(808) 331-0770",
+    "City":"Kailua Kona",
+    "Latitude":19.6880442,
+    "Longitude":-156.0159526
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"KN Mazda, Subaru, Hyundai",
+    "Address":"75-5793 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-5274",
+    "City":"Kailua Kona",
+    "Latitude":19.6361744,
+    "Longitude":-155.9881794
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kiser Motorcycles",
+    "Address":"73-4906 Kamanu Street., Kailua Kona HI 96740",
+    "Phone":"(808) 329-9100",
+    "City":"Kailua Kona",
+    "Latitude":19.6860001,
+    "Longitude":-156.015547
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kona Coast Customs, LLC",
+    "Address":"73-4776 Kanalani Street Unit #22,23, Kailua Kona HI 96740",
+    "Phone":"(808) 325-2500",
+    "City":"Kailua Kona",
+    "Latitude":19.6895621,
+    "Longitude":-156.0215176
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kona Dodge",
+    "Address":"76-6353 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-4408",
+    "City":"Kailua Kona",
+    "Latitude":19.6098508,
+    "Longitude":-155.9647437
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kona European Auto Repair",
+    "Address":"74-555 Honokohau Street Suite A-7, Kailua Kona HI 96740",
+    "Phone":"(808) 731-6139",
+    "City":"Kailua Kona",
+    "Latitude":19.675163,
+    "Longitude":-156.012821
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kona Kwik Lube",
+    "Address":"74-5590 Alapa Street., Kailua Kona HI 96740",
+    "Phone":"(808) 329-2110",
+    "City":"Kailua Kona",
+    "Latitude":19.6454817,
+    "Longitude":-155.9991773
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Kona Nissan",
+    "Address":"76-6353 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-4408",
+    "City":"Kailua Kona",
+    "Latitude":19.6098508,
+    "Longitude":-155.9647437
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Lawrence Mills Auto Repair",
+    "Address":"74-5491 Kaiwi Street. #17,#18, Kailua Kona HI 96740",
+    "Phone":"(808) 936-4743",
+    "City":"Kailua Kona",
+    "Latitude":19.6466122,
+    "Longitude":-155.9998206
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Lex Brodie Tire Co. Kona",
+    "Address":"75-5570 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-8826",
+    "City":"Kailua Kona",
+    "Latitude":19.6416486,
+    "Longitude":-156.0008192
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Lex Brodie's Fast Lube",
+    "Address":"75-5570 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-5823",
+    "City":"Kailua Kona",
+    "Latitude":19.6416486,
+    "Longitude":-156.0008192
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Mercedes-Benz Kona Service Center",
+    "Address":"74-5536 Kaiwi Street., Kailua Kona HI 96740",
+    "Phone":"(808) 930-2622",
+    "City":"Kailua Kona",
+    "Latitude":19.6443208,
+    "Longitude":-156.0017695
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Midas Auto Service",
+    "Address":"74-5615 Luhia Street, Kailua-Kona HI 96740",
+    "Phone":"(808) 326-1016",
+    "City":"Kailua-Kona",
+    "Latitude":19.646993,
+    "Longitude":-155.996869
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"No Limitz Auto Repair, LLC",
+    "Address":"74-555 Honokohau Street Suite B-5,6, Kailua Kona HI 96740",
+    "Phone":"(808) 326-7466",
+    "City":"Kailua Kona",
+    "Latitude":19.6748009,
+    "Longitude":-156.0129083
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Orchid Isle Auto Center",
+    "Address":"76-6319 Kuakini Highway, Kailua-Kona HI 96740",
+    "Phone":"(808) 329-4851",
+    "City":"Kailua-Kona",
+    "Latitude":19.6120473,
+    "Longitude":-155.9658219
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Pit Stop Auto Shop",
+    "Address":"74-5490 Kaiwi Street., Kailua Kona HI 96740",
+    "Phone":"(808) 327-6766",
+    "City":"Kailua Kona",
+    "Latitude":19.6471138,
+    "Longitude":-156.0008697
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Pre-Owned Motor Cars Ltd.",
+    "Address":"75-5721 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 334-1111",
+    "City":"Kailua Kona",
+    "Latitude":19.6399047,
+    "Longitude":-155.9911042
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Precision Auto Repair Corp",
+    "Address":"74-5622 Alapa Street. #3, Kailua Kona HI 96740",
+    "Phone":"(808) 329-7223",
+    "City":"Kailua Kona",
+    "Latitude":19.6444441,
+    "Longitude":-155.9972839
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"R & G Tire Center (Kona)",
+    "Address":"73-4770 Kanalani Street., Kailua Kona HI 96740",
+    "Phone":"(808) 331-8920",
+    "City":"Kailua Kona",
+    "Latitude":19.6905028,
+    "Longitude":-156.0219248
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Rags, A Private Auto Club, LLC",
+    "Address":"74-5626 Alapa Street. #12, Kailua Kona HI 96740",
+    "Phone":"(808) 329-7247",
+    "City":"Kailua Kona",
+    "Latitude":19.6439041,
+    "Longitude":-155.9970473
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Silva Shine Detailing LLC",
+    "Address":"74-5565 Luhia Street. #A4B Box 108, Kailua Kona HI 96740",
+    "Phone":"(808) 326-4848",
+    "City":"Kailua Kona",
+    "Latitude":19.6482608,
+    "Longitude":-156.0003072
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96740,
+    "Station Name":"Tony Honda Kona",
+    "Address":"75-5608 Kuakini Highway, Kailua Kona HI 96740",
+    "Phone":"(808) 329-8101",
+    "City":"Kailua Kona",
+    "Latitude":19.6422239,
+    "Longitude":-155.9983699
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Cartow kohala",
+    "Address":"64-1055 Mamalahoa Highway., Kamuela HI 96743",
+    "Phone":"(808) 443-7390",
+    "City":"Kamuela",
+    "Latitude":20.023892,
+    "Longitude":-155.6600129
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Gearheadz Auto Salon",
+    "Address":"64-1013 Mamalahoa Highway. #2,#3, Kamuela HI 96743",
+    "Phone":"(808) 885-0000",
+    "City":"Kamuela",
+    "Latitude":20.0256135,
+    "Longitude":-155.6575465
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Hawaii Tire Company, LLC, Lex Brodie's Tire Co.",
+    "Address":"67-1185 Mamalahoa Highway. Bldg. I, Kamuela HI 96743",
+    "Phone":"(808) 885-5959",
+    "City":"Kamuela",
+    "Latitude":20.0206399,
+    "Longitude":-155.667106
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Horizon Automotive",
+    "Address":"64-5205 Alanui Ohana Pl., Kamuela HI 96743",
+    "Phone":"(808) 887-0390",
+    "City":"Kamuela",
+    "Latitude":20.0401362,
+    "Longitude":-155.6131793
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Jeb's Garage",
+    "Address":"61-3785 Maluokalani Pl. #19, Kamuela HI 96743",
+    "Phone":"(808) 882-4486",
+    "City":"Kamuela",
+    "Latitude":20.0458053,
+    "Longitude":-155.834582
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"RT\u2019s Service",
+    "Address":"64-5223 Kauakea Rd, Waimea HI 96743",
+    "Phone":"(808) 885-4488",
+    "City":"Waimea",
+    "Latitude":20.040267,
+    "Longitude":-155.616308
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96743,
+    "Station Name":"Thunder Alley Automotive",
+    "Address":"61-3270 Maluokalani Street., Kamuela HI 96743",
+    "Phone":"(808) 880-1933",
+    "City":"Kamuela",
+    "Latitude":20.0470757,
+    "Longitude":-155.8358343
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Bob's Auto Repair",
+    "Address":"16-110 Ilima Street., Keaau HI 96749",
+    "Phone":"(808) 982-9289",
+    "City":"Keaau",
+    "Latitude":19.5453219,
+    "Longitude":-154.9774276
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Eddie's Auto Diagnostic & Repair",
+    "Address":"16-768 Hoawa Street, Keaau HI 96749",
+    "Phone":"(808) 966-8594",
+    "City":"Keaau",
+    "Latitude":19.6241792,
+    "Longitude":-155.0358762
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Hawaii Automotive Restoration",
+    "Address":"16-1998 37Th Avenue., Keaau HI 96749",
+    "Phone":"(808) 982-9797",
+    "City":"Keaau",
+    "Latitude":19.57086,
+    "Longitude":-155.015098
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Jay's Auto Repair, LLC",
+    "Address":"16-123 Liilii Street. , Keaau HI 96749",
+    "Phone":"(808) 982-6192",
+    "City":"Keaau",
+    "Latitude":19.6406449,
+    "Longitude":-155.0473093
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Paradise Plus",
+    "Address":"15-1854 29Th Ave., Keaau HI 96749",
+    "Phone":"(808) 756-7008",
+    "City":"Keaau",
+    "Latitude":19.5578659,
+    "Longitude":-154.9789724
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Silva's Service",
+    "Address":"15-5014 28th Ave, Keaau HI 96749",
+    "Phone":"(808) 966-8580",
+    "City":"Keaau",
+    "Latitude":19.5750555,
+    "Longitude":-154.9956024
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96749,
+    "Station Name":"Wally's Garage LLC",
+    "Address":"15-1897 33Rd Avenue., Keaau HI 96749",
+    "Phone":"(808) 966-9275",
+    "City":"Keaau",
+    "Latitude":19.5508354,
+    "Longitude":-154.9812827
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96750,
+    "Station Name":"Autotech Inc.",
+    "Address":"81-981 Halekii Street., Kealakekua HI 96750",
+    "Phone":"(808) 322-8881",
+    "City":"Kealakekua",
+    "Latitude":19.5188739,
+    "Longitude":-155.9211556
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96760,
+    "Station Name":"Keaau Service Station, Inc.",
+    "Address":"17-355 Volcano Rd, Kurtistown, HI 96760",
+    "Phone":"(808) 966-9373",
+    "City":"Kurtistown",
+    "Latitude":19.5932527,
+    "Longitude":-155.0571719
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96772,
+    "Station Name":"Kau Auto Repair",
+    "Address":"95-1178 Kaalaiki Rd., Naalehu HI 96772",
+    "Phone":"(808) 929-9096",
+    "City":"Naalehu",
+    "Latitude":19.0624672,
+    "Longitude":-155.5867295
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96776,
+    "Station Name":"Kainehe Service Station",
+    "Address":"42-1034 Old Mamalahoa Highway, Paauilo HI 96776",
+    "Phone":"(808) 776-1012",
+    "City":"Paauilo",
+    "Latitude":20.0312607,
+    "Longitude":-155.3492006
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96778,
+    "Station Name":"Lex brodie tire Co. Pahoa",
+    "Address":"15-2660 Keaau-Pahoa Road, Pahoa HI 96778",
+    "Phone":"(808) 965-9125",
+    "City":"Pahoa",
+    "Latitude":19.5050397,
+    "Longitude":-154.9588343
+  },
+  {
+    "County":"Hawaii",
+    "ZIP":96778,
+    "Station Name":"Paul's Repair Service",
+    "Address":"15-2992 Pahoa Village Rd, Pahoa HI 96778",
+    "Phone":"(808) 965-8386",
+    "City":"Pahoa",
+    "Latitude":19.4936224,
+    "Longitude":-154.9440872
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Aiea Auto Service",
+    "Address":"99-187 Aiea Heights Dr, Aiea HI 96701",
+    "Phone":"(808) 485-8811",
+    "City":"Aiea",
+    "Latitude":21.3800169,
+    "Longitude":-157.9286212
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Auto Repair Of Hawaii",
+    "Address":"98-055 Kamehameha Highway. C-5, Aiea HI 96701",
+    "Phone":"(808) 488-7555",
+    "City":"Aiea",
+    "Latitude":21.3831399,
+    "Longitude":-157.9491407
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Central Body & Paint",
+    "Address":"98-021 Kamehameha Highway, Aiea HI 96701",
+    "Phone":"(808) 488-0045",
+    "City":"Aiea",
+    "Latitude":21.3840201,
+    "Longitude":-157.9524635
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Cutter Ford",
+    "Address":"98-021 Kamehameha Highway., Aiea HI 96701",
+    "Phone":"(808) 564-9210",
+    "City":"Aiea",
+    "Latitude":21.3840201,
+    "Longitude":-157.9524635
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Eddie's Auto Repair LLC",
+    "Address":"98-025 Hekaha Street. Bldg.2, Suite. 25, Aiea HI 96701",
+    "Phone":"(808) 486-5231",
+    "City":"Aiea",
+    "Latitude":21.3840046,
+    "Longitude":-157.9502205
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Firestone Complete Auto Care",
+    "Address":"98-141 Kamehameha Highway, Aiea HI 96701",
+    "Phone":"(808) 486-1582",
+    "City":"Aiea",
+    "Latitude":21.3819877,
+    "Longitude":-157.9440493
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Hawaiian Tire & Auto Center",
+    "Address":"98-025 Hekaha Street. Bldg 2 U9, Aiea HI 96701",
+    "Phone":"(808) 487-6616",
+    "City":"Aiea",
+    "Latitude":21.3840046,
+    "Longitude":-157.9502205
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Jiffy Lube",
+    "Address":"98-199 Kamehameha Highway Suite G3, Aiea HI 96701",
+    "Phone":"(808) 488-5433",
+    "City":"Aiea",
+    "Latitude":21.3804321,
+    "Longitude":-157.9437092
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Lex Brodie's Tire Co",
+    "Address":"99-115 Kamehameha Highway, Aiea HI 96701",
+    "Phone":"(808) 484-5680",
+    "City":"Aiea",
+    "Latitude":21.3760387,
+    "Longitude":-157.93311
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Oil Changers",
+    "Address":"99-236 Moanalua Rd, Aiea HI 96701",
+    "Phone":"(808) 488-3723",
+    "City":"Aiea",
+    "Latitude":21.3777932,
+    "Longitude":-157.9305425
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"Pearl City Auto Works",
+    "Address":"98-025 Hekaha Street #27, Aiea HI 96701",
+    "Phone":"(808) 486-4848",
+    "City":"Aiea",
+    "Latitude":21.383985,
+    "Longitude":-157.950388
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96701,
+    "Station Name":"The Cutter Team - Aiea",
+    "Address":"98-015 Kamehameha Highway., Aiea HI 96701",
+    "Phone":"(808) 564-9293",
+    "City":"Aiea",
+    "Latitude":21.3853187,
+    "Longitude":-157.9520835
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96706,
+    "Station Name":"Ewa Beach Auto Repair LLC",
+    "Address":"91-919 Ft Weaver Rd Unit 115, Ewa Beach HI 96706",
+    "Phone":"(808) 744-2020",
+    "City":"Ewa Beach",
+    "Latitude":21.3170403,
+    "Longitude":-158.014359
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"APB Construction Corp",
+    "Address":"91-335 Kauhi Street, Kapolei HI 96707",
+    "Phone":"(808) 682-2085",
+    "City":"Kapolei",
+    "Latitude":21.307774,
+    "Longitude":-158.0945834
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Ebikes Hawaii Corp",
+    "Address":"2045 Lauwiliwili Street #205, Kapolei HI 96707",
+    "Phone":"(808) 223-7038",
+    "City":"Kapolei",
+    "Latitude":21.3228112,
+    "Longitude":-158.0901427
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"G & C Fleet Services & Auto Body LLC",
+    "Address":"91-195 Hanua Street, Kapolei HI 96707",
+    "Phone":"(808) 842-4210",
+    "City":"Kapolei",
+    "Latitude":21.3059214,
+    "Longitude":-158.1020528
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Goodyear Kapolei",
+    "Address":"91-590 Farrington Highway #230, Kapolei HI 96707",
+    "Phone":"(808) 674-2211",
+    "City":"Kapolei",
+    "Latitude":21.339899,
+    "Longitude":-158.0769942
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Hawaiian Dredging Construction Co.",
+    "Address":"91-160 Malakole Street, Kapolei HI 96707",
+    "Phone":"(808) 673-4320",
+    "City":"Kapolei",
+    "Latitude":21.3141986,
+    "Longitude":-158.0959638
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Mini of Hawaii",
+    "Address":"367 Farrington Highway Unit 5A, Kapolei HI 96707",
+    "Phone":"(808) 593-8699",
+    "City":"Kapolei",
+    "Latitude":21.3335208,
+    "Longitude":-158.0886895
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Oil Changers",
+    "Address":"581 Farrington Highway, Kapolei HI 96707",
+    "Phone":"(808) 674-8444",
+    "City":"Kapolei",
+    "Latitude":21.3390874,
+    "Longitude":-158.0766985
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"PG Kapolei LLC",
+    "Address":"91-489 Kapolei Kai Street, Kapolei HI 96707",
+    "Phone":"(808) 528-7400",
+    "City":"Kapolei",
+    "Latitude":21.3225119,
+    "Longitude":-158.0968411
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Penske Truck Leasing Co Lp",
+    "Address":"2376 Lauwiliwili Street, Kapolei HI 96707",
+    "Phone":"(808) 664-5910",
+    "City":"Kapolei",
+    "Latitude":21.317028,
+    "Longitude":-158.0987757
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"Servco Vehicle Processing Center",
+    "Address":"91-1831 Franklin D Roosevelt Avenue Bldg 1143, Kapolei HI 96707",
+    "Phone":"(808) 349-0085",
+    "City":"Kapolei",
+    "Latitude":21.3290426,
+    "Longitude":-158.0531466
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96707,
+    "Station Name":"The Pasha Group",
+    "Address":"1730 Kittyhawk Street, Kapolei, HI 96707",
+    "Phone":"(808) 842-5360",
+    "City":"Kapolei",
+    "Latitude":21.3623595,
+    "Longitude":-157.9587116
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96712,
+    "Station Name":"Pupukea Service",
+    "Address":"59-680 Kamehameha Highway., Haleiwa HI 96712",
+    "Phone":"(808) 638-8316",
+    "City":"Haleiwa",
+    "Latitude":21.6505898,
+    "Longitude":-158.0616117
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96717,
+    "Station Name":"The Organic Mechanic LLC",
+    "Address":"53-534 Kamehameha Highway, Hauula HI 96717",
+    "Phone":"(808) 260-9122",
+    "City":"Hauula",
+    "Latitude":21.5884374,
+    "Longitude":-157.8893211
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Aikahi Park Texaco",
+    "Address":"25 Kaneohe Bay Dr. Suite 100, Kailua HI 96734",
+    "Phone":"(808) 254-1567",
+    "City":"Kailua",
+    "Latitude":21.4237045,
+    "Longitude":-157.7488825
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Bridgestone Firestone",
+    "Address":"1667 Mokapu Road , Kailua HI 96734",
+    "Phone":"(808) 254-2258",
+    "City":"Kailua",
+    "Latitude":21.4424581,
+    "Longitude":-157.744332
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Bridgestone Retail Operations",
+    "Address":"201 Hamakua Dr, Kailua HI 96734",
+    "Phone":"(808) 263-2009",
+    "City":"Kailua",
+    "Latitude":21.3905521,
+    "Longitude":-157.7411404
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Clyde's Auto Care Center",
+    "Address":"905 Kalanianaole Hwy. Space 29 Ste. C, Kailua HI 96734",
+    "Phone":"(808) 261-0262",
+    "City":"Kailua",
+    "Latitude":21.3970281,
+    "Longitude":-157.7698275
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Corey's Auto Care",
+    "Address":"171 A Hamakua Drive, Kailua HI 96734",
+    "Phone":"(808) 253-0220",
+    "City":"Kailua",
+    "Latitude":21.3906906,
+    "Longitude":-157.7417179
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Goodyear ACS. - Kailua",
+    "Address":"724 Kailua Road, Kailua HI 96734",
+    "Phone":"(808) 261-1741",
+    "City":"Kailua",
+    "Latitude":21.3943555,
+    "Longitude":-157.7442516
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Hamakua Auto Body",
+    "Address":"160 Hamakua Drive, Kailua HI 96734",
+    "Phone":"(808) 263-0844",
+    "City":"Kailua",
+    "Latitude":21.3914509,
+    "Longitude":-157.7421948
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Midas Auto Service",
+    "Address":"174 Hamakua Drive, Kailua HI 96734",
+    "Phone":"(808) 677-6180",
+    "City":"Kailua",
+    "Latitude":21.3911615,
+    "Longitude":-157.7414719
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"RNS Automotive LLC",
+    "Address":"905 Kalanianaole Highway 27 D, Kailua HI 96734",
+    "Phone":"(808) 263-7277",
+    "City":"Kailua",
+    "Latitude":21.3970281,
+    "Longitude":-157.7698275
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Tenn's Enchanted Lake Auto Center",
+    "Address":"1025 Keolu Dr., Kailua HI 96734",
+    "Phone":"(808) 263-1076",
+    "City":"Kailua",
+    "Latitude":21.3784309,
+    "Longitude":-157.7281954
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Tonys Autowerks LLC",
+    "Address":"905 Kalanianaole Highway. Bldg 29, Kailua HI 96734",
+    "Phone":"(808) 368-8345",
+    "City":"Kailua",
+    "Latitude":21.3970281,
+    "Longitude":-157.7698275
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96734,
+    "Station Name":"Windward Ford Of Hawaii",
+    "Address":"725 Kailua Rd, Kailua, HI HI 96734",
+    "Phone":"(808) 866-6700",
+    "City":"Kailua",
+    "Latitude":21.3936505,
+    "Longitude":-157.7436762
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Bridgestone Firestone",
+    "Address":"45-934 Kamehameha Highway, Kaneohe HI 96744",
+    "Phone":"(808) 247-7422",
+    "City":"Kaneohe",
+    "Latitude":21.4141328,
+    "Longitude":-157.8008117
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"GTS Parts & Service",
+    "Address":"45-512 Keaahala Road #105, Kaneohe HI 96744",
+    "Phone":"(808) 236-1199",
+    "City":"Kaneohe",
+    "Latitude":21.4144512,
+    "Longitude":-157.8012923
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Gomes School Bus Service Ltd.",
+    "Address":"47-114 Wailehua Road, Kaneohe HI 96744",
+    "Phone":"(808) 239-6755",
+    "City":"Kaneohe",
+    "Latitude":21.4632734,
+    "Longitude":-157.8440659
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Goodyear Tire & Rubber Co.",
+    "Address":"46-047 Kamehameha Highway, Kaneohe HI 96744",
+    "Phone":"(808) 247-6668",
+    "City":"Kaneohe",
+    "Latitude":21.4209578,
+    "Longitude":-157.8033515
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Honda Windward",
+    "Address":"45-671 Kamehameha Highway, Kaneohe HI 96744",
+    "Phone":"(808) 235-7566",
+    "City":"Kaneohe",
+    "Latitude":21.404568,
+    "Longitude":-157.7988531
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Jiffy Lube",
+    "Address":"45-685 Kamehameha Highway, Kaneohe HI 96744",
+    "Phone":"(808) 247-5433",
+    "City":"Kaneohe",
+    "Latitude":21.4058311,
+    "Longitude":-157.7985995
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Kaneohe Autocare",
+    "Address":"46-148 Kahuhipa Street., Kaneohe HI 96744",
+    "Phone":"(808) 236-0832",
+    "City":"Kaneohe",
+    "Latitude":21.4167595,
+    "Longitude":-157.8042129
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"King Windward Nissan LLC",
+    "Address":"45-568 Kam Highway , Kaneohe HI 96744",
+    "Phone":"(808) 235-6433",
+    "City":"Kaneohe",
+    "Latitude":21.3993724,
+    "Longitude":-157.7996707
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Lex Brodie's Tire Co.",
+    "Address":"46-158 Malina Pl., Kaneohe HI 96744",
+    "Phone":"(808) 792-4900",
+    "City":"Kaneohe",
+    "Latitude":21.4175098,
+    "Longitude":-157.8047774
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Servco Auto Windward",
+    "Address":"45-655 Kamehameha Highway., Kaneohe HI 96744",
+    "Phone":"(808) 564-1400",
+    "City":"Kaneohe",
+    "Latitude":21.4036137,
+    "Longitude":-157.7985718
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"The Car Shop",
+    "Address":"45-554 Kamehameha Highway., Kaneohe HI 96744",
+    "Phone":"(808) 234-1700",
+    "City":"Kaneohe",
+    "Latitude":21.3984568,
+    "Longitude":-157.7987995
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Windward Auto Spa",
+    "Address":"46-151 Kahuhipa Street , Kanohoe HI 96744",
+    "Phone":"(808) 247-8522",
+    "City":"Kanohoe",
+    "Latitude":21.4170625,
+    "Longitude":-157.8046532
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Windward Dodge Chrysler Jeep",
+    "Address":"46-177 Kahuhipa Street, Kaneohe HI 96744",
+    "Phone":"(808) 233-6000",
+    "City":"Kaneohe",
+    "Latitude":21.4164946,
+    "Longitude":-157.8060834
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Windward Hyundai",
+    "Address":"46-158 Kahuhipa Street, Kaneohe HI 96744",
+    "Phone":"(808) 233-6000",
+    "City":"Kaneohe",
+    "Latitude":21.416487,
+    "Longitude":-157.8047257
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96744,
+    "Station Name":"Windward Service LLC",
+    "Address":"45-558 Kamehameha Hwy, Kaneohe, HI 96744",
+    "Phone":"(808) 247-3033",
+    "City":"Kaneohe",
+    "Latitude":21.3986424,
+    "Longitude":-157.7991155
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"3WM Auto Repair LLC",
+    "Address":"96-1272 Waihona Street Unit 14, Pearl City HI 96782",
+    "Phone":"(808) 384-2886",
+    "City":"Pearl City",
+    "Latitude":21.409981,
+    "Longitude":-157.9760299
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Classic Bodyworks",
+    "Address":"96-1372 Waihona Street, Pearl City HI 96782",
+    "Phone":"(808) 455-8853",
+    "City":"Pearl City",
+    "Latitude":21.4130557,
+    "Longitude":-157.9718014
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Cutter Chrysler Jeep Dodge of Pearl City",
+    "Address":"905 Kamehameha Highway, Pearl City HI 96782",
+    "Phone":"(808) 564-9316",
+    "City":"Pearl City",
+    "Latitude":21.3934815,
+    "Longitude":-157.9708616
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Da Motorsports",
+    "Address":"687 Kamehameha Highway., Pearl City HI 96782",
+    "Phone":"(808) 455-7000",
+    "City":"Pearl City",
+    "Latitude":21.3913943,
+    "Longitude":-157.9642677
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Goodyear Auto Service",
+    "Address":"350 Kamehameha Highway, Pearl City HI 96782",
+    "Phone":"(808) 487-0066",
+    "City":"Pearl City",
+    "Latitude":21.3878264,
+    "Longitude":-157.9552371
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Hokama Auto Repair Inc.",
+    "Address":"1011 Lehua Avenue, Pearl City HI 96782",
+    "Phone":"(808) 456-5500",
+    "City":"Pearl City",
+    "Latitude":21.3931191,
+    "Longitude":-157.9702663
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Midas Muffler & Brakes",
+    "Address":"98-1234 Kaahumanu Street, Pearl City HI 96782",
+    "Phone":"(808) 487-6477",
+    "City":"Pearl City",
+    "Latitude":21.3883212,
+    "Longitude":-157.9542027
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Oil Changers",
+    "Address":"826 Kamehameha Highway, Pearl City HI 96782",
+    "Phone":"(808) 456-4057",
+    "City":"Pearl City",
+    "Latitude":21.3934884,
+    "Longitude":-157.9679719
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"One Stop Auto Center",
+    "Address":"98-259 Kaluamoi Pl, Pearl City HI 96782",
+    "Phone":"(808) 487-3139",
+    "City":"Pearl City",
+    "Latitude":21.3874454,
+    "Longitude":-157.9559049
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Unitek Contracting Group LLC",
+    "Address":"96-1367 Waihona Street., Pearl City HI 96782",
+    "Phone":"(808) 343-6116",
+    "City":"Pearl City",
+    "Latitude":21.4125142,
+    "Longitude":-157.9711172
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96782,
+    "Station Name":"Voyager Auto Sales",
+    "Address":"96-1185 Waihona Street. C6-C8, Pearl City HI 96782",
+    "Phone":"(808) 454-9999",
+    "City":"Pearl City",
+    "Latitude":21.4052016,
+    "Longitude":-157.9774206
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Garry's Auto Repair Inc.",
+    "Address":"232G Koa Street, WaHIawa HI 96786",
+    "Phone":"(808) 622-2273",
+    "City":"WaHIawa",
+    "Latitude":21.5015472,
+    "Longitude":-158.0234005
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Hawaii Rides Inc.",
+    "Address":"651 A Kilani Avenue. , WaHIawa HI 96786",
+    "Phone":"(808) 621-6686",
+    "City":"WaHIawa",
+    "Latitude":21.4981857,
+    "Longitude":-158.028336
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"ILTK Service",
+    "Address":"651 Kilani Avenuenue, WaHIawa HI 96786",
+    "Phone":"(808) 621-1111",
+    "City":"WaHIawa",
+    "Latitude":21.4981857,
+    "Longitude":-158.028336
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Midas Auto Service",
+    "Address":"25 N. Kamehameha Highway, WaHIawa HI 96786",
+    "Phone":"(808) 622-3991",
+    "City":"WaHIawa",
+    "Latitude":21.4963007,
+    "Longitude":-158.0301691
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Ohana Automotive Repair & Service LLC",
+    "Address":"136 Wilikina Dr, WaHIawa HI 96786",
+    "Phone":"(808) 631-3020",
+    "City":"WaHIawa",
+    "Latitude":21.4913827,
+    "Longitude":-158.0308785
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Oil Changers",
+    "Address":"961 Center Street, Honolulu HI 96786",
+    "Phone":"(808) 622-2191",
+    "City":"Honolulu",
+    "Latitude":21.4985502,
+    "Longitude":-158.0249468
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Wahiawa Auto Repair & Maintenance",
+    "Address":"1011 California Avenue, WaHIawa HI 96786",
+    "Phone":"(808) 622-1678",
+    "City":"WaHIawa",
+    "Latitude":21.4979912,
+    "Longitude":-158.0239445
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96786,
+    "Station Name":"Wahiawa Automotive",
+    "Address":"58 S. Kamehameha Highway, WaHIawa HI 96786",
+    "Phone":"(808) 621-9145",
+    "City":"WaHIawa",
+    "Latitude":21.4952474,
+    "Longitude":-158.0292366
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96789,
+    "Station Name":"Goodyear ASC.",
+    "Address":"95-390 Kuahelani Avenue , Mililani HI 96789",
+    "Phone":"(808) 625-1477",
+    "City":"Mililani",
+    "Latitude":21.458139,
+    "Longitude":-158.0146582
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96789,
+    "Station Name":"Mililani Auto Repair LLC",
+    "Address":"95-130 Kamehameha Highway, Mililani HI 96789",
+    "Phone":"(808) 623-8200",
+    "City":"Mililani",
+    "Latitude":21.4583204,
+    "Longitude":-158.0169404
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96791,
+    "Station Name":"Haleiwa Service LLC",
+    "Address":"67-106 Kealohanui Street., Waialua HI 96791",
+    "Phone":"(808) 637-4255",
+    "City":"Waialua",
+    "Latitude":21.572813,
+    "Longitude":-158.12571
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"808 Safety LLC",
+    "Address":"87-680 Farrington Highway, Waianae HI 96792",
+    "Phone":"(808) 398-3779",
+    "City":"Waianae",
+    "Latitude":21.411074,
+    "Longitude":-158.1764606
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"Bee Auto Truck Repair",
+    "Address":"87-110 Nanaikeola Street Bay 5, Waianae HI 96792",
+    "Phone":"(808) 668-1377",
+    "City":"Waianae",
+    "Latitude":21.3864335,
+    "Longitude":-158.150035
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"DT Automotive",
+    "Address":"87-166A Farrington Highway, Waianae HI 96792",
+    "Phone":"(808) 696-0310",
+    "City":"Waianae",
+    "Latitude":21.4248801,
+    "Longitude":-158.1780023
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"Dansen's Auto Repair & Towing Inc.",
+    "Address":"85-850 Farrington Highway., Waianae HI 96792",
+    "Phone":"(808) 696-5385",
+    "City":"Waianae",
+    "Latitude":21.4455416,
+    "Longitude":-158.1876709
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"Kekahuna Customs & General Repair",
+    "Address":"85-143 Lualualei Hmstd Road , Waianae HI 96792",
+    "Phone":"(808) 696-1146",
+    "City":"Waianae",
+    "Latitude":21.4414249,
+    "Longitude":-158.1855974
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"Midas Auto Service",
+    "Address":"94-709 Farrington Highway, Waipahu HI 96792",
+    "Phone":"(808) 677-9157",
+    "City":"Waipahu",
+    "Latitude":21.3831028,
+    "Longitude":-158.0069621
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96792,
+    "Station Name":"Rapoza Auto Body & Repair",
+    "Address":"87-140 Farrington Highway , Waianae HI 96792",
+    "Phone":"(808) 696-4430",
+    "City":"Waianae",
+    "Latitude":21.4254657,
+    "Longitude":-158.178108
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Accurate Auto LLC",
+    "Address":"94-295 Pupuole Street. #B, Waipahu HI 96797",
+    "Phone":"(808) 680-0050",
+    "City":"Waipahu",
+    "Latitude":21.3780769,
+    "Longitude":-158.0164333
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Aloha Kia Waipahu",
+    "Address":"94-081 Farrington Highway , Waipahu HI 96797",
+    "Phone":"(808) 677-4500",
+    "City":"Waipahu",
+    "Latitude":21.3771274,
+    "Longitude":-158.0236659
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Capitol Auto Service LLC",
+    "Address":"94-422 Ukee Street. Bay 7, Waipahu HI 96797",
+    "Phone":"(808) 676-1888",
+    "City":"Waipahu",
+    "Latitude":21.424048,
+    "Longitude":-158.002037
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Cesar's Auto Repair LLC",
+    "Address":"94-138 Leoleo Street., Waipahu HI 96797",
+    "Phone":"(808) 671-2286",
+    "City":"Waipahu",
+    "Latitude":21.3757135,
+    "Longitude":-158.0200405
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Cutter Buick GMC. Inc.",
+    "Address":"94-133 Leonui Street, Waipahu HI 96797",
+    "Phone":"(808) 564-9500",
+    "City":"Waipahu",
+    "Latitude":21.3769101,
+    "Longitude":-158.0219842
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Cutter Mazda of Waipahu",
+    "Address":"94-245 Farrington Highway, Waipahu HI 96797",
+    "Phone":"(808) 564-9560",
+    "City":"Waipahu",
+    "Latitude":21.3794619,
+    "Longitude":-158.0195171
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Ewa Repair Shop Inc.",
+    "Address":"94-303 Waipahu Street , Waipahu HI 96797",
+    "Phone":"(808) 671-8999",
+    "City":"Waipahu",
+    "Latitude":21.3830761,
+    "Longitude":-158.0207447
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"G.E.A.R.S",
+    "Address":"94-165 C Leonui Street., Waipahu HI 96797",
+    "Phone":"(808) 621-5522",
+    "City":"Waipahu",
+    "Latitude":21.3773081,
+    "Longitude":-158.0212488
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Glen's Auto Service LLC",
+    "Address":"94-1388 Moaniani Street. #320, Waipahu HI 96797",
+    "Phone":"(808) 782-0889",
+    "City":"Waipahu",
+    "Latitude":21.4219858,
+    "Longitude":-157.9959934
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Goodyear Auto Service Center",
+    "Address":"94-822 Moloalo Street, Waipahu HI 96797",
+    "Phone":"(808) 677-9146",
+    "City":"Waipahu",
+    "Latitude":21.384789,
+    "Longitude":-158.0038663
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"HT Automotive LLC",
+    "Address":"94-529 Ukee Street., Suite 103, Waipahu HI 96797",
+    "Phone":"(808) 676-8937",
+    "City":"Waipahu",
+    "Latitude":21.4225817,
+    "Longitude":-158.0059566
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"J's Service Station",
+    "Address":"94-380 Mokuola Street, Waipahu HI 96797",
+    "Phone":"(808) 671-3371",
+    "City":"Waipahu",
+    "Latitude":21.3868545,
+    "Longitude":-158.0053931
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Kammie's Auto Services",
+    "Address":"94-1388 Moaniani Street #305, Waipahu HI 96797",
+    "Phone":"(808) 677-0292",
+    "City":"Waipahu",
+    "Latitude":21.4225708,
+    "Longitude":-157.9958509
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Kick Only Motorcycle",
+    "Address":"94-147 Leokane Street., Waipahu HI 96797",
+    "Phone":"(808) 382-7941",
+    "City":"Waipahu",
+    "Latitude":21.3771046,
+    "Longitude":-158.0174809
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Kuroda Auto Repair Inc.",
+    "Address":"94-518 PuaHI Street, Waipahu HI 96797",
+    "Phone":"(808) 676-1941",
+    "City":"Waipahu",
+    "Latitude":21.4231211,
+    "Longitude":-158.0046396
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Leeward Automotive Inc.",
+    "Address":"94-1388 Moaniani Street, Waipahu HI 96797",
+    "Phone":"(808) 671-7898",
+    "City":"Waipahu",
+    "Latitude":21.4225708,
+    "Longitude":-157.9958509
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Lex Brodie's Tire Co.- Waipahu",
+    "Address":"94-169 Farrington Highway , Waipahu HI 96797",
+    "Phone":"(808) 671-4561",
+    "City":"Waipahu",
+    "Latitude":21.3782123,
+    "Longitude":-158.0216595
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Oil Changers",
+    "Address":"94-1235 Ka Uka Blvd Ste A, Waipahu, HI 96797",
+    "Phone":"(808) 773-4114",
+    "City":"Waipahu",
+    "Latitude":21.4270982,
+    "Longitude":-158.0011158
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Oil Changers",
+    "Address":"94-615 KupuoHI Street, Waipahu HI 96797",
+    "Phone":"(808) 678-1192",
+    "City":"Waipahu",
+    "Latitude":21.3896592,
+    "Longitude":-158.034505
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Servco Auto Leeward",
+    "Address":"94-729 Farrington Highway , Waipahu HI 96797",
+    "Phone":"(808) 564-1051",
+    "City":"Waipahu",
+    "Latitude":21.3827598,
+    "Longitude":-158.0053662
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Tony Honda",
+    "Address":"94-1299 Ka Uka Blvd, Waipahu HI 96797",
+    "Phone":"(808) 680-7120",
+    "City":"Waipahu",
+    "Latitude":21.4274419,
+    "Longitude":-157.9977786
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Tony Hyundai",
+    "Address":"94-1299 Ka Uka Blvd, Waipahu HI 96797",
+    "Phone":"(808) 680-7190",
+    "City":"Waipahu",
+    "Latitude":21.4274419,
+    "Longitude":-157.9977786
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Tony Nissan",
+    "Address":"94-1299 Ka Uka Blvd, Waipahu HI 96797",
+    "Phone":"(808) 680-7165",
+    "City":"Waipahu",
+    "Latitude":21.4274419,
+    "Longitude":-157.9977786
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Tony Volkswagen",
+    "Address":"94-1299 Ka Uka Blvd, Waipahu HI 96797",
+    "Phone":"(808) 680-7180",
+    "City":"Waipahu",
+    "Latitude":21.4274419,
+    "Longitude":-157.9977786
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Waipahu Auto Care LLC",
+    "Address":"94-825 Waipahu Street, Waipahu HI 96797",
+    "Phone":"(808) 773-7640",
+    "City":"Waipahu",
+    "Latitude":21.3852578,
+    "Longitude":-158.0083144
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Waipahu Repairs",
+    "Address":"94-767 Farrington Highway, Waipahu HI 96797",
+    "Phone":"(808) 677-3781",
+    "City":"Waipahu",
+    "Latitude":21.3836264,
+    "Longitude":-158.0050232
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96797,
+    "Station Name":"Yokota Service Inc.",
+    "Address":"94-1037 Waipahu Street, Waipahu HI 96797",
+    "Phone":"(808) 677-3351",
+    "City":"Waipahu",
+    "Latitude":21.3894211,
+    "Longitude":-158.0042514
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"818 Kapiolani LLC",
+    "Address":"416 Cooke Street. Unit 2, Honolulu HI 96813",
+    "Phone":"(808) 592-5600",
+    "City":"Honolulu",
+    "Latitude":21.2978849,
+    "Longitude":-157.8598825
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"BMW of Honolulu",
+    "Address":"777 Kapiolani Blvd, Honolulu HI 96813",
+    "Phone":"(808) 597-1265",
+    "City":"Honolulu",
+    "Latitude":21.3001126,
+    "Longitude":-157.8542773
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Bavarian Motor Experts",
+    "Address":"757 Kawaiahao Street, Honolulu HI 96813",
+    "Phone":"(808) 589-1333",
+    "City":"Honolulu",
+    "Latitude":21.3000392,
+    "Longitude":-157.8557095
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"C & S Service Inc.",
+    "Address":"834 Ilaniwai Street., Honolulu HI 96813",
+    "Phone":"(808) 591-0553",
+    "City":"Honolulu",
+    "Latitude":21.2987292,
+    "Longitude":-157.8558927
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Cutter Chevrolet",
+    "Address":"711 Ala Moana Blvd, Honolulu HI 96813",
+    "Phone":"(808) 564-9050",
+    "City":"Honolulu",
+    "Latitude":21.296344,
+    "Longitude":-157.8622646
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Cutter Chrysler Jeep Dodge of Honolulu",
+    "Address":"777 Ala Moana Blvd, Honolulu HI 96813",
+    "Phone":"(808) 564-9978",
+    "City":"Honolulu",
+    "Latitude":21.2959204,
+    "Longitude":-157.8590278
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Cutter Mazda of Honolulu",
+    "Address":"805 Ala Moana Blvd, Honolulu HI 96813",
+    "Phone":"(808) 564-9100",
+    "City":"Honolulu",
+    "Latitude":21.295388,
+    "Longitude":-157.8595449
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"GX Auto Inc.",
+    "Address":"875 Waimanu Street. #107, Honolulu HI 96813",
+    "Phone":"(808) 375-5252",
+    "City":"Honolulu",
+    "Latitude":21.2995719,
+    "Longitude":-157.8545101
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Great People Auto Repair",
+    "Address":"812 Queen Street., Honolulu HI 96813",
+    "Phone":"(808) 589-0066",
+    "City":"Honolulu",
+    "Latitude":21.2998082,
+    "Longitude":-157.8558258
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Honolulu Bimmer Service",
+    "Address":"670 Halekauwila Street, Honolulu HI 96813",
+    "Phone":"(808) 599-6148",
+    "City":"Honolulu",
+    "Latitude":21.3007403,
+    "Longitude":-157.8585155
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Jaguar Land Rover Honolulu",
+    "Address":"888 Kapiolani Blvd., Honolulu HI 96813",
+    "Phone":"(808) 592-5150",
+    "City":"Honolulu",
+    "Latitude":21.2997458,
+    "Longitude":-157.8527868
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Jiffy Lube",
+    "Address":"1489 Punchbowl Street, Honolulu HI 96813",
+    "Phone":"(808) 599-5433",
+    "City":"Honolulu",
+    "Latitude":21.3109138,
+    "Longitude":-157.8533855
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Klassic Automotive LLC",
+    "Address":"140 S. School Street., Honolulu HI 96813",
+    "Phone":"(808) 537-2606",
+    "City":"Honolulu",
+    "Latitude":21.3137074,
+    "Longitude":-157.8532149
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Lee's Garage",
+    "Address":"844 Ilaniwai Street, Honolulu HI 96813",
+    "Phone":"(808) 597-8857",
+    "City":"Honolulu",
+    "Latitude":21.2985583,
+    "Longitude":-157.8557895
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Lex Brodie's Tire Co.",
+    "Address":"701 Queen Street , Honolulu HI 96813",
+    "Phone":"(808) 536-9381",
+    "City":"Honolulu",
+    "Latitude":21.30029,
+    "Longitude":-157.8574282
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"M W Transportation Inc.",
+    "Address":"801 Kawaiahao Street, Honolulu HI 96813",
+    "Phone":"(808) 593-8555",
+    "City":"Honolulu",
+    "Latitude":21.2998825,
+    "Longitude":-157.8556881
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Masaki's Auto Repair Inc.",
+    "Address":"2211 South Beretania Street, Honolulu HI 96813",
+    "Phone":"(808) 943-1550",
+    "City":"Honolulu",
+    "Latitude":21.2952681,
+    "Longitude":-157.82657
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Mercedes - Benz Of Honolulu",
+    "Address":"818 Kapiolani Blvd, Honolulu HI 96813",
+    "Phone":"(808) 592-5161",
+    "City":"Honolulu",
+    "Latitude":21.3003487,
+    "Longitude":-157.8531129
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Motor Imports Service",
+    "Address":"609 South Street, Honolulu HI 96813",
+    "Phone":"(808) 564-1550",
+    "City":"Honolulu",
+    "Latitude":21.3015413,
+    "Longitude":-157.8593222
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Pacific Honda",
+    "Address":"188 S. Beretania Street., Honolulu HI 96813",
+    "Phone":"(808) 528-7400",
+    "City":"Honolulu",
+    "Latitude":21.311174,
+    "Longitude":-157.8578169
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Porsche Hawaii",
+    "Address":"730 Ala Moana Blvd., Honolulu HI 96813",
+    "Phone":"(808) 592-3933",
+    "City":"Honolulu",
+    "Latitude":21.2970046,
+    "Longitude":-157.8609786
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Priam's Automotive Service & Repair Inc.",
+    "Address":"2002 Pauoa Rd, Honolulu HI 96813",
+    "Phone":"(808) 537-1919",
+    "City":"Honolulu",
+    "Latitude":21.3197955,
+    "Longitude":-157.8491658
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Servco Lexus",
+    "Address":"650 Kapiolani Blvd., Honolulu HI 96813",
+    "Phone":"(808) 265-6701",
+    "City":"Honolulu",
+    "Latitude":21.3022902,
+    "Longitude":-157.8546124
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Stewart's Auto Service",
+    "Address":"815 Kawaiahao Street , Honolulu HI 96813",
+    "Phone":"(808) 596-8139",
+    "City":"Honolulu",
+    "Latitude":21.2997092,
+    "Longitude":-157.8554305
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Sumida's Auto Repair",
+    "Address":"866 Kawaiahao Street, Honolulu HI 96813",
+    "Phone":"(808) 533-2994",
+    "City":"Honolulu",
+    "Latitude":21.2992318,
+    "Longitude":-157.8544403
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Tesla Motors Inc.",
+    "Address":"746 Auahi Street., Honolulu HI 96813",
+    "Phone":"(808) 680-9260",
+    "City":"Honolulu",
+    "Latitude":21.2975561,
+    "Longitude":-157.8587483
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96813,
+    "Station Name":"Volvo Cars Honolulu",
+    "Address":"744 Ala Moana Blvd, Honolulu HI 96813",
+    "Phone":"(808) 748-4010",
+    "City":"Honolulu",
+    "Latitude":21.2967578,
+    "Longitude":-157.8603038
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"A-1 Euro Auto",
+    "Address":"742 Sheridan Street, Honolulu HI 96814",
+    "Phone":"(808) 946-9885",
+    "City":"Honolulu",
+    "Latitude":21.2964521,
+    "Longitude":-157.8426035
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Abe's Repair",
+    "Address":"1219 Keeaumoku Street #C2, Honolulu HI 96814",
+    "Phone":"(808) 947-7228",
+    "City":"Honolulu",
+    "Latitude":21.3006762,
+    "Longitude":-157.8390245
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Don's Makiki Service",
+    "Address":"1406 S. Beretania Street., Honolulu HI 96814",
+    "Phone":"(808) 949-3787",
+    "City":"Honolulu",
+    "Latitude":21.3004907,
+    "Longitude":-157.8391059
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Dynamic Motorsports Inc.",
+    "Address":"534 Ward Avenue, Honolulu HI 96814",
+    "Phone":"(808) 591-0599",
+    "City":"Honolulu",
+    "Latitude":21.298227,
+    "Longitude":-157.853682
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"French Wrench Shell",
+    "Address":"520 Ward Avenue, Honolulu HI 96814",
+    "Phone":"(808) 284-1631",
+    "City":"Honolulu",
+    "Latitude":21.2979439,
+    "Longitude":-157.8541259
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"K & Y Auto Service",
+    "Address":"902 Kawaiahao Street. , Honolulu HI 96814",
+    "Phone":"(808) 593-2842",
+    "City":"Honolulu",
+    "Latitude":21.2985815,
+    "Longitude":-157.8540645
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"MB Euromotors Inc.",
+    "Address":"1144 Kona Street., Honolulu HI 96814",
+    "Phone":"(808) 597-1171",
+    "City":"Honolulu",
+    "Latitude":21.2950651,
+    "Longitude":-157.8492693
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Makiki Auto Repair Inc.",
+    "Address":"1218 Makiki Street , Honolulu HI 96814",
+    "Phone":"(808) 947-8908",
+    "City":"Honolulu",
+    "Latitude":21.3005615,
+    "Longitude":-157.8385122
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Mckinley Car Wash",
+    "Address":"1124 Kona Street., Honolulu HI 96814",
+    "Phone":"(808) 596-2609",
+    "City":"Honolulu",
+    "Latitude":21.2955943,
+    "Longitude":-157.8497014
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Midas Auto Service - Beretania",
+    "Address":"1355 S. Beretania Street, Honolulu HI 96814",
+    "Phone":"(808) 593-8118",
+    "City":"Honolulu",
+    "Latitude":21.3001438,
+    "Longitude":-157.8401128
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Moped Garage",
+    "Address":"919 Waimanu Street, Honolulu HI 96814",
+    "Phone":"(808) 591-9999",
+    "City":"Honolulu",
+    "Latitude":21.2984931,
+    "Longitude":-157.8535554
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Mr. Motor Service",
+    "Address":"435 Kamakee Street, Suite 103, Honolulu HI 96814",
+    "Phone":"(808) 291-8627",
+    "City":"Honolulu",
+    "Latitude":21.2950731,
+    "Longitude":-157.850767
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Olympia Autobody Repair & Paint Inc.",
+    "Address":"1152 Waimanu Street, Honolulu HI 96814",
+    "Phone":"(808) 593-8600",
+    "City":"Honolulu",
+    "Latitude":21.2945062,
+    "Longitude":-157.8495372
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Servco Lexus Honolulu",
+    "Address":"1045 Waimanu Street, Honolulu HI 96814",
+    "Phone":"(808) 564-1213",
+    "City":"Honolulu",
+    "Latitude":21.295809,
+    "Longitude":-157.8514515
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"The Auto Clinic",
+    "Address":"900 Ala Moana Blvd., Honolulu HI 96814",
+    "Phone":"(808) 206-3564",
+    "City":"Honolulu",
+    "Latitude":21.2962458,
+    "Longitude":-157.8587029
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96814,
+    "Station Name":"Yajima Convenience Center",
+    "Address":"1326 Liona Street., Honolulu HI 96814",
+    "Phone":"(808) 947-3606",
+    "City":"Honolulu",
+    "Latitude":21.298096,
+    "Longitude":-157.8413998
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96815,
+    "Station Name":"A & H Auto Repair LLC",
+    "Address":"455 B Kapahulu Avenue, Honolulu HI 96815",
+    "Phone":"(808) 735-0530",
+    "City":"Honolulu",
+    "Latitude":21.275173,
+    "Longitude":-157.8152105
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96815,
+    "Station Name":"Kapahulu Auto Repair Inc.",
+    "Address":"3131 Castle Street., Honolulu HI 96815",
+    "Phone":"(808) 738-5577",
+    "City":"Honolulu",
+    "Latitude":21.2762505,
+    "Longitude":-157.8140433
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Harding Service",
+    "Address":"3608 Harding Avenue, Honolulu HI 96816",
+    "Phone":"(808) 735-2422",
+    "City":"Honolulu",
+    "Latitude":21.2810855,
+    "Longitude":-157.7994072
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Kaimuki Auto Repair",
+    "Address":"3375 Waialae Avenue, Honolulu HI 96816",
+    "Phone":"(808) 737-1711",
+    "City":"Honolulu",
+    "Latitude":21.2848911,
+    "Longitude":-157.8037509
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"McCully Auto Repair",
+    "Address":"3119 Olu Street , Honolulu HI 96816",
+    "Phone":"(808) 738-0220",
+    "City":"Honolulu",
+    "Latitude":21.2835639,
+    "Longitude":-157.8134812
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Mopeds Direct Inc.",
+    "Address":"750A Kapahulu Avenue, Honolulu HI 96816",
+    "Phone":"(808) 732-3366",
+    "City":"Honolulu",
+    "Latitude":21.2809097,
+    "Longitude":-157.8142901
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Palolo Auto Service Inc.",
+    "Address":"3236 Waialae Avenue, Honolulu HI 96816",
+    "Phone":"(808) 737-7231",
+    "City":"Honolulu",
+    "Latitude":21.2871516,
+    "Longitude":-157.8071572
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Premier Automotive",
+    "Address":"3030 Waialae Avenue, Honolulu HI 96816",
+    "Phone":"(808) 924-7777",
+    "City":"Honolulu",
+    "Latitude":21.2894183,
+    "Longitude":-157.8115829
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96816,
+    "Station Name":"Servco Subaru Kaimuki",
+    "Address":"3282 Waialae Avenue, Honolulu HI 96816",
+    "Phone":"(808) 687-7624",
+    "City":"Honolulu",
+    "Latitude":21.2865541,
+    "Longitude":-157.806077
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"A1 Auto Repair",
+    "Address":"740 D Moowaa Street, Honolulu HI 96817",
+    "Phone":"(808) 842-7700",
+    "City":"Honolulu",
+    "Latitude":21.325049,
+    "Longitude":-157.8731396
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"A & A Motor Werkes",
+    "Address":"501 Sumner Street. 6A, Honolulu HI 96817",
+    "Phone":"(808) 739-1599",
+    "City":"Honolulu",
+    "Latitude":21.3170605,
+    "Longitude":-157.8686028
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Bowtie Automotive",
+    "Address":"720 Moowaa Street., Honolulu HI 96817",
+    "Phone":"(808) 843-0091",
+    "City":"Honolulu",
+    "Latitude":21.3245909,
+    "Longitude":-157.8736558
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Bridgestone Retail Operations Bldg",
+    "Address":"1528 P.O. Box 17846, Ft Shafter, Honolulu HI 96817",
+    "Phone":"(808) 845-9351",
+    "City":"Honolulu",
+    "Latitude":21.3451533,
+    "Longitude":-157.8843911
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Burts Union Service Inc.",
+    "Address":"1342 N School Street, Honolulu HI 96817",
+    "Phone":"(808) 841-6711",
+    "City":"Honolulu",
+    "Latitude":21.3320928,
+    "Longitude":-157.8660604
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"CR Import Repair",
+    "Address":"1316 A Mookaula Street, Honolulu HI 96817",
+    "Phone":"(808) 845-8844",
+    "City":"Honolulu",
+    "Latitude":21.3266769,
+    "Longitude":-157.8709279
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Cheng's AC Service & Auto Repair",
+    "Address":"1015 Dillingham Blvd. 1206, Honolulu HI 96817",
+    "Phone":"(808) 842-1771",
+    "City":"Honolulu",
+    "Latitude":21.3204576,
+    "Longitude":-157.8719766
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Chiks Auto Air & Alignment Inc.",
+    "Address":"1739 Liliha Street, Honolulu HI 96817",
+    "Phone":"(808) 591-1726",
+    "City":"Honolulu",
+    "Latitude":21.3232745,
+    "Longitude":-157.8574216
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Crystal Auto Repair & Auto Air Conditioning",
+    "Address":"1308 N. School Street., Honolulu HI 96817",
+    "Phone":"(808) 847-4200",
+    "City":"Honolulu",
+    "Latitude":21.3312863,
+    "Longitude":-157.8653227
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"HT & T Truck Center",
+    "Address":"311 A. Pacific Street., Honolulu HI 96817",
+    "Phone":"(808) 532-7505",
+    "City":"Honolulu",
+    "Latitude":21.3144343,
+    "Longitude":-157.8715714
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Honolulu Auto Service",
+    "Address":"1300 Hart Street., Honolulu HI 96817",
+    "Phone":"(808) 943-1024",
+    "City":"Honolulu",
+    "Latitude":21.3210311,
+    "Longitude":-157.8774903
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Honolulu Autoworks Inc.",
+    "Address":"1607 Hau Street, Honolulu HI 96817",
+    "Phone":"(808) 845-3772",
+    "City":"Honolulu",
+    "Latitude":21.3253428,
+    "Longitude":-157.8800707
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Honolulu Ford",
+    "Address":"1370 N. King Street., Honolulu HI 96817",
+    "Phone":"(808) 532-1700",
+    "City":"Honolulu",
+    "Latitude":21.3287041,
+    "Longitude":-157.869926
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Jayex Ltd.",
+    "Address":"515 Kuwili Street. #D, Honolulu HI 96817",
+    "Phone":"(808) 216-8193",
+    "City":"Honolulu",
+    "Latitude":21.3178784,
+    "Longitude":-157.8678677
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Jiffy Lube",
+    "Address":"555 N King Street, Honolulu HI 96817",
+    "Phone":"(808) 843-0115",
+    "City":"Honolulu",
+    "Latitude":21.3185959,
+    "Longitude":-157.8653967
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Kustom Fab Choppers",
+    "Address":"500 Alakawa Street. #218-L, Honolulu HI 96817",
+    "Phone":"(808) 847-5322",
+    "City":"Honolulu",
+    "Latitude":21.3205419,
+    "Longitude":-157.8728996
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Midas Auto Service",
+    "Address":"1415 Dillingham Blvd, Honolulu HI 96817",
+    "Phone":"(808) 841-7361",
+    "City":"Honolulu",
+    "Latitude":21.3238108,
+    "Longitude":-157.8763066
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Montgomery Powersports",
+    "Address":"550 North Nimitz Highway, Honolulu HI 96817",
+    "Phone":"(808) 536-7023",
+    "City":"Honolulu",
+    "Latitude":21.3136325,
+    "Longitude":-157.8689479
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"NT Automotive LLC",
+    "Address":"1316 Kaumualii Street. #1, Honolulu HI 96817",
+    "Phone":"(808) 848-5554",
+    "City":"Honolulu",
+    "Latitude":21.3245732,
+    "Longitude":-157.8741642
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Nuuanu Chevron",
+    "Address":"1909 Nuuanu Avenue, Honolulu HI 96817",
+    "Phone":"(808) 524-2871",
+    "City":"Honolulu",
+    "Latitude":21.3204567,
+    "Longitude":-157.8517988
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Osung Complete Automotive Repair",
+    "Address":"1229 N King Street, Honolulu HI 96817",
+    "Phone":"(808) 841-2442",
+    "City":"Honolulu",
+    "Latitude":21.3266186,
+    "Longitude":-157.870323
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Sea Engineering Inc.",
+    "Address":"863 N. Nimitz Highway, Honolulu HI 96817",
+    "Phone":"(808) 536-3603",
+    "City":"Honolulu",
+    "Latitude":21.3147696,
+    "Longitude":-157.8744724
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Soderholm Sales & Leasing Inc.",
+    "Address":"2044 Dillingham Blvd, Honolulu HI 96817",
+    "Phone":"(808) 837-1417",
+    "City":"Honolulu",
+    "Latitude":21.3295945,
+    "Longitude":-157.8823263
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Starkey's Auto Repair",
+    "Address":"1336 Dillingham Blvd. Suite. F, Honolulu HI 96817",
+    "Phone":"(808) 721-3315",
+    "City":"Honolulu",
+    "Latitude":21.3237277,
+    "Longitude":-157.8749224
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"The Sung's Tire",
+    "Address":"730 Moowaa Street #A, Honolulu HI 96817",
+    "Phone":"(808) 841-1711",
+    "City":"Honolulu",
+    "Latitude":21.3248007,
+    "Longitude":-157.8734016
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Thrive's Automotive Service",
+    "Address":"1302 N. School Street., Honolulu HI 96817",
+    "Phone":"(808) 688-4312",
+    "City":"Honolulu",
+    "Latitude":21.3312221,
+    "Longitude":-157.8653141
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96817,
+    "Station Name":"Triple Five Auto",
+    "Address":"1313 N School, Honolulu HI 96817",
+    "Phone":"(808) 847-7911",
+    "City":"Honolulu",
+    "Latitude":21.3309993,
+    "Longitude":-157.8659493
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96818,
+    "Station Name":"Goodyear ASC.",
+    "Address":"4510 Salt Lake Blvd, Honollulu HI 96818",
+    "Phone":"(808) 487-0081",
+    "City":"Honolulu",
+    "Latitude":21.3660202,
+    "Longitude":-157.927537
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96818,
+    "Station Name":"Navy Exchange Autoport Service Center",
+    "Address":"996 Namur Road Bldg. #82, Honolulu HI 96818",
+    "Phone":"(808) 423-3225",
+    "City":"Honolulu",
+    "Latitude":21.3517586,
+    "Longitude":-157.9274547
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96818,
+    "Station Name":"Salt Lake Service",
+    "Address":"846 Ala Lilikoi Street, Honolulu HI 96818",
+    "Phone":"(808) 839-6306",
+    "City":"Honolulu",
+    "Latitude":21.3449289,
+    "Longitude":-157.9133564
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"A-",
+    "Address":"1 Auto A\/C Specialist & General Repair Inc. 720 Ahua Street, Honolulu HI 96819",
+    "Phone":"(808) 836-2939",
+    "City":"Honolulu",
+    "Latitude":21.3378408,
+    "Longitude":-157.8980011
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Acura of Honolulu",
+    "Address":"3251 N. Nimitz Highway, Honolulu HI 96819",
+    "Phone":"(808) 942-4555",
+    "City":"Honolulu",
+    "Latitude":21.3360757,
+    "Longitude":-157.912914
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Alexander's Automotive LLC",
+    "Address":"1305 Middle Street, Honolulu HI 96819",
+    "Phone":"(808) 845-2116",
+    "City":"Honolulu",
+    "Latitude":21.3404514,
+    "Longitude":-157.8800983
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Aloha Kia",
+    "Address":"2841 N. Nimitz Highway., Honolulu HI 96819",
+    "Phone":"(808) 833-9000",
+    "City":"Honolulu",
+    "Latitude":21.3346249,
+    "Longitude":-157.9020077
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Aloha Kia Airport",
+    "Address":"3179 N Nimitz Highway, Honolulu HI 96819",
+    "Phone":"(808) 792-8920",
+    "City":"Honolulu",
+    "Latitude":21.3360907,
+    "Longitude":-157.9112606
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Andy's Car Care Service Inc.",
+    "Address":"1924 Democrat Street., Honolulu HI 96819",
+    "Phone":"(808) 732-1122",
+    "City":"Honolulu",
+    "Latitude":21.3249336,
+    "Longitude":-157.8854203
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Auto Air & Accessories",
+    "Address":"1717 Homerule Street, Honolulu HI 96819",
+    "Phone":"(808) 593-2331",
+    "City":"Honolulu",
+    "Latitude":21.3235586,
+    "Longitude":-157.8835954
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Auto Biz",
+    "Address":"709 Ahua Street., Honolulu HI 96819",
+    "Phone":"(808) 306-7305",
+    "City":"Honolulu",
+    "Latitude":21.3377255,
+    "Longitude":-157.8973581
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Bert's Garage LLC",
+    "Address":"669 Ahua Street, Honolulu HI 96819",
+    "Phone":"(808) 838-0033",
+    "City":"Honolulu",
+    "Latitude":21.3366158,
+    "Longitude":-157.8975938
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Continental Mechanical of The Pacific",
+    "Address":"2146 Puuhale Place, Honolulu HI 96819",
+    "Phone":"(808) 845-5936",
+    "City":"Honolulu",
+    "Latitude":21.3288523,
+    "Longitude":-157.8854724
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Contractor's Equipment & Service Corp.",
+    "Address":"681 Mapunapuna Street, Honolulu HI 96819",
+    "Phone":"(808) 833-0039",
+    "City":"Honolulu",
+    "Latitude":21.3374862,
+    "Longitude":-157.8998166
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Cycle City Ltd.",
+    "Address":"600 Puuloa Road, Honolulu HI 96819",
+    "Phone":"(808) 831-2602",
+    "City":"Honolulu",
+    "Latitude":21.3357491,
+    "Longitude":-157.9018375
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Ducks Powersports Repair LLC",
+    "Address":"2130 N King Street Bldg D12, Honolulu HI 96819",
+    "Phone":"(808) 330-7466",
+    "City":"Honolulu",
+    "Latitude":21.3340057,
+    "Longitude":-157.8794677
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Family Service & Auto Repair",
+    "Address":"2156 Kamehameha Highway., Honolulu HI 96819",
+    "Phone":"(808) 845-6877",
+    "City":"Honolulu",
+    "Latitude":21.3306402,
+    "Longitude":-157.8835023
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Fantastik Auto",
+    "Address":"2031 Colburn Street, Honolulu HI 96819",
+    "Phone":"(808) 842-3777",
+    "City":"Honolulu",
+    "Latitude":21.3289806,
+    "Longitude":-157.8833345
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Gentech Automotive",
+    "Address":"708 Bannister Street., Honolulu HI 96819",
+    "Phone":"(808) 845-9941",
+    "City":"Honolulu",
+    "Latitude":21.3322803,
+    "Longitude":-157.8823746
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Global Auto Repair",
+    "Address":"231-B Sand Island Access Road, Honolulu HI 96819",
+    "Phone":"(808) 848-0344",
+    "City":"Honolulu",
+    "Latitude":21.325875,
+    "Longitude":-157.8887463
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Goya's Garage",
+    "Address":"287 C Mokauea Street., Honolulu HI 96819",
+    "Phone":"(808) 679-8752",
+    "City":"Honolulu",
+    "Latitude":21.3247712,
+    "Longitude":-157.8842928
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"HI-Teq Auto Repair Shop",
+    "Address":"105 Puuhale Rd., Honolulu HI 96819",
+    "Phone":"(808) 843-0848",
+    "City":"Honolulu",
+    "Latitude":21.3223949,
+    "Longitude":-157.8890679
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Honolulu Buick GMC. Cadillac",
+    "Address":"2945 N Nimitz Highway, Honolulu HI 96819",
+    "Phone":"(808) 792-4568",
+    "City":"Honolulu",
+    "Latitude":21.3349736,
+    "Longitude":-157.903556
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Honolulu Volkswagen",
+    "Address":"2881 N Nimitz Highway, Honolulu HI 96819",
+    "Phone":"(808) 834-6200",
+    "City":"Honolulu",
+    "Latitude":21.3346855,
+    "Longitude":-157.9031124
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Ikeda's Auto Repair Inc.",
+    "Address":"710 Umi Street, Honolulu HI 96819",
+    "Phone":"(808) 847-4605",
+    "City":"Honolulu",
+    "Latitude":21.3334356,
+    "Longitude":-157.8833899
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Infiniti Of Honolulu",
+    "Address":"2845 Kilihau Street, Honolulu HI 96819",
+    "Phone":"(808) 275-3629",
+    "City":"Honolulu",
+    "Latitude":21.335639,
+    "Longitude":-157.9008387
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Ivans Psycles & Repairs LLC",
+    "Address":"2178 N. King Street., Honolulu HI 96819",
+    "Phone":"(808) 292-1301",
+    "City":"Honolulu",
+    "Latitude":21.3346665,
+    "Longitude":-157.8801024
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"JN Chevrolet",
+    "Address":"2770 Waiwai Lp, Honolulu HI 96819",
+    "Phone":"(808) 831-2560",
+    "City":"Honolulu",
+    "Latitude":21.3344716,
+    "Longitude":-157.9002923
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Jads Automotive",
+    "Address":"1810 Kalani Street, Honolulu HI 96819",
+    "Phone":"(808) 206-9080",
+    "City":"Honolulu",
+    "Latitude":21.3264368,
+    "Longitude":-157.8817791
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"KCK Auto And Diesel LLC",
+    "Address":"2821 Mokumoa Street, Honolulu HI 96819",
+    "Phone":"(808) 358-3038",
+    "City":"Honolulu",
+    "Latitude":21.341006,
+    "Longitude":-157.8962985
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Kenny's Multi Services LLC",
+    "Address":"1010 Paapu Street, Honolulu HI 96819",
+    "Phone":"(808) 479-3590",
+    "City":"Honolulu",
+    "Latitude":21.3027793,
+    "Longitude":-157.8733259
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Lim's Auto Service LLC",
+    "Address":"2855 B Kaihikapu Street, Honolulu HI 96819",
+    "Phone":"(808) 833-0654",
+    "City":"Honolulu",
+    "Latitude":21.3397431,
+    "Longitude":-157.898569
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"New City Nissan",
+    "Address":"2295 N. King Street, Honolulu HI 96819",
+    "Phone":"(808) 524-2111",
+    "City":"Honolulu",
+    "Latitude":21.3352272,
+    "Longitude":-157.8821221
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Okuhara Auto & Truck Repair Inc.",
+    "Address":"1734 Hau Street, Honolulu HI 96819",
+    "Phone":"(808) 842-0900",
+    "City":"Honolulu",
+    "Latitude":21.3266653,
+    "Longitude":-157.8811524
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Oscar's Automotive Service",
+    "Address":"345 Mokauea Street , Honolulu HI 96819",
+    "Phone":"(808) 847-3660",
+    "City":"Honolulu",
+    "Latitude":21.3261537,
+    "Longitude":-157.8830016
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Paul's Service & Repair Inc.",
+    "Address":"527 Puuhale Road, Honolulu HI 96819",
+    "Phone":"(808) 295-8523",
+    "City":"Honolulu",
+    "Latitude":21.3292173,
+    "Longitude":-157.8831211
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Penske Truck Leasing Co",
+    "Address":"819 Ahua Street., Honolulu HI 96819",
+    "Phone":"(808) 836-7800",
+    "City":"Honolulu",
+    "Latitude":21.3401265,
+    "Longitude":-157.8958308
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Platinum Detailing and Automobile Service LLC",
+    "Address":"1804 Republican Street, Honolulu HI 96819",
+    "Phone":"(808) 216-6688",
+    "City":"Honolulu",
+    "Latitude":21.3247721,
+    "Longitude":-157.8832363
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Polar Automotive Air Condition",
+    "Address":"960 Ahua Street #102, Honolulu HI 96819",
+    "Phone":"(808) 833-3772",
+    "City":"Honolulu",
+    "Latitude":21.3429766,
+    "Longitude":-157.8956925
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Robert's Hawaii Inc.",
+    "Address":"2665 Mokumoa Street, Honolulu HI 96819",
+    "Phone":"(808) 831-1565",
+    "City":"Honolulu",
+    "Latitude":21.339004,
+    "Longitude":-157.8942069
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Roy's Kalihi Automotive Center & Towing",
+    "Address":"1820 Hau Street, Honolulu HI 96819",
+    "Phone":"(808) 841-2214",
+    "City":"Honolulu",
+    "Latitude":21.3270977,
+    "Longitude":-157.8815395
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Servco Auto Honolulu",
+    "Address":"2850 Pukuloa Street #107, Honolulu HI 96819",
+    "Phone":"(808) 564-1150",
+    "City":"Honolulu",
+    "Latitude":21.3444103,
+    "Longitude":-157.8969389
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Servco Subaru",
+    "Address":"2819 Pukoloa Street, Honolulu HI 96819",
+    "Phone":"(808) 687-7614",
+    "City":"Honolulu",
+    "Latitude":21.3432045,
+    "Longitude":-157.8960104
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Servco Toyota Service Center",
+    "Address":"2841 Pukoloa Street., Honolulu HI 96819",
+    "Phone":"(808) 564-2841",
+    "City":"Honolulu",
+    "Latitude":21.3429721,
+    "Longitude":-157.8967895
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"TDK Repairs",
+    "Address":"2847 Awaawaloa Street, Honolulu HI 96819",
+    "Phone":"(808) 479-0822",
+    "City":"Honolulu",
+    "Latitude":21.3373931,
+    "Longitude":-157.8993836
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"TS Autoworks",
+    "Address":"1255 Mookaula Street, Honolulu HI 96819",
+    "Phone":"(808) 845-8228",
+    "City":"Honolulu",
+    "Latitude":21.3260137,
+    "Longitude":-157.8708978
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Tagami Auto Service Ltd.",
+    "Address":"1733 Kahai Street., Honolulu HI 96819",
+    "Phone":"(808) 841-5009",
+    "City":"Honolulu",
+    "Latitude":21.3229161,
+    "Longitude":-157.8848255
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Tim's Mobile Automotive Service",
+    "Address":"3229A Koapaka Street, Honolulu HI 96819",
+    "Phone":"(808) 836-1727",
+    "City":"Honolulu",
+    "Latitude":21.3353506,
+    "Longitude":-157.9133329
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Tom's Auto Body & Repairs Inc.",
+    "Address":"1918 Kalani Street., Honolulu HI 96819",
+    "Phone":"(808) 621-9145",
+    "City":"Honolulu",
+    "Latitude":21.3273777,
+    "Longitude":-157.8828502
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Ukee Service Inc.",
+    "Address":"2621 Waiwai Lp, Honolulu HI 96819",
+    "Phone":"(808) 956-8875",
+    "City":"Honolulu",
+    "Latitude":21.3331501,
+    "Longitude":-157.900818
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Wasa Electrical Services Inc.",
+    "Address":"1021 Kikowaena Pl Unit 2, Honolulu HI 96819",
+    "Phone":"(808) 839-2741",
+    "City":"Honolulu",
+    "Latitude":21.3423356,
+    "Longitude":-157.8922104
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Wrench Werks",
+    "Address":"2017 Homerule Street., Honolulu HI 96819",
+    "Phone":"(808) 376-3033",
+    "City":"Honolulu",
+    "Latitude":21.3257944,
+    "Longitude":-157.8859692
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Wrenchy's Auto Repairs LLC",
+    "Address":"156 Mokauea Street. #D-1, Honolulu HI 96819",
+    "Phone":"(808) 593-0940",
+    "City":"Honolulu",
+    "Latitude":21.3233592,
+    "Longitude":-157.8868615
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Yama's Auto Care LLC",
+    "Address":"501 Sumner Street #603, Honolulu HI 96819",
+    "Phone":"(808) 845-2666",
+    "City":"Honolulu",
+    "Latitude":21.3167016,
+    "Longitude":-157.8686082
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96819,
+    "Station Name":"Z Tech LLC",
+    "Address":"1725 Homerule Street , Honolulu HI 96819",
+    "Phone":"(808) 845-1720",
+    "City":"Honolulu",
+    "Latitude":21.3237303,
+    "Longitude":-157.8835758
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96821,
+    "Station Name":"Aina Haina",
+    "Address":"76 830 West Hind Drive, Honolulu HI 96821",
+    "Phone":"(808) 373-3992",
+    "City":"Honolulu",
+    "Latitude":21.2785688,
+    "Longitude":-157.7551046
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96822,
+    "Station Name":"Manoa Service Inc.",
+    "Address":"2927 E Manoa Rd , Honolulu HI 96822",
+    "Phone":"(808) 988-3622",
+    "City":"Honolulu",
+    "Latitude":21.3098442,
+    "Longitude":-157.8096424
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96825,
+    "Station Name":"KT's Auto Repair and Sales",
+    "Address":"501 Kealahou Street. A21, Honolulu HI 96825",
+    "Phone":"(808) 395-0184",
+    "City":"Honolulu",
+    "Latitude":21.2962779,
+    "Longitude":-157.6727896
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96825,
+    "Station Name":"Koko Marina",
+    "Address":"76 234 Lunalilo Hm Rd, Honolulu HI 96825",
+    "Phone":"(808) 395-2133",
+    "City":"Honolulu",
+    "Latitude":21.2781602,
+    "Longitude":-157.7035023
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Apex Motorsports LLC",
+    "Address":"1930 S Beretania Street, Honolulu HI 96826",
+    "Phone":"(808) 945-9400",
+    "City":"Honolulu",
+    "Latitude":21.2970732,
+    "Longitude":-157.8301979
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"JP Powersports LLC",
+    "Address":"1694 Kalakaua Avenue. Suite. 106, Honolulu HI 96826",
+    "Phone":"(808) 591-9999",
+    "City":"Honolulu",
+    "Latitude":21.2925014,
+    "Longitude":-157.8362909
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Jiffy Lube",
+    "Address":"2550 S Beretania Street, Honolulu HI 96826",
+    "Phone":"(808) 951-5433",
+    "City":"Honolulu",
+    "Latitude":21.2926757,
+    "Longitude":-157.8225127
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Magic Trading LLC",
+    "Address":"2310 Young Street., Honolulu HI 96826",
+    "Phone":"(808) 216-5122",
+    "City":"Honolulu",
+    "Latitude":21.2945262,
+    "Longitude":-157.8259932
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"McCully Union Service Auto Repairs",
+    "Address":"2105 S Beretania Street, Honolulu HI 96826",
+    "Phone":"(808) 947-4099",
+    "City":"Honolulu",
+    "Latitude":21.2956657,
+    "Longitude":-157.8278814
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Moped Doctors Inc.",
+    "Address":"2338 S. King Street., Honolulu HI 96826",
+    "Phone":"(808) 953-9438",
+    "City":"Honolulu",
+    "Latitude":21.2934903,
+    "Longitude":-157.8257023
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Punahou Auto Service",
+    "Address":"1558 S. King Street, Honolulu HI 96826",
+    "Phone":"(808) 941-7060",
+    "City":"Honolulu",
+    "Latitude":21.2973951,
+    "Longitude":-157.8361565
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96826,
+    "Station Name":"Tenneys Algaroba Auto Repair",
+    "Address":"1918 Algaroba Street., Honolulu HI 96826",
+    "Phone":"(808) 941-6855",
+    "City":"Honolulu",
+    "Latitude":21.294638,
+    "Longitude":-157.8310428
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96853,
+    "Station Name":"Bridgestone Firestone",
+    "Address":"Bldg 2073, HIckam Afb HI 96853",
+    "Phone":"(808) 423-8755",
+    "City":"HIckam Afb",
+    "Latitude":21.3359718,
+    "Longitude":-157.9556579
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96853,
+    "Station Name":"Hickam Auto Skills Center",
+    "Address":"4002 Moffet Street., Hickam AFB, Honolulu HI 96853",
+    "Phone":"(808) 449-2554",
+    "City":"Honolulu",
+    "Latitude":21.3317802,
+    "Longitude":-157.9343524
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96857,
+    "Station Name":"Bridgestone Retail Operations",
+    "Address":"Road A, Bldg 80, Schofield Barracks HI 96857",
+    "Phone":"(808) 624-0204",
+    "City":"Schofield Barracks",
+    "Latitude":21.484387,
+    "Longitude":-158.0473148
+  },
+  {
+    "County":"Honolulu",
+    "ZIP":96857,
+    "Station Name":"Schofield Barracks Automotive Self Help Garage",
+    "Address":"Bldg 910, Schofield Barracks HI 96857",
+    "Phone":"(808) 655-1367",
+    "City":"Schofield Barracks",
+    "Latitude":21.4954957,
+    "Longitude":-158.0626555
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96705,
+    "Station Name":"Hi-Tech Automotive Repair",
+    "Address":"4350 Waialo Road, Eleele HI 96705",
+    "Phone":"(808) 335-3643",
+    "City":"Eleele",
+    "Latitude":21.9014044,
+    "Longitude":-159.5865921
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96716,
+    "Station Name":"Bert's Auto Repair",
+    "Address":"5492 Hanapepe Rd , Hanapepe HI 96716",
+    "Phone":"(808) 335-5492",
+    "City":"Hanapepe",
+    "Latitude":21.9101789,
+    "Longitude":-159.5855514
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96716,
+    "Station Name":"Denny's Repair",
+    "Address":"4545 Kona Rd , Hanapepe HI 96716",
+    "Phone":"(808) 335-5534",
+    "City":"Hanapepe",
+    "Latitude":21.9108806,
+    "Longitude":-159.5882224
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96716,
+    "Station Name":"Western Motors Service, Inc.",
+    "Address":"1-3680 Kaumualii Highway, Hanapepe HI 96716",
+    "Phone":"(808) 335-5751",
+    "City":"Hanapepe",
+    "Latitude":21.9087419,
+    "Longitude":-159.5902462
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96746,
+    "Station Name":"Jason Cornelio",
+    "Address":"5611 Kawaihau Rd Unit A, Kapaa HI 96746",
+    "Phone":"(808) 354-5207",
+    "City":"Kapaa",
+    "Latitude":22.0974248,
+    "Longitude":-159.3330825
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96746,
+    "Station Name":"Manny's Repair Inc.",
+    "Address":"5685 Kawaihau Road, Kapaa HI 96746",
+    "Phone":"(808) 823-6749",
+    "City":"Kapaa",
+    "Latitude":22.0988444,
+    "Longitude":-159.3347104
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96746,
+    "Station Name":"Professional Automotive Service",
+    "Address":"954 Kipuni Way, Kapaa HI 96746",
+    "Phone":"(808) 822-7507",
+    "City":"Kapaa",
+    "Latitude":22.0650902,
+    "Longitude":-159.3201651
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96746,
+    "Station Name":"Safety Check N Service Kauai Inc.",
+    "Address":"944 Kipuni Way, Kapaa HI 96746",
+    "Phone":"(209) 814-4436",
+    "City":"Kapaa",
+    "Latitude":22.0649562,
+    "Longitude":-159.3202353
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96753,
+    "Station Name":"Mana Motors",
+    "Address":"PMRF Building 1276, Kekaha HI 96753",
+    "Phone":"(808) 335-4439",
+    "City":"Kekaha",
+    "Latitude":21.9692675,
+    "Longitude":-159.7163591
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96754,
+    "Station Name":"Scott's Auto Service",
+    "Address":"4321 Aalona Street, Kilauea HI 96754",
+    "Phone":"(808) 828-1975",
+    "City":"Kilauea",
+    "Latitude":22.2094246,
+    "Longitude":-159.4077915
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96756,
+    "Station Name":"Hadama service",
+    "Address":"5161 Koloa Rd , Koloa HI 96756",
+    "Phone":"(808) 742-1401",
+    "City":"Koloa",
+    "Latitude":21.9055827,
+    "Longitude":-159.4690037
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"A & B fleet services",
+    "Address":"1821 Leleiona Street., Lihue HI 96766",
+    "Phone":"(808) 245-1980",
+    "City":"Lihue",
+    "Latitude":21.9630888,
+    "Longitude":-159.3962938
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Aloha Auto Group",
+    "Address":"4359 Pahee Street., Lihue HI 96766",
+    "Phone":"(808) 482-2000",
+    "City":"Lihue",
+    "Latitude":21.9672496,
+    "Longitude":-159.3849076
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Aloha Equipment Rentals",
+    "Address":"1696 Haleukana Street, Lihue HI 96766",
+    "Phone":"(808) 241-7368",
+    "City":"Lihue",
+    "Latitude":21.9602264,
+    "Longitude":-159.3962195
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Andy's Machine Shop",
+    "Address":"3116 Hoolako, Lihue HI 96766",
+    "Phone":"(808) 245-2614",
+    "City":"Lihue",
+    "Latitude":21.9708555,
+    "Longitude":-159.3580595
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"D & W services",
+    "Address":"2989 Aukele Street A, Lihue HI 96766",
+    "Phone":"(808) 245-2308",
+    "City":"Lihue",
+    "Latitude":21.965819,
+    "Longitude":-159.3569631
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Dandi's Service LLC",
+    "Address":"3-4280 KuhioHighway, Hanamaulu HI 96766",
+    "Phone":"(808) 245-3531",
+    "City":"Hanamaulu",
+    "Latitude":21.9948589,
+    "Longitude":-159.3536908
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Destination Autoworks",
+    "Address":"4490 Kolopa Street, Lihue HI 96766",
+    "Phone":"(808) 246-9700",
+    "City":"Lihue",
+    "Latitude":21.9694262,
+    "Longitude":-159.3840207
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Gary's Service, Inc.",
+    "Address":"4469 Kolopa Street, Lihue HI 96766",
+    "Phone":"(808) 245-2221",
+    "City":"Lihue",
+    "Latitude":21.9686005,
+    "Longitude":-159.3834571
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Harbor Motors Inc.",
+    "Address":"3371 Wilcox Road Unit 201, Lihue HI 96766",
+    "Phone":"(808) 634-5829",
+    "City":"Lihue",
+    "Latitude":21.9572407,
+    "Longitude":-159.3564765
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Howard Costa's Auto Repair",
+    "Address":"3009 Peleke Street, Lihue HI 96766",
+    "Phone":"(808) 245-6418",
+    "City":"Lihue",
+    "Latitude":21.9666773,
+    "Longitude":-159.3564716
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"JB's Repair, LLC",
+    "Address":"3148 O'Ihana Street Bay 12 & 13, Lihue HI 96766",
+    "Phone":"(808) 241-7000",
+    "City":"Lihue",
+    "Latitude":21.9687701,
+    "Longitude":-159.3570886
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"KQ Speedie Lube 2 LLC",
+    "Address":"3148 Oihana Street Bay 5 & 6, Lihue HI 96766",
+    "Phone":"(808) 241-7845",
+    "City":"Lihue",
+    "Latitude":21.9687701,
+    "Longitude":-159.3570886
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Auto Repair LLC",
+    "Address":"1629 Haleukana Street, Lihue HI 96766",
+    "Phone":"(808) 245-8055",
+    "City":"Lihue",
+    "Latitude":21.9604786,
+    "Longitude":-159.394517
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Foreign Cars",
+    "Address":"1890 Leleiona Street, Lihue HI 96766",
+    "Phone":"(808) 245-8577",
+    "City":"Lihue",
+    "Latitude":21.9642517,
+    "Longitude":-159.3944601
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Harley-Davidson",
+    "Address":"3-1878 Kaumuali'I Highway. , Lihue HI 96766",
+    "Phone":"(808) 241-7020",
+    "City":"Lihue",
+    "Latitude":21.9663711,
+    "Longitude":-159.3960115
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Nursery & Landscaping Inc.",
+    "Address":"3-1550 Kaumualii Highway., Lihue HI 96766",
+    "Phone":"(808) 245-7747",
+    "City":"Lihue",
+    "Latitude":21.9634595,
+    "Longitude":-159.4030228
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Toyota, Inc.",
+    "Address":"2477 Ulu Maika Street, Lihue HI 96766",
+    "Phone":"(808) 564-1951",
+    "City":"Lihue",
+    "Latitude":21.9694199,
+    "Longitude":-159.383224
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Kauai Vehicle Service Center",
+    "Address":"3124 Peleke Street, Lihue HI 96766",
+    "Phone":"(808) 246-6711",
+    "City":"Lihue",
+    "Latitude":21.9685569,
+    "Longitude":-159.354096
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"King Auto Center Inc.",
+    "Address":"4330 Kukui Grove Street, Lihue HI 96766",
+    "Phone":"(808) 245-5977",
+    "City":"Lihue",
+    "Latitude":21.9698129,
+    "Longitude":-159.3757514
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"KuhioAuto Group",
+    "Address":"3050 Holako Street., Lihue HI 96766",
+    "Phone":"(808) 245-3673",
+    "City":"Lihue",
+    "Latitude":21.9697736,
+    "Longitude":-159.3589639
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"KuhioAuto Group",
+    "Address":"3033 Aukele Street, Lihue HI 96766",
+    "Phone":"(808) 245-6731",
+    "City":"Lihue",
+    "Latitude":21.9677096,
+    "Longitude":-159.3571634
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Midas Auto Service",
+    "Address":"4230 Rice Street., Lihue HI 96766",
+    "Phone":"(808) 677-6180",
+    "City":"Lihue",
+    "Latitude":21.9719619,
+    "Longitude":-159.363835
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Morales Auto Workshop",
+    "Address":"3-4051 Kuhio Hwy # A, Lihue, HI 96766",
+    "Phone":"(808) 639-9314",
+    "City":"Lihue",
+    "Latitude":21.9949457,
+    "Longitude":-159.355247
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Pacific Service & Development Corporation",
+    "Address":"4004 Rice Street, Lihue HI 96766",
+    "Phone":"(808) 245-9502",
+    "City":"Lihue",
+    "Latitude":21.9685744,
+    "Longitude":-159.3580993
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Soriano Auto Service",
+    "Address":"3081 Peleke Street. Suite C, Lihue HI 96766",
+    "Phone":"(808) 245-7710",
+    "City":"Lihue",
+    "Latitude":21.9680645,
+    "Longitude":-159.3551873
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96766,
+    "Station Name":"Tire Warehouse Kauai",
+    "Address":"3028 Aukele Street, Lihue HI 96766",
+    "Phone":"(808) 245-6754",
+    "City":"Lihue",
+    "Latitude":21.9674103,
+    "Longitude":-159.356527
+  },
+  {
+    "County":"Kauai",
+    "ZIP":96796,
+    "Station Name":"M & H Service",
+    "Address":"9937 Waimea Road, Waimea HI 96796",
+    "Phone":"(808) 338-9111",
+    "City":"Waimea",
+    "Latitude":21.9550121,
+    "Longitude":-159.6653485
+  },
+  {
+    "County":"Maui",
+    "ZIP":96713,
+    "Station Name":"Heavenly Hana LLC",
+    "Address":"5170 Hana Highway, Hana HI 96713",
+    "Phone":"(808) 268-2815",
+    "City":"Hana",
+    "Latitude":20.7501781,
+    "Longitude":-155.986695
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Acura of Maui",
+    "Address":"404 Kele Street, Kahului HI 96732",
+    "Phone":"(808) 871-1234",
+    "City":"Kahului",
+    "Latitude":20.8868226,
+    "Longitude":-156.4539442
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Aloha Kia Maui",
+    "Address":"89 E Wakea Avenue, Kahului, HI 96732",
+    "Phone":"(808) 877-4545",
+    "City":"Kahului",
+    "Latitude":20.8857006,
+    "Longitude":-156.4632383
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Aloha Shell Service",
+    "Address":"110 South Puunene Avenue, Kahului HI 96732",
+    "Phone":"(808) 877-5894",
+    "City":"Kahului",
+    "Latitude":20.8881214,
+    "Longitude":-156.4663286
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Auto Trends Maui",
+    "Address":"395 Dairy Road, Unit O, Kahului HI 96732",
+    "Phone":"(808) 877-4200",
+    "City":"Kahului",
+    "Latitude":20.8845706,
+    "Longitude":-156.4539812
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Glenn's Automotive Inc.",
+    "Address":"283 Lalo Street, Kahului HI 96732",
+    "Phone":"(808) 573-0600",
+    "City":"Kahului",
+    "Latitude":20.8849564,
+    "Longitude":-156.4576398
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Go Rent A Car",
+    "Address":"2000 Maui Veterans Highway, Kahului HI 96732",
+    "Phone":"(808) 866-8191",
+    "City":"Kahului",
+    "Latitude":20.8658039,
+    "Longitude":-156.4561353
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Goodyear Auto Service Center",
+    "Address":"121 Alamaha Street, Kahului HI 96732",
+    "Phone":"(808) 871-7132",
+    "City":"Kahului",
+    "Latitude":20.8894773,
+    "Longitude":-156.4618867
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Hex Safety Station",
+    "Address":"305 Hukilike Street Suite 3A, Kahului HI 96732",
+    "Phone":"(808) 298-9111",
+    "City":"Kahului",
+    "Latitude":20.8855059,
+    "Longitude":-156.4602467
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Island Honda",
+    "Address":"110 S. Hana Highway, Kahului HI 96732",
+    "Phone":"(808) 873-8084",
+    "City":"Kahului",
+    "Latitude":20.8901791,
+    "Longitude":-156.4614745
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Jim Falk Chrysler Dodge Jeep Ram",
+    "Address":"86 Hololea Street, Kahului HI 96732",
+    "Phone":"(808) 893-7750",
+    "City":"Kahului",
+    "Latitude":20.8862789,
+    "Longitude":-156.4635671
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Jim Falk Motors of Maui",
+    "Address":"260 Hana Highway, Kahului HI 96732",
+    "Phone":"(808) 270-2601",
+    "City":"Kahului",
+    "Latitude":20.888227,
+    "Longitude":-156.4583669
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Kahului Trucking & Storage, Inc.",
+    "Address":"140 Hobron Avenue Kahului HI 96732",
+    "Phone":"(808) 270-3715",
+    "City":"Kahului",
+    "Latitude":20.8954318,
+    "Longitude":-156.4623196
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Lloyd's Kahului Chevron",
+    "Address":"130 West Kamehameha Avenue, Kahului HI 96732",
+    "Phone":"(808) 877-5293",
+    "City":"Kahului",
+    "Latitude":20.8878616,
+    "Longitude":-156.469583
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Maui Express Lube",
+    "Address":"81 Alae Street, Kahului HI 96732",
+    "Phone":"(808) 875-8882",
+    "City":"Kahului",
+    "Latitude":20.8789412,
+    "Longitude":-156.4481021
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Maui Fix Auto",
+    "Address":"343 Hanamau Street, Kahului HI 96732",
+    "Phone":"(808) 877-3731",
+    "City":"Kahului",
+    "Latitude":20.8874923,
+    "Longitude":-156.4585174
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Maui Oil Change & Tune-up",
+    "Address":"41 E. Wakea Avenuenue, Kahului HI 96732",
+    "Phone":"(808) 877-7522",
+    "City":"Kahului",
+    "Latitude":20.8854122,
+    "Longitude":-156.4638494
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Mercedes-Benz of Maui",
+    "Address":"69 Hobron Avenue, Kahului HI 96732",
+    "Phone":"(808) 216-3617",
+    "City":"Kahului",
+    "Latitude":20.8923081,
+    "Longitude":-156.462141
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"New Wave Auto Care, Body, and Paint",
+    "Address":"331 Ano Street Suite E, Kahului HI 96732",
+    "Phone":"(808) 877-8800",
+    "City":"Kahului",
+    "Latitude":20.8864302,
+    "Longitude":-156.4770469
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"NextGen Automotive Center LLC",
+    "Address":"106 Kane Street, Kahului HI 96732",
+    "Phone":"(808) 264-5050",
+    "City":"Kahului",
+    "Latitude":20.8860561,
+    "Longitude":-156.4732261
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Ohana Automotive Group",
+    "Address":"410 Koloa Street, Kahului HI 96732",
+    "Phone":"(808) 419-7400",
+    "City":"Kahului",
+    "Latitude":20.8871413,
+    "Longitude":-156.4543562
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Servco Subaru",
+    "Address":"781 Hookele Street, Kahului HI 96732",
+    "Phone":"(808) 877-6578",
+    "City":"Kahului",
+    "Latitude":20.879544,
+    "Longitude":-156.44705
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Servco lexus maui",
+    "Address":"445 Kele Street, Kahului HI 96732",
+    "Phone":"(808) 877-4411",
+    "City":"Kahului",
+    "Latitude":20.8870617,
+    "Longitude":-156.4524736
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"South Pacific Motors Inc.",
+    "Address":"Central Maui Baseyard Unit 90 Makeke Place, Maui Veterans Hwy, Puunene, HI 96784",
+    "Phone":"(808) 868-4559",
+    "City":"Kahului",
+    "Latitude":20.8399144,
+    "Longitude":-156.4618314
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Tavares Trucking",
+    "Address":"2000 Veterans Highway, Kahului HI 96732",
+    "Phone":"(808) 357-0066",
+    "City":"Kahului",
+    "Latitude":20.8658039,
+    "Longitude":-156.4561353
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Tires Warehouse Hawaii",
+    "Address":"181 Dairy Road, Kahului HI 96732",
+    "Phone":"(808) 877-2091",
+    "City":"Kahului",
+    "Latitude":20.8803219,
+    "Longitude":-156.4572364
+  },
+  {
+    "County":"Maui",
+    "ZIP":96732,
+    "Station Name":"Valley Isle Motors",
+    "Address":"221 S Puunene Avenue, Kahului HI 96732",
+    "Phone":"(808) 877-7708",
+    "City":"Kahului",
+    "Latitude":20.8867303,
+    "Longitude":-156.4645722
+  },
+  {
+    "County":"Maui",
+    "ZIP":96748,
+    "Station Name":"Bobo's Auto Service",
+    "Address":"16 Kamoi Street, Kaunakakai HI 96748",
+    "Phone":"(808) 553-3443",
+    "City":"Kaunakakai",
+    "Latitude":21.0895323,
+    "Longitude":-157.019356
+  },
+  {
+    "County":"Maui",
+    "ZIP":96748,
+    "Station Name":"Rawlin's Enterprises, Inc.",
+    "Address":"20 Mauna Loa Highway., Kaunakakai HI 96748",
+    "Phone":"(808) 553-3214",
+    "City":"Kaunakakai",
+    "Latitude":21.089759,
+    "Longitude":-157.0228564
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"All Stars Garage",
+    "Address":"330 Ohukai Rd. Bldg. 1, Kihei HI 96753",
+    "Phone":"(808) 870-2684",
+    "City":"Kihei",
+    "Latitude":20.7733408,
+    "Longitude":-156.4508464
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Bronco Garage",
+    "Address":"340 Ohukai Road Suite 201, Kihei HI 96753",
+    "Phone":"(808) 250-3319",
+    "City":"Kihei",
+    "Latitude":20.7740747,
+    "Longitude":-156.4504655
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Goodyear Auto Service Center Kihei",
+    "Address":"105 Halekuai Street, Kihei HI 96753",
+    "Phone":"(808) 891-1702",
+    "City":"Kihei",
+    "Latitude":20.7451876,
+    "Longitude":-156.4515779
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Kihei Auto Sales",
+    "Address":"368 Huku Lii Place, Kihei HI 96753",
+    "Phone":"(808) 875-8782",
+    "City":"Kihei",
+    "Latitude":20.7739774,
+    "Longitude":-156.4526442
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Kihei Auto Sales Inc.",
+    "Address":"2675 Waiwai Place, Kihei HI 96753",
+    "Phone":"(808) 875-8882",
+    "City":"Kihei",
+    "Latitude":20.7450003,
+    "Longitude":-156.4492605
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Kihei Auto Sales Inc.",
+    "Address":"177 Hale Kuai Street, Kihei HI 96753",
+    "Phone":"(808) 875-8782",
+    "City":"Kihei",
+    "Latitude":20.7454198,
+    "Longitude":-156.4495599
+  },
+  {
+    "County":"Maui",
+    "ZIP":96753,
+    "Station Name":"Ohana Automotive Group",
+    "Address":"411 Huku Lii Pl #103, Kihei HI 96753",
+    "Phone":"(808) 240-4769",
+    "City":"Kihei",
+    "Latitude":20.7719782,
+    "Longitude":-156.4516712
+  },
+  {
+    "County":"Maui",
+    "ZIP":96761,
+    "Station Name":"Aloha Motor Sports LLC",
+    "Address":"30 Halawai Drive, Lahaina HI 96761",
+    "Phone":"(808) 667-7000",
+    "City":"Lahaina",
+    "Latitude":20.9421535,
+    "Longitude":-156.6888173
+  },
+  {
+    "County":"Maui",
+    "ZIP":96761,
+    "Station Name":"Juan's Auto Repair",
+    "Address":"283 Wili Ko Place, Lahaina HI 96761",
+    "Phone":"(808) 868-0991",
+    "City":"Lahaina",
+    "Latitude":20.8818464,
+    "Longitude":-156.6791966
+  },
+  {
+    "County":"Maui",
+    "ZIP":96761,
+    "Station Name":"Kaanapali Safety Check",
+    "Address":"31 Halawai Drive , Lahaina HI 96761",
+    "Phone":"(808) 667-2886",
+    "City":"Lahaina",
+    "Latitude":20.9426292,
+    "Longitude":-156.6882811
+  },
+  {
+    "County":"Maui",
+    "ZIP":96761,
+    "Station Name":"Tires Warehouse West",
+    "Address":"41 KupuoHI Street, Lahaina HI 96761",
+    "Phone":"(808) 661-3003",
+    "City":"Lahaina",
+    "Latitude":20.8845047,
+    "Longitude":-156.6779392
+  },
+  {
+    "County":"Maui",
+    "ZIP":96761,
+    "Station Name":"West Maui Safety Check",
+    "Address":"1000 Limahana Pl. #J, Lahaina HI 96761",
+    "Phone":"(808) 661-9239",
+    "City":"Lahaina",
+    "Latitude":20.8810692,
+    "Longitude":-156.6792346
+  },
+  {
+    "County":"Maui",
+    "ZIP":96763,
+    "Station Name":"Pulama Lanai",
+    "Address":"949 Lanai Avenue, Lanai City HI 96763",
+    "Phone":"(808) 565-3615",
+    "City":"Lanai City",
+    "Latitude":20.8232248,
+    "Longitude":-156.9178317
+  },
+  {
+    "County":"Maui",
+    "ZIP":96790,
+    "Station Name":"Kula Auto LLC",
+    "Address":"4836 Lower Kula Road, Kula HI 96790",
+    "Phone":"(808) 878-6461",
+    "City":"Kula",
+    "Latitude":20.7559604,
+    "Longitude":-156.3276248
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"1320 Automotive LLC",
+    "Address":"768 Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 244-6755",
+    "City":"Wailuku",
+    "Latitude":20.9019359,
+    "Longitude":-156.4867431
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Aikane Auto Repair",
+    "Address":"261 Hookahi Street, Wailuku HI 96793",
+    "Phone":"(808) 244-4188",
+    "City":"Wailuku",
+    "Latitude":20.9033134,
+    "Longitude":-156.4853432
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Chan's Autobody",
+    "Address":"241 Hookahi Street, Wailuku HI 96793",
+    "Phone":"(808) 244-6888",
+    "City":"Wailuku",
+    "Latitude":20.9030756,
+    "Longitude":-156.4851863
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Cycle City Maui",
+    "Address":"890 Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 877-7433",
+    "City":"Wailuku",
+    "Latitude":20.9016202,
+    "Longitude":-156.4872886
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Ekahi Automotive Center",
+    "Address":"236 Mamo Place, Wailuku HI 96793",
+    "Phone":"(808) 242-0808",
+    "City":"Wailuku",
+    "Latitude":20.9013444,
+    "Longitude":-156.4888446
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"I.H. Auto Service",
+    "Address":"1161 F Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 249-2027",
+    "City":"Wailuku",
+    "Latitude":20.8977042,
+    "Longitude":-156.4902102
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Kiwi Car Care Ltd",
+    "Address":"362 E Uahi Way, Wailuku HI 96793",
+    "Phone":"(808) 242-7743",
+    "City":"Wailuku",
+    "Latitude":20.8503037,
+    "Longitude":-156.48901
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Maui Auto Care",
+    "Address":"736 Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 666-3249",
+    "City":"Wailuku",
+    "Latitude":20.9027163,
+    "Longitude":-156.4851536
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"PD's Repair Service",
+    "Address":"1354 Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 877-2144",
+    "City":"Wailuku",
+    "Latitude":20.8956096,
+    "Longitude":-156.4930121
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Pacific Auto Maintenance & Repair LLC",
+    "Address":"1866 Wili Pa Lp, Wailuku HI 96793",
+    "Phone":"(808) 877-2889",
+    "City":"Wailuku",
+    "Latitude":20.8937455,
+    "Longitude":-156.5000232
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Patao Gas & Go",
+    "Address":"744 Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 242-5567",
+    "City":"Wailuku",
+    "Latitude":20.9025511,
+    "Longitude":-156.4858595
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Safety Inspection Services Maui LLC",
+    "Address":"986 Lower Main Street., Wailuku HI 96793",
+    "Phone":"(808) 866-3378",
+    "City":"Wailuku",
+    "Latitude":20.9000131,
+    "Longitude":-156.4889726
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Truck Shop Maui",
+    "Address":"1188-B, Lower Main Street, Wailuku HI 96793",
+    "Phone":"(808) 868-4809",
+    "City":"Wailuku",
+    "Latitude":20.8978378,
+    "Longitude":-156.4911228
+  },
+  {
+    "County":"Maui",
+    "ZIP":96793,
+    "Station Name":"Wailuku Automotive",
+    "Address":"1726 Mill Street, Wailuku HI 96793",
+    "Phone":"(808) 244-3322",
+    "City":"Wailuku",
+    "Latitude":20.8928765,
+    "Longitude":-156.4988887
+  }
+]
