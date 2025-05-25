@@ -19,6 +19,7 @@ const HAWAIIAN_ISLANDS_BOUNDS = {
 
 let safetyStations = [];
 let userLocation = null;
+let map = null;
 
 // DOM elements
 const locateBtn = document.getElementById('locateBtn');
@@ -89,8 +90,8 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
   return R * c;
 }
 
-// Find nearest stations
-function findNearestStations(userLat, userLng, limit = 6) {
+// Find nearest stations with smart filtering
+function findNearestStations(userLat, userLng) {
   const stationsWithDistance = safetyStations.map(station => ({
     name: station['Station Name'],
     address: station.Address,
@@ -101,9 +102,88 @@ function findNearestStations(userLat, userLng, limit = 6) {
     distance: calculateDistance(userLat, userLng, station.Latitude, station.Longitude)
   }));
 
-  return stationsWithDistance.sort((a, b) => a.distance - b.distance).slice(0, limit);
+  // Sort by distance
+  const sortedStations = stationsWithDistance.sort((a, b) => a.distance - b.distance);
+  
+  // Logic: Show stations within 10 miles, but at least 4 stations within 25 miles
+  const stationsWithin10Miles = sortedStations.filter(s => s.distance <= 10);
+  
+  if (stationsWithin10Miles.length >= 4) {
+    return stationsWithin10Miles;
+  } else {
+    // If fewer than 4 within 10 miles, show the 4 closest within 25 miles
+    const stationsWithin25Miles = sortedStations.filter(s => s.distance <= 25);
+    return stationsWithin25Miles.slice(0, 4);
+  }
 }
 
+// Initialize map
+function initializeMap(userLat, userLng, nearestStations) {
+  map = L.map('map');
+  
+  // Use Esri satellite imagery for Hawaii
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '© Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
+  }).addTo(map);
+
+  // Add user location marker
+  const userIcon = L.divIcon({
+    html: `<div style="
+      font-size: 20px;
+      text-align: center;
+      line-height: 1;
+      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+    ">🚗</div>`,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+    className: 'user-marker'
+  });
+  L.marker([userLat, userLng], { icon: userIcon })
+   .addTo(map)
+   .bindPopup('<strong style="color: #FF6B6B;">Your Location</strong>')
+   .openPopup();
+
+  // Add station markers
+  nearestStations.forEach((station) => {
+    const stationIcon = L.divIcon({
+      html: `<div style="
+        font-size: 18px;
+        text-align: center;
+        line-height: 1;
+        filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+      ">🌿</div>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+      className: 'station-marker'
+    });
+    
+    L.marker([station.lat, station.lng], { icon: stationIcon })
+      .addTo(map)
+      .bindPopup(`
+        <div style="min-width: 200px;">
+          <strong style="color: #333; font-size: 14px;">${station.name}</strong><br>
+          <span style="color: #666; font-size: 12px;">${station.address}</span><br>
+          <span style="color: #28a391; font-size: 12px; font-weight: 500;">${station.phone}</span>
+        </div>
+      `);
+  });
+
+  // Determine zoom level and center based on stations within 10 miles
+  const stationsWithin10Miles = nearestStations.filter(s => s.distance <= 10);
+  
+  if (stationsWithin10Miles.length > 0) {
+    // Show user location and all stations within 10 miles, zoomed as close as possible
+    const allPoints = [[userLat, userLng], ...stationsWithin10Miles.map(s => [s.lat, s.lng])];
+    const markers = [L.marker([userLat, userLng]), ...stationsWithin10Miles.map(s => L.marker([s.lat, s.lng]))];
+    const group = new L.featureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.1));
+  } else {
+    // No stations within 10 miles - show user location and closest station, zoomed as close as possible
+    const nearestStation = nearestStations[0];
+    const bounds = L.latLngBounds([[userLat, userLng], [nearestStation.lat, nearestStation.lng]]);
+    map.fitBounds(bounds.pad(0.2));
+  }
+}
 // Display stations list
 function displayStationsList(stations) {
   stationListEl.innerHTML = '';
@@ -118,20 +198,17 @@ function displayStationsList(stations) {
     const stationCard = document.createElement('div');
     stationCard.className = 'card';
     stationCard.innerHTML = `
-      <div>
-        <h4 style="margin-bottom:0.5rem;color:var(--font-dark);">${station.name}</h4>
-        <p style="margin-bottom:0.25rem;color:#666;">
-          <a href="${mapsUrl}" target="_blank" style="color:#666;text-decoration:none;">
-            📍 ${station.address}
-          </a>
-        </p>
-        <p style="margin:0;">
-          <a href="${phoneUrl}" style="color:var(--brand-teal);text-decoration:none;font-weight:500;">
-            📞 ${station.phone}
-          </a>
-        </p>
-      </div>
-      <div class="distance">${station.distance.toFixed(1)} mi</div>
+      <h4 style="margin-bottom:0.5rem;color:var(--font-dark);">${station.name}</h4>
+      <p style="margin-bottom:0.25rem;color:#666;">
+        <a href="${mapsUrl}" target="_blank" style="color:#666;text-decoration:none;">
+          📍 ${station.address}
+        </a>
+      </p>
+      <p style="margin:0;">
+        <a href="${phoneUrl}" style="color:var(--brand-teal);text-decoration:none;font-weight:500;">
+          📞 ${station.phone}
+        </a>
+      </p>
     `;
     stationListEl.appendChild(stationCard);
   });
@@ -236,7 +313,12 @@ async function getUserLocationAndFindStations() {
 
       // Show results
       resultsEl.removeAttribute('hidden');
-      displayStationsList(nearestStations);
+      
+      // Initialize map and display results
+      setTimeout(() => {
+        initializeMap(userLocation.lat, userLocation.lng, nearestStations);
+        displayStationsList(nearestStations);
+      }, 100);
     },
     function(error) {
       console.error('Geolocation error:', error);
@@ -270,8 +352,16 @@ async function getUserLocationAndFindStations() {
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, setting up event listeners');
   
-  // Button is ready to use immediately
-  locateBtn.addEventListener('click', function(e) {
+  // Get the button element
+  const btn = document.getElementById('locateBtn');
+  
+  if (!btn) {
+    console.error('Button not found!');
+    return;
+  }
+  
+  // Add click handler
+  btn.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('Button clicked!');
     getUserLocationAndFindStations();

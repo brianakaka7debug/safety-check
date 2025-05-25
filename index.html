@@ -35,6 +35,8 @@
   </style>
   <!--  Main stylesheet (everything below the fold)  -->
   <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS for maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
   <header class="hero">
@@ -44,9 +46,12 @@
     <div id="status" hidden>Finding nearby safety check stations…</div>
   </header>
   <section id="results" hidden>
+    <div id="map"></div>
     <h3>Nearest Safety Check Stations</h3>
     <div id="stationList"></div>
   </section>
+  <!-- Leaflet JavaScript for maps -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- Your logic, loaded last with defer so it never blocks rendering -->
   <script src="app.js" defer></script>
 </body>
