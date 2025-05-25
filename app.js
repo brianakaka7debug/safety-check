@@ -1,40 +1,5 @@
 // Big Island Safety Check Station Finder
-// Refactored JavaScript with real Hawaii safety station data
-
-// Real safety check stations data for Big Island (Hawaii County only)
-const safetyStations = [
-  { name: "DT Customs", address: "83-5326 Mamalahoa Highway, Captain Cook HI 96704", phone: "(808) 938-6063", lat: 19.4478643, lng: -155.8794948 },
-  { name: "Cartow Kohala", address: "55-510 Hawi Rd., Hawi HI 96719", phone: "(808) 889-1061", lat: 20.2376651, lng: -155.8309846 },
-  { name: "AKM Performance LLC", address: "66 Kukila Street., Hilo HI 96720", phone: "(808) 756-4859", lat: 19.7023384, lng: -155.0599128 },
-  { name: "Aloha Kia Hilo", address: "226 Kanoelehua Avenue, Hilo HI 96720", phone: "(808) 935-3500", lat: 19.7193486, lng: -155.0647679 },
-  { name: "Big Island Honda-Hilo", address: "124 Wiwoole Street, Hilo HI 96720", phone: "(808) 961-5505", lat: 19.7023527, lng: -155.0650399 },
-  { name: "Big Island Toyota, Inc.", address: "811 Kanoelehua, Hilo HI 96720", phone: "(808) 974-2237", lat: 19.7061143, lng: -155.0634478 },
-  { name: "Cal's Union Service", address: "56 E. Puainako Street, Hilo HI 96720", phone: "(808) 959-9860", lat: 19.6946705, lng: -155.0665988 },
-  { name: "Downtown Texaco", address: "192 Kinoole Street., Hilo HI 96720", phone: "(808) 935-8613", lat: 19.7235342, lng: -155.0883261 },
-  { name: "Firestone Complete Auto Care", address: "26 Kekela Street, Hilo HI 96720", phone: "(808) 959-7654", lat: 19.6959845, lng: -155.0664163 },
-  { name: "Lex Brodie's", address: "1095 Kilauea Avenue., Hilo HI 96720", phone: "(808) 985-8473", lat: 19.7123553, lng: -155.0768369 },
-  { name: "Orchid Isle Auto Center", address: "1030 Kanoelehua Avenue, Hilo HI 96720", phone: "(808) 935-1191", lat: 19.6997056, lng: -155.0659542 },
-  { name: "Hualalai garage", address: "77-6069 Mamalahoa Highway, Holualoa HI 96725", phone: "(808) 324-4772", lat: 19.6096659, lng: -155.9493458 },
-  { name: "Waikoloa automotive", address: "68-1897 Pua Melia Street., Waikoloa HI 96738", phone: "(808) 883-0888", lat: 19.9262132, lng: -155.7873643 },
-  { name: "All About Autos Hawaii Inc.", address: "73-5580 Maiau Street, Kailua Kona HI 96740", phone: "(808) 334-1994", lat: 19.6864636, lng: -156.0181318 },
-  { name: "Big Island Toyota Kona", address: "74-5504 Kaiwi Street., Kailua Kona HI 96740", phone: "(808) 329-4520", lat: 19.6462868, lng: -156.0011803 },
-  { name: "Goodyear Tire and Rubber Company", address: "74-5488 Kaiwi Street., Kailua Kona HI 96740", phone: "(808) 329-1750", lat: 19.6474824, lng: -156.0009577 },
-  { name: "KN Mazda, Subaru, Hyundai", address: "75-5793 Kuakini Highway, Kailua Kona HI 96740", phone: "(808) 329-5274", lat: 19.6361744, lng: -155.9881794 },
-  { name: "Kona Dodge", address: "76-6353 Kuakini Highway, Kailua Kona HI 96740", phone: "(808) 329-4408", lat: 19.6098508, lng: -155.9647437 },
-  { name: "Lex Brodie Tire Co. Kona", address: "75-5570 Kuakini Highway, Kailua Kona HI 96740", phone: "(808) 329-8826", lat: 19.6416486, lng: -156.0008192 },
-  { name: "Tony Honda Kona", address: "75-5608 Kuakini Highway, Kailua Kona HI 96740", phone: "(808) 329-8101", lat: 19.6422239, lng: -155.9983699 },
-  { name: "Gearheadz Auto Salon", address: "64-1013 Mamalahoa Highway. #2,#3, Kamuela HI 96743", phone: "(808) 885-0000", lat: 20.0256135, lng: -155.6575465 },
-  { name: "Hawaii Tire Company, LLC, Lex Brodie's Tire Co.", address: "67-1185 Mamalahoa Highway. Bldg. I, Kamuela HI 96743", phone: "(808) 885-5959", lat: 20.0206399, lng: -155.667106 },
-  { name: "RT's Service", address: "64-5223 Kauakea Rd, Waimea HI 96743", phone: "(808) 885-4488", lat: 20.040267, lng: -155.616308 },
-  { name: "Eddie's Auto Diagnostic & Repair", address: "16-768 Hoawa Street, Keaau HI 96749", phone: "(808) 966-8594", lat: 19.6241792, lng: -155.0358762 },
-  { name: "Silva's Service", address: "15-5014 28th Ave, Keaau HI 96749", phone: "(808) 966-8580", lat: 19.5750555, lng: -154.9956024 },
-  { name: "Autotech Inc.", address: "81-981 Halekii Street., Kealakekua HI 96750", phone: "(808) 322-8881", lat: 19.5188739, lng: -155.9211556 },
-  { name: "Keaau Service Station, Inc.", address: "17-355 Volcano Rd, Kurtistown, HI 96760", phone: "(808) 966-9373", lat: 19.5932527, lng: -155.0571719 },
-  { name: "Kau Auto Repair", address: "95-1178 Kaalaiki Rd., Naalehu HI 96772", phone: "(808) 929-9096", lat: 19.0624672, lng: -155.5867295 },
-  { name: "Kainehe Service Station", address: "42-1034 Old Mamalahoa Highway, Paauilo HI 96776", phone: "(808) 776-1012", lat: 20.0312607, lng: -155.3492006 },
-  { name: "Lex brodie tire Co. Pahoa", address: "15-2660 Keaau-Pahoa Road, Pahoa HI 96778", phone: "(808) 965-9125", lat: 19.5050397, lng: -154.9588343 },
-  { name: "Paul's Repair Service", address: "15-2992 Pahoa Village Rd, Pahoa HI 96778", phone: "(808) 965-8386", lat: 19.4936224, lng: -154.9440872 }
-];
+// Refactored JavaScript that loads data from JSON file
 
 // Geographic boundaries for Big Island of Hawaii
 const BIG_ISLAND_BOUNDS = {
@@ -52,6 +17,7 @@ const HAWAIIAN_ISLANDS_BOUNDS = {
   west: -160.3    // Kauai western shore
 };
 
+let safetyStations = [];
 let userLocation = null;
 
 // DOM elements
@@ -59,6 +25,41 @@ const locateBtn = document.getElementById('locateBtn');
 const statusEl = document.getElementById('status');
 const resultsEl = document.getElementById('results');
 const stationListEl = document.getElementById('stationList');
+
+// Load safety stations data from JSON file
+async function loadStationsData() {
+  try {
+    const response = await fetch('hawaii_safety_stations_geocoded.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const allStations = await response.json();
+    
+    // Filter for Hawaii County (Big Island) only
+    safetyStations = allStations.filter(station => 
+      station.County === 'Hawaii' && 
+      station.Latitude && 
+      station.Longitude
+    );
+    
+    console.log(`Loaded ${safetyStations.length} Big Island safety check stations`);
+    
+    // Enable the button once data is loaded
+    locateBtn.disabled = false;
+    
+  } catch (error) {
+    console.error('Error loading stations data:', error);
+    // Fallback to a few hardcoded stations if JSON fails to load
+    safetyStations = [
+      { "County": "Hawaii", "Station Name": "Lex Brodie's", "Address": "1095 Kilauea Avenue., Hilo HI 96720", "Phone": "(808) 985-8473", "City": "Hilo", "Latitude": 19.7123553, "Longitude": -155.0768369 },
+      { "County": "Hawaii", "Station Name": "Big Island Toyota Kona", "Address": "74-5504 Kaiwi Street., Kailua Kona HI 96740", "Phone": "(808) 329-4520", "City": "Kailua Kona", "Latitude": 19.6462868, "Longitude": -156.0011803 },
+      { "County": "Hawaii", "Station Name": "Downtown Texaco", "Address": "192 Kinoole Street., Hilo HI 96720", "Phone": "(808) 935-8613", "City": "Hilo", "Latitude": 19.7235342, "Longitude": -155.0883261 },
+      { "County": "Hawaii", "Station Name": "Kona Dodge", "Address": "76-6353 Kuakini Highway, Kailua Kona HI 96740", "Phone": "(808) 329-4408", "City": "Kailua Kona", "Latitude": 19.6098508, "Longitude": -155.9647437 }
+    ];
+    locateBtn.disabled = false;
+    console.log('Using fallback station data');
+  }
+}
 
 // Check if coordinates are within Big Island
 function isWithinBigIsland(lat, lng) {
@@ -91,8 +92,13 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
 // Find nearest stations
 function findNearestStations(userLat, userLng, limit = 6) {
   const stationsWithDistance = safetyStations.map(station => ({
-    ...station,
-    distance: calculateDistance(userLat, userLng, station.lat, station.lng)
+    name: station['Station Name'],
+    address: station.Address,
+    phone: station.Phone,
+    city: station.City,
+    lat: station.Latitude,
+    lng: station.Longitude,
+    distance: calculateDistance(userLat, userLng, station.Latitude, station.Longitude)
   }));
 
   return stationsWithDistance.sort((a, b) => a.distance - b.distance).slice(0, limit);
@@ -168,3 +174,109 @@ function showLocationError(lat, lng) {
       designed for Hawaii's Big Island (Island of Hawaii). When you travel to the Big Island, 
       this tool will help you find the nearest safety check stations.`);
   }
+}
+
+// Get user location and find stations
+async function getUserLocationAndFindStations() {
+  console.log('Button clicked');
+  
+  locateBtn.disabled = true;
+  locateBtn.textContent = 'Getting Location...';
+  statusEl.removeAttribute('hidden');
+  statusEl.textContent = 'Finding nearby safety check stations…';
+
+  // Check if we're on HTTPS or localhost
+  const isSecure = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  
+  if (!isSecure) {
+    showError('Location access requires HTTPS. Please use a secure hosting service.');
+    return;
+  }
+
+  if (!navigator.geolocation) {
+    showError('Geolocation is not supported by this browser.');
+    locateBtn.disabled = false;
+    locateBtn.textContent = 'Get My Location';
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    async function(position) {
+      console.log('Location received:', position.coords.latitude, position.coords.longitude);
+      
+      userLocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      // Check if user is within Big Island bounds
+      if (!isWithinBigIsland(userLocation.lat, userLocation.lng)) {
+        showLocationError(userLocation.lat, userLocation.lng);
+        return;
+      }
+
+      // Now ensure stations data is loaded before showing results
+      if (safetyStations.length === 0) {
+        statusEl.textContent = 'Loading safety station data…';
+        try {
+          await loadStationsData();
+        } catch (error) {
+          showError('Unable to load safety station data. Please try again.');
+          return;
+        }
+      }
+
+      // Find nearest stations
+      const nearestStations = findNearestStations(userLocation.lat, userLocation.lng);
+      console.log('Found nearest stations:', nearestStations.length);
+
+      // Hide status and button
+      statusEl.setAttribute('hidden', '');
+      locateBtn.style.display = 'none';
+
+      // Show results
+      resultsEl.removeAttribute('hidden');
+      displayStationsList(nearestStations);
+    },
+    function(error) {
+      console.error('Geolocation error:', error);
+      let errorMessage = 'Unable to retrieve your location. ';
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          errorMessage += 'Please allow location access in your browser settings.';
+          break;
+        case error.POSITION_UNAVAILABLE:
+          errorMessage += 'Location information is unavailable. Please check your GPS/location services.';
+          break;
+        case error.TIMEOUT:
+          errorMessage += 'Location request timed out. Please try again.';
+          break;
+        default:
+          errorMessage += `An unknown error occurred (Code: ${error.code}). Make sure you're using HTTPS.`;
+          break;
+      }
+      
+      showError(errorMessage);
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 300000 // 5 minutes
+    }
+  );
+}
+
+// Event listeners and initialization
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded, setting up event listeners');
+  
+  // Button is ready to use immediately
+  locateBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('Button clicked!');
+    getUserLocationAndFindStations();
+  });
+  
+  // Start loading station data in the background (optional preload)
+  loadStationsData();
+});
