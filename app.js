@@ -116,22 +116,14 @@ function initializeMap(userLat, userLng, nearestStations) {
     attributionControl: false // Remove credits overlay
   });
   
-  // Satellite layer (underneath)
-  const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  // Clean road map only (no satellite layer)
+  const roadLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: ''
   });
   
-  // Road layer with street names (on top, semi-transparent)
-  const roadLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '',
-    opacity: 0.7 // Semi-transparent to show satellite underneath
-  });
-  
-  // Add both layers
-  satelliteLayer.addTo(map);
   roadLayer.addTo(map);
 
-  // User location marker - custom red car icon
+  // User location marker - simple red pin
   const userIcon = L.divIcon({
     html: `<div style="
       width: 24px;
@@ -140,13 +132,7 @@ function initializeMap(userLat, userLng, nearestStations) {
       border: 3px solid white;
       border-radius: 50%;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 12px;
-    ">📍</div>`,
+    "></div>`,
     iconSize: [30, 30],
     iconAnchor: [15, 15],
     className: 'user-marker'
@@ -157,7 +143,7 @@ function initializeMap(userLat, userLng, nearestStations) {
    .bindPopup('<strong style="color: #ff4444;">Your Location</strong>')
    .openPopup();
 
-  // Station markers - custom green repair shop icons
+  // Station markers - simple green squares
   nearestStations.forEach((station) => {
     const stationIcon = L.divIcon({
       html: `<div style="
@@ -167,13 +153,7 @@ function initializeMap(userLat, userLng, nearestStations) {
         border: 2px solid white;
         border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-size: 10px;
-      ">🔧</div>`,
+      "></div>`,
       iconSize: [24, 24],
       iconAnchor: [12, 12],
       className: 'station-marker'
