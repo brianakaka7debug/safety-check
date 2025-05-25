@@ -143,14 +143,19 @@ function initializeMap(userLat, userLng, nearestStations) {
    .bindPopup('<strong style="color: #4a90e2;">Your Location</strong>')
    .openPopup();
 
-  // Station markers - numbered grey squares (1, 2, 3, 4 based on proximity)
+  // Station markers - numbered colored squares (1, 2, 3, 4 based on proximity)
   nearestStations.forEach((station, index) => {
     const stationNumber = index + 1; // 1, 2, 3, 4
+    
+    // Color scheme for markers
+    const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1']; // Green, Orange, Red, Purple
+    const markerColor = colors[index] || '#6c757d'; // Fallback to grey
+    
     const stationIcon = L.divIcon({
       html: `<div style="
         width: 22px;
         height: 22px;
-        background-color: #666;
+        background-color: ${markerColor};
         border: 2px solid white;
         border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -239,7 +244,31 @@ function initializeMap(userLat, userLng, nearestStations) {
 function displayStationsList(stations) {
   stationListEl.innerHTML = '';
   
-  stations.forEach(station => {
+  // Add warning message at the top
+  const warningDiv = document.createElement('div');
+  warningDiv.style.cssText = `
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+  `;
+  warningDiv.innerHTML = `
+    <strong>⚠️ Important:</strong> Please call ahead before driving to these locations, as business hours and availability may vary.
+  `;
+  stationListEl.appendChild(warningDiv);
+  
+  // Color scheme for card numbers (matching map markers)
+  const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1']; // Green, Orange, Red, Purple
+  
+  stations.forEach((station, index) => {
+    const stationNumber = index + 1; // 1, 2, 3, 4
+    const markerColor = colors[index] || '#6c757d'; // Fallback to grey
+    
     // Create Google Maps URL for address
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`;
     
@@ -249,7 +278,23 @@ function displayStationsList(stations) {
     const stationCard = document.createElement('div');
     stationCard.className = 'card';
     stationCard.innerHTML = `
-      <h4 style="margin-bottom:0.75rem;color:var(--font-dark);">${station.name}</h4>
+      <h4 style="margin-bottom:0.75rem;color:var(--font-dark);display:flex;align-items:center;">
+        <span style="
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          background-color: ${markerColor};
+          color: white;
+          font-weight: bold;
+          font-size: 14px;
+          border-radius: 4px;
+          margin-right: 12px;
+          flex-shrink: 0;
+        ">${stationNumber}</span>
+        ${station.name}
+      </h4>
       <p style="margin-bottom:0.5rem;">
         <a href="${mapsUrl}" target="_blank" class="address-link">
           📍 ${station.address}
