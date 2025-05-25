@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Island Safety Check Finder</title>
+    <title>Hawaii Safety Check Finder</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         * {
@@ -125,6 +125,27 @@
             display: block;
         }
 
+        .island-info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 100%);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+            text-align: center;
+        }
+
+        .island-info h3 {
+            color: #1976d2;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .island-info p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
         .map-container {
             height: 400px;
             margin-bottom: 20px;
@@ -174,6 +195,13 @@
             font-weight: 500;
         }
 
+        .station-distance {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
         .error {
             background: #cc5200;
             color: white;
@@ -207,7 +235,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Big Island Safety Check</h1>
+            <h1>Hawaii Safety Check</h1>
             <p>Find the nearest safety check stations ~ island style</p>
         </div>
 
@@ -223,6 +251,7 @@
             </div>
 
             <div class="results-section" id="resultsSection">
+                <div class="island-info" id="islandInfo"></div>
                 <div class="map-container" id="map"></div>
                 <div class="stations-list" id="stationsList"></div>
             </div>
@@ -231,43 +260,115 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Sample database of safety check stations on Big Island
-        const safetyStations = [
-            { name: "Hilo Bay Auto Service", address: "123 Kamehameha Ave, Hilo, HI 96720", phone: "(808) 555-0101", lat: 19.7297, lng: -155.0856 },
-            { name: "Kona Coast Motors", address: "456 Queen K Hwy, Kailua-Kona, HI 96740", phone: "(808) 555-0102", lat: 19.6389, lng: -155.9969 },
-            { name: "Volcano Village Garage", address: "789 Old Volcano Rd, Volcano, HI 96785", phone: "(808) 555-0103", lat: 19.4194, lng: -155.2422 },
-            { name: "Pahoa Auto Repair", address: "321 Pahoa Village Rd, Pahoa, HI 96778", phone: "(808) 555-0104", lat: 19.4958, lng: -154.9428 },
-            { name: "Waimea Service Center", address: "654 Mamalahoa Hwy, Waimea, HI 96743", phone: "(808) 555-0105", lat: 20.0194, lng: -155.6719 },
-            { name: "Captain Cook Auto", address: "987 Napoopoo Rd, Captain Cook, HI 96704", phone: "(808) 555-0106", lat: 19.4897, lng: -155.8892 },
-            { name: "Keaau Motors", address: "147 Keaau Pahoa Rd, Keaau, HI 96749", phone: "(808) 555-0107", lat: 19.6219, lng: -155.0361 },
-            { name: "Honokaa Automotive", address: "258 Mamane St, Honokaa, HI 96727", phone: "(808) 555-0108", lat: 20.0786, lng: -155.4675 }
-        ];
+        // Island boundary definitions based on actual data
+        const ISLAND_BOUNDS = {
+            'Hawaii': {
+                name: 'Big Island (Hawaii)',
+                emoji: '🌋',
+                north: 20.3,
+                south: 18.9,
+                east: -154.8,
+                west: -156.1,
+                county: 'Hawaii'
+            },
+            'Oahu': {
+                name: 'Oahu',
+                emoji: '🏙️',
+                north: 21.7,
+                south: 21.2,
+                east: -157.6,
+                west: -158.3,
+                county: 'Honolulu'
+            },
+            'Maui': {
+                name: 'Maui',
+                emoji: '🏝️',
+                north: 21.1,
+                south: 20.5,
+                east: -155.9,
+                west: -157.1,
+                county: 'Maui'
+            },
+            'Kauai': {
+                name: 'Kauai',
+                emoji: '🌿',
+                north: 22.3,
+                south: 21.8,
+                east: -159.2,
+                west: -159.8,
+                county: 'Kauai'
+            }
+        };
+
+        // All Hawaiian Islands bounds for general checking
+        const HAWAIIAN_ISLANDS_BOUNDS = {
+            north: 22.3,
+            south: 18.8,
+            east: -154.7,
+            west: -160.0
+        };
 
         let map;
         let userLocation;
+        let userIsland;
+        let safetyStations = [];
 
-        // Geographic boundaries for Big Island of Hawaii
-        const BIG_ISLAND_BOUNDS = {
-            north: 20.3,    // Northern tip (Upolu Point area)
-            south: 18.9,    // Southern tip (South Point)
-            east: -154.8,   // Eastern shore (Laupahoehoe area)
-            west: -156.1    // Western shore (South Kona)
-        };
+        // Load real station data from CSV
+        async function loadStationData() {
+            try {
+                const csvContent = await window.fs.readFile('hawaii_safety_stations_geocoded2.csv', { encoding: 'utf8' });
+                
+                // Simple CSV parsing
+                const lines = csvContent.split('\n');
+                const headers = lines[0].split(',');
+                
+                const stations = [];
+                for (let i = 1; i < lines.length; i++) {
+                    if (lines[i].trim()) {
+                        const values = lines[i].split(',');
+                        const station = {};
+                        headers.forEach((header, index) => {
+                            let value = values[index] ? values[index].replace(/"/g, '').trim() : '';
+                            // Convert numeric fields
+                            if (header.trim() === 'Latitude' || header.trim() === 'Longitude') {
+                                value = parseFloat(value) || null;
+                            }
+                            station[header.trim()] = value;
+                        });
+                        
+                        // Only include stations with valid coordinates
+                        if (station.Latitude && station.Longitude && 
+                            station['Station Name'] && station.Address) {
+                            stations.push({
+                                name: station['Station Name'],
+                                address: station.Address,
+                                phone: station.Phone || 'No phone available',
+                                city: station.City || '',
+                                county: station.County || '',
+                                lat: station.Latitude,
+                                lng: station.Longitude
+                            });
+                        }
+                    }
+                }
+                
+                console.log(`Loaded ${stations.length} valid safety check stations`);
+                return stations;
+            } catch (error) {
+                console.error('Error loading station data:', error);
+                return [];
+            }
+        }
 
-        // Broader Hawaiian Islands bounds for more specific messaging
-        const HAWAIIAN_ISLANDS_BOUNDS = {
-            north: 22.3,    // Kauai northern tip
-            south: 18.8,    // Big Island southern tip
-            east: -154.7,   // Big Island eastern shore
-            west: -160.3    // Kauai western shore
-        };
-
-        // Check if coordinates are within Big Island
-        function isWithinBigIsland(lat, lng) {
-            return lat >= BIG_ISLAND_BOUNDS.south && 
-                   lat <= BIG_ISLAND_BOUNDS.north && 
-                   lng >= BIG_ISLAND_BOUNDS.west && 
-                   lng <= BIG_ISLAND_BOUNDS.east;
+        // Determine which island the user is on
+        function getUserIsland(lat, lng) {
+            for (const [key, bounds] of Object.entries(ISLAND_BOUNDS)) {
+                if (lat >= bounds.south && lat <= bounds.north && 
+                    lng >= bounds.west && lng <= bounds.east) {
+                    return key;
+                }
+            }
+            return null;
         }
 
         // Check if coordinates are within Hawaiian Islands
@@ -276,6 +377,14 @@
                    lat <= HAWAIIAN_ISLANDS_BOUNDS.north && 
                    lng >= HAWAIIAN_ISLANDS_BOUNDS.west && 
                    lng <= HAWAIIAN_ISLANDS_BOUNDS.east;
+        }
+
+        // Filter stations by island (county)
+        function getStationsForIsland(island) {
+            if (!island || !ISLAND_BOUNDS[island]) return [];
+            
+            const targetCounty = ISLAND_BOUNDS[island].county;
+            return safetyStations.filter(station => station.county === targetCounty);
         }
 
         // Calculate distance between two points using Haversine formula
@@ -290,9 +399,11 @@
             return R * c;
         }
 
-        // Find nearest stations
-        function findNearestStations(userLat, userLng, limit = 4) {
-            const stationsWithDistance = safetyStations.map(station => ({
+        // Find nearest stations on the same island
+        function findNearestStations(userLat, userLng, island, limit = 8) {
+            const islandStations = getStationsForIsland(island);
+            
+            const stationsWithDistance = islandStations.map(station => ({
                 ...station,
                 distance: calculateDistance(userLat, userLng, station.lat, station.lng)
             }));
@@ -301,7 +412,7 @@
         }
 
         // Initialize map
-        function initializeMap(userLat, userLng, nearestStations) {
+        function initializeMap(userLat, userLng, nearestStations, island) {
             map = L.map('map');
             
             // Use Esri satellite imagery for Hawaii
@@ -309,7 +420,7 @@
                 attribution: '© Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
             }).addTo(map);
 
-            // Add user location marker with red car
+            // Add user location marker
             const userIcon = L.divIcon({
                 html: `<div style="
                     font-size: 20px;
@@ -326,17 +437,16 @@
              .bindPopup('<strong style="color: #FF6B6B;">Your Location</strong>')
              .openPopup();
 
-            // Add station markers with kalo leaf and name labels
+            // Add station markers
             const stationMarkers = [];
             nearestStations.forEach((station, index) => {
-                // Create kalo leaf marker
                 const stationIcon = L.divIcon({
                     html: `<div style="
                         font-size: 18px;
                         text-align: center;
                         line-height: 1;
                         filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-                    ">🌿</div>`,
+                    ">🔧</div>`,
                     iconSize: [22, 22],
                     iconAnchor: [11, 11],
                     className: 'station-marker'
@@ -348,49 +458,40 @@
                         <div style="min-width: 200px;">
                             <strong style="color: #333; font-size: 14px;">${station.name}</strong><br>
                             <span style="color: #666; font-size: 12px;">${station.address}</span><br>
-                            <span style="color: #4ECDC4; font-size: 12px; font-weight: 500;">${station.phone}</span>
+                            <span style="color: #4ECDC4; font-size: 12px; font-weight: 500;">${station.phone}</span><br>
+                            <span style="color: #888; font-size: 11px;">${station.distance.toFixed(1)} miles away</span>
                         </div>
                     `);
-                
-                // Add name label next to marker
-                const labelIcon = L.divIcon({
-                    html: `<div style="
-                        background: rgba(255,255,255,0.9);
-                        padding: 2px 6px;
-                        border-radius: 4px;
-                        font-size: 11px;
-                        font-weight: 500;
-                        color: #333;
-                        white-space: nowrap;
-                        border: 1px solid rgba(0,0,0,0.1);
-                        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-                    ">${station.name}</div>`,
-                    iconSize: [0, 0],
-                    iconAnchor: [-15, 0],
-                    className: 'station-label'
-                });
-                
-                L.marker([station.lat, station.lng], { icon: labelIcon })
-                    .addTo(map);
                 
                 stationMarkers.push(marker);
             });
 
-            // Determine zoom level and center based on stations within 10 miles
-            const stationsWithin10Miles = nearestStations.filter(s => s.distance <= 10);
+            // Fit map to show user and nearby stations
+            const stationsWithin15Miles = nearestStations.filter(s => s.distance <= 15);
             
-            if (stationsWithin10Miles.length > 0) {
-                // Show user location and all stations within 10 miles, zoomed as close as possible
-                const allPointsWithin10Miles = [[userLat, userLng], ...stationsWithin10Miles.map(s => [s.lat, s.lng])];
-                const markersWithin10Miles = [L.marker([userLat, userLng]), ...stationsWithin10Miles.map(s => L.marker([s.lat, s.lng]))];
-                const group = new L.featureGroup(markersWithin10Miles);
+            if (stationsWithin15Miles.length > 0) {
+                const allPoints = [[userLat, userLng], ...stationsWithin15Miles.map(s => [s.lat, s.lng])];
+                const allMarkers = [L.marker([userLat, userLng]), ...stationsWithin15Miles.map(s => L.marker([s.lat, s.lng]))];
+                const group = new L.featureGroup(allMarkers);
                 map.fitBounds(group.getBounds().pad(0.1));
-            } else {
-                // No stations within 10 miles - show user location and closest station, zoomed as close as possible
+            } else if (nearestStations.length > 0) {
                 const nearestStation = nearestStations[0];
                 const bounds = L.latLngBounds([[userLat, userLng], [nearestStation.lat, nearestStation.lng]]);
                 map.fitBounds(bounds.pad(0.2));
+            } else {
+                map.setView([userLat, userLng], 10);
             }
+        }
+
+        // Display island info
+        function displayIslandInfo(island, stationCount) {
+            const islandInfo = document.getElementById('islandInfo');
+            const bounds = ISLAND_BOUNDS[island];
+            
+            islandInfo.innerHTML = `
+                <h3>${bounds.emoji} ${bounds.name}</h3>
+                <p>${stationCount} safety check stations found on your island</p>
+            `;
         }
 
         // Display stations list
@@ -398,11 +499,13 @@
             const listContainer = document.getElementById('stationsList');
             listContainer.innerHTML = '<h3 style="margin-bottom: 15px; color: #333;">Nearest Safety Check Stations</h3>';
             
+            if (stations.length === 0) {
+                listContainer.innerHTML += '<p style="color: #666; font-style: italic;">No stations found on this island.</p>';
+                return;
+            }
+            
             stations.forEach(station => {
-                // Create Google Maps URL for address
                 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`;
-                
-                // Create phone URL
                 const phoneUrl = `tel:${station.phone.replace(/[^\d]/g, '')}`;
                 
                 const stationCard = document.createElement('div');
@@ -419,6 +522,7 @@
                             📞 ${station.phone}
                         </a>
                     </div>
+                    <div class="station-distance">${station.distance.toFixed(1)} miles away</div>
                 `;
                 listContainer.appendChild(stationCard);
             });
@@ -429,7 +533,6 @@
             const welcomeSection = document.getElementById('welcomeSection');
             const loading = document.getElementById('loading');
             
-            // Remove any existing error messages
             const existingError = welcomeSection.querySelector('.error');
             if (existingError) {
                 existingError.remove();
@@ -447,48 +550,42 @@
         function showLocationError(lat, lng) {
             const btn = document.getElementById('locationBtn');
             btn.disabled = false;
-            btn.textContent = 'Get My Location';
+            btn.textContent = 'Get My Location 🤙🏽';
 
             if (!isWithinHawaii(lat, lng)) {
-                // Outside Hawaiian Islands entirely
                 showError(`
                     <strong>Service Area Notice</strong><br><br>
-                    This safety check finder is designed for Hawaii's Big Island residents and visitors. 
+                    This safety check finder is designed for Hawaii residents and visitors. 
                     It appears you're currently outside of the Hawaiian Islands.<br><br>
-                    <strong>Planning a visit to the Big Island?</strong><br>
-                    When you arrive, this tool will help you find the nearest safety check stations for your rental car or vehicle.
+                    <strong>Planning a visit to Hawaii?</strong><br>
+                    When you arrive, this tool will help you find the nearest safety check stations on any Hawaiian island.
                 `);
-            } else if (!isWithinBigIsland(lat, lng)) {
-                // Within Hawaii but not on Big Island
-                let islandMessage = "another Hawaiian island";
-                
-                // Rough estimates for other major islands
-                if (lat > 21.2 && lng > -158.3) {
-                    islandMessage = "Oahu";
-                } else if (lat > 20.5 && lng < -156.7) {
-                    islandMessage = "Maui";
-                } else if (lat > 21.8) {
-                    islandMessage = "Kauai";
-                } else if (lat > 21.0 && lng < -156.8) {
-                    islandMessage = "Molokai or Lanai";
-                }
-                
+            } else {
+                // Within Hawaii but we couldn't determine the specific island
                 showError(`
-                    <strong>Service Area Notice</strong><br><br>
-                    You appear to be on ${islandMessage}. This safety check finder is specifically 
-                    designed for Hawaii's Big Island (Island of Hawaii).<br><br>
-                    <strong>Visiting the Big Island?</strong><br>
-                    When you travel to the Big Island, this tool will help you find the nearest safety check stations.
+                    <strong>Location Notice</strong><br><br>
+                    You appear to be in Hawaii, but we couldn't determine which specific island you're on. 
+                    Please try again or ensure your location services are accurate.
                 `);
             }
         }
 
         // Get user location and find stations
-        function getUserLocationAndFindStations() {
+        async function getUserLocationAndFindStations() {
             const btn = document.getElementById('locationBtn');
             const loading = document.getElementById('loading');
             const welcomeSection = document.getElementById('welcomeSection');
             const resultsSection = document.getElementById('resultsSection');
+
+            // Load station data if not already loaded
+            if (safetyStations.length === 0) {
+                console.log('Loading station data...');
+                safetyStations = await loadStationData();
+                if (safetyStations.length === 0) {
+                    showError('Unable to load station data. Please try refreshing the page.');
+                    return;
+                }
+            }
 
             // Check if we're on HTTPS or localhost
             const isSecure = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
@@ -505,7 +602,7 @@
             if (!navigator.geolocation) {
                 showError('Geolocation is not supported by this browser.');
                 btn.disabled = false;
-                btn.textContent = '📍 Check Your Location';
+                btn.textContent = 'Get My Location 🤙🏽';
                 loading.classList.remove('show');
                 return;
             }
@@ -517,14 +614,17 @@
                         lng: position.coords.longitude
                     };
 
-                    // Check if user is within Big Island bounds
-                    if (!isWithinBigIsland(userLocation.lat, userLocation.lng)) {
+                    // Determine which island the user is on
+                    userIsland = getUserIsland(userLocation.lat, userLocation.lng);
+
+                    if (!userIsland) {
                         showLocationError(userLocation.lat, userLocation.lng);
                         return;
                     }
 
-                    // Find nearest stations
-                    const nearestStations = findNearestStations(userLocation.lat, userLocation.lng);
+                    // Find nearest stations on the same island
+                    const nearestStations = findNearestStations(userLocation.lat, userLocation.lng, userIsland);
+                    const totalStationsOnIsland = getStationsForIsland(userIsland).length;
 
                     // Hide welcome section and loading
                     welcomeSection.style.display = 'none';
@@ -533,9 +633,10 @@
                     // Show results
                     resultsSection.classList.add('show');
 
-                    // Initialize map and display results
+                    // Display island info and results
                     setTimeout(() => {
-                        initializeMap(userLocation.lat, userLocation.lng, nearestStations);
+                        displayIslandInfo(userIsland, totalStationsOnIsland);
+                        initializeMap(userLocation.lat, userLocation.lng, nearestStations, userIsland);
                         displayStationsList(nearestStations);
                     }, 100);
                 },
@@ -558,9 +659,14 @@
                     
                     showError(errorMessage);
                     btn.disabled = false;
-                    btn.textContent = '📍 Check Your Location';
+                    btn.textContent = 'Get My Location 🤙🏽';
                     loading.classList.remove('show');
                 },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 60000
+                }
             );
         }
 
