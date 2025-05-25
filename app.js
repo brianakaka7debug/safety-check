@@ -123,15 +123,15 @@ function initializeMap(userLat, userLng, nearestStations) {
   
   roadLayer.addTo(map);
 
-  // User location marker - simple red pin
+  // User location marker - blue circle with gradient/shine
   const userIcon = L.divIcon({
     html: `<div style="
       width: 24px;
       height: 24px;
-      background-color: #ff4444;
+      background: linear-gradient(135deg, #4a90e2 0%, #357abd 50%, #1e5f9a 100%);
       border: 3px solid white;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 10px rgba(74, 144, 226, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
     "></div>`,
     iconSize: [30, 30],
     iconAnchor: [15, 15],
@@ -140,22 +140,30 @@ function initializeMap(userLat, userLng, nearestStations) {
   
   L.marker([userLat, userLng], { icon: userIcon })
    .addTo(map)
-   .bindPopup('<strong style="color: #ff4444;">Your Location</strong>')
+   .bindPopup('<strong style="color: #4a90e2;">Your Location</strong>')
    .openPopup();
 
-  // Station markers - simple green squares
-  nearestStations.forEach((station) => {
+  // Station markers - numbered grey squares (1, 2, 3, 4 based on proximity)
+  nearestStations.forEach((station, index) => {
+    const stationNumber = index + 1; // 1, 2, 3, 4
     const stationIcon = L.divIcon({
       html: `<div style="
-        width: 20px;
-        height: 20px;
-        background-color: #28a391;
+        width: 22px;
+        height: 22px;
+        background-color: #666;
         border: 2px solid white;
         border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      "></div>`,
-      iconSize: [24, 24],
-      iconAnchor: [12, 12],
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        font-family: system-ui, sans-serif;
+      ">${stationNumber}</div>`,
+      iconSize: [26, 26],
+      iconAnchor: [13, 13],
       className: 'station-marker'
     });
     

@@ -68,10 +68,7 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 .leaflet-popup-close-button {
-  color: #666 !important;
-  font-size: 18px !important;
-  top: 8px !important;
-  right: 8px !important;
+  display: none !important; /* Hide the X button */
 }
 @media (min-width:600px){
   body{font-size:17px;}
