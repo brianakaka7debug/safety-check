@@ -1,0 +1,21 @@
+/* BELOW-THE-FOLD STYLES  (cached once, reused every visit) */
+#results{
+  max-width:900px;
+  margin:5rem auto 3rem;
+  padding:0 1rem;
+}
+#results h3{margin-bottom:1rem;color:var(--font-dark);}
+#stationList{display:grid;gap:1rem;}
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:1rem 1.25rem;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.distance{font-weight:600;color:var(--brand-teal);}
+@media (min-width:600px){
+  body{font-size:17px;}
+}
