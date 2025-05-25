@@ -105,55 +105,77 @@ function findNearestStations(userLat, userLng) {
   // Sort by distance
   const sortedStations = stationsWithDistance.sort((a, b) => a.distance - b.distance);
   
-  // Logic: Show stations within 10 miles, but at least 4 stations within 25 miles
-  const stationsWithin10Miles = sortedStations.filter(s => s.distance <= 10);
-  
-  if (stationsWithin10Miles.length >= 4) {
-    return stationsWithin10Miles;
-  } else {
-    // If fewer than 4 within 10 miles, show the 4 closest within 25 miles
-    const stationsWithin25Miles = sortedStations.filter(s => s.distance <= 25);
-    return stationsWithin25Miles.slice(0, 4);
-  }
+  // Logic: Show closest 4 stations within 25 miles
+  const stationsWithin25Miles = sortedStations.filter(s => s.distance <= 25);
+  return stationsWithin25Miles.slice(0, 4);
 }
 
 // Initialize map
 function initializeMap(userLat, userLng, nearestStations) {
-  map = L.map('map');
+  map = L.map('map', {
+    attributionControl: false // Remove credits overlay
+  });
   
-  // Use Esri satellite imagery for Hawaii
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: '© Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
-  }).addTo(map);
+  // Satellite layer (underneath)
+  const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: ''
+  });
+  
+  // Road layer with street names (on top, semi-transparent)
+  const roadLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '',
+    opacity: 0.7 // Semi-transparent to show satellite underneath
+  });
+  
+  // Add both layers
+  satelliteLayer.addTo(map);
+  roadLayer.addTo(map);
 
-  // Add user location marker
+  // User location marker - custom red car icon
   const userIcon = L.divIcon({
     html: `<div style="
-      font-size: 20px;
-      text-align: center;
-      line-height: 1;
-      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-    ">🚗</div>`,
-    iconSize: [24, 24],
-    iconAnchor: [12, 12],
+      width: 24px;
+      height: 24px;
+      background-color: #ff4444;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+    ">📍</div>`,
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
     className: 'user-marker'
   });
+  
   L.marker([userLat, userLng], { icon: userIcon })
    .addTo(map)
-   .bindPopup('<strong style="color: #FF6B6B;">Your Location</strong>')
+   .bindPopup('<strong style="color: #ff4444;">Your Location</strong>')
    .openPopup();
 
-  // Add station markers
+  // Station markers - custom green repair shop icons
   nearestStations.forEach((station) => {
     const stationIcon = L.divIcon({
       html: `<div style="
-        font-size: 18px;
-        text-align: center;
-        line-height: 1;
-        filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
-      ">🌿</div>`,
-      iconSize: [22, 22],
-      iconAnchor: [11, 11],
+        width: 20px;
+        height: 20px;
+        background-color: #28a391;
+        border: 2px solid white;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 10px;
+      ">🔧</div>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
       className: 'station-marker'
     });
     
@@ -168,21 +190,11 @@ function initializeMap(userLat, userLng, nearestStations) {
       `);
   });
 
-  // Determine zoom level and center based on stations within 10 miles
-  const stationsWithin10Miles = nearestStations.filter(s => s.distance <= 10);
-  
-  if (stationsWithin10Miles.length > 0) {
-    // Show user location and all stations within 10 miles, zoomed as close as possible
-    const allPoints = [[userLat, userLng], ...stationsWithin10Miles.map(s => [s.lat, s.lng])];
-    const markers = [L.marker([userLat, userLng]), ...stationsWithin10Miles.map(s => L.marker([s.lat, s.lng]))];
-    const group = new L.featureGroup(markers);
-    map.fitBounds(group.getBounds().pad(0.1));
-  } else {
-    // No stations within 10 miles - show user location and closest station, zoomed as close as possible
-    const nearestStation = nearestStations[0];
-    const bounds = L.latLngBounds([[userLat, userLng], [nearestStation.lat, nearestStation.lng]]);
-    map.fitBounds(bounds.pad(0.2));
-  }
+  // Fit map to show all displayed stations with padding
+  const allPoints = [[userLat, userLng], ...nearestStations.map(s => [s.lat, s.lng])];
+  const markers = [L.marker([userLat, userLng]), ...nearestStations.map(s => L.marker([s.lat, s.lng]))];
+  const group = new L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.15)); // Slightly more padding around the stations
 }
 // Display stations list
 function displayStationsList(stations) {
