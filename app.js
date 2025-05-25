@@ -182,22 +182,47 @@ function initializeMap(userLat, userLng, nearestStations) {
           <h3 style="
             color: #333; 
             font-size: 16px; 
-            margin: 0 0 8px 0;
+            margin: 0 0 12px 0;
             font-weight: 600;
             line-height: 1.3;
           ">${station.name}</h3>
-          <p style="
-            color: #666; 
-            font-size: 14px; 
-            margin: 0 0 8px 0;
-            line-height: 1.4;
-          ">${station.address}</p>
-          <p style="
-            color: #28a391; 
-            font-size: 14px; 
-            margin: 0;
-            font-weight: 500;
-          ">${station.phone}</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}" 
+             target="_blank"
+             style="
+               color: #28a391;
+               text-decoration: none;
+               font-weight: 500;
+               padding: 8px 12px;
+               border-radius: 6px;
+               background: rgba(40, 163, 145, 0.1);
+               display: block;
+               margin-bottom: 8px;
+               font-size: 14px;
+               line-height: 1.4;
+               text-align: center;
+               transition: background 0.2s ease;
+             "
+             onmouseover="this.style.background='rgba(40, 163, 145, 0.2)'"
+             onmouseout="this.style.background='rgba(40, 163, 145, 0.1)'">
+            📍 ${station.address}
+          </a>
+          <a href="tel:${station.phone.replace(/[^\d]/g, '')}"
+             style="
+               color: #28a391;
+               text-decoration: none;
+               font-weight: 600;
+               padding: 10px 16px;
+               border-radius: 6px;
+               background: rgba(40, 163, 145, 0.1);
+               display: block;
+               font-size: 14px;
+               text-align: center;
+               transition: background 0.2s ease;
+             "
+             onmouseover="this.style.background='rgba(40, 163, 145, 0.2)'"
+             onmouseout="this.style.background='rgba(40, 163, 145, 0.1)'">
+            📞 ${station.phone}
+          </a>
         </div>
       `, {
         className: 'custom-popup'
