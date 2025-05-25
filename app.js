@@ -162,19 +162,45 @@ function initializeMap(userLat, userLng, nearestStations) {
     L.marker([station.lat, station.lng], { icon: stationIcon })
       .addTo(map)
       .bindPopup(`
-        <div style="min-width: 200px;">
-          <strong style="color: #333; font-size: 14px;">${station.name}</strong><br>
-          <span style="color: #666; font-size: 12px;">${station.address}</span><br>
-          <span style="color: #28a391; font-size: 12px; font-weight: 500;">${station.phone}</span>
+        <div style="
+          background: white;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          border: none;
+          font-family: system-ui, -apple-system, sans-serif;
+          min-width: 220px;
+        ">
+          <h3 style="
+            color: #333; 
+            font-size: 16px; 
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            line-height: 1.3;
+          ">${station.name}</h3>
+          <p style="
+            color: #666; 
+            font-size: 14px; 
+            margin: 0 0 8px 0;
+            line-height: 1.4;
+          ">${station.address}</p>
+          <p style="
+            color: #28a391; 
+            font-size: 14px; 
+            margin: 0;
+            font-weight: 500;
+          ">${station.phone}</p>
         </div>
-      `);
+      `, {
+        className: 'custom-popup'
+      });
   });
 
-  // Fit map to show all displayed stations with padding
+  // Fit map to show all displayed stations with less padding (zoom closer)
   const allPoints = [[userLat, userLng], ...nearestStations.map(s => [s.lat, s.lng])];
   const markers = [L.marker([userLat, userLng]), ...nearestStations.map(s => L.marker([s.lat, s.lng]))];
   const group = new L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.15)); // Slightly more padding around the stations
+  map.fitBounds(group.getBounds().pad(0.075)); // Reduced padding by half for closer zoom
 }
 // Display stations list
 function displayStationsList(stations) {
@@ -190,14 +216,14 @@ function displayStationsList(stations) {
     const stationCard = document.createElement('div');
     stationCard.className = 'card';
     stationCard.innerHTML = `
-      <h4 style="margin-bottom:0.5rem;color:var(--font-dark);">${station.name}</h4>
-      <p style="margin-bottom:0.25rem;color:#666;">
-        <a href="${mapsUrl}" target="_blank" style="color:#666;text-decoration:none;">
+      <h4 style="margin-bottom:0.75rem;color:var(--font-dark);">${station.name}</h4>
+      <p style="margin-bottom:0.5rem;">
+        <a href="${mapsUrl}" target="_blank" class="address-link">
           📍 ${station.address}
         </a>
       </p>
       <p style="margin:0;">
-        <a href="${phoneUrl}" style="color:var(--brand-teal);text-decoration:none;font-weight:500;">
+        <a href="${phoneUrl}" class="phone-link">
           📞 ${station.phone}
         </a>
       </p>
