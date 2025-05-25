@@ -172,6 +172,9 @@ function initializeMap(userLat, userLng, nearestStations) {
       className: 'station-marker'
     });
     
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`;
+    const phoneUrl = `tel:${station.phone.replace(/[^\d]/g, '')}`;
+    
     L.marker([station.lat, station.lng], { icon: stationIcon })
       .addTo(map)
       .bindPopup(`
@@ -191,7 +194,7 @@ function initializeMap(userLat, userLng, nearestStations) {
             font-weight: 600;
             line-height: 1.3;
           ">${station.name}</h3>
-          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}" 
+          <a href="${mapsUrl}" 
              target="_blank"
              style="
                color: #28a391;
@@ -211,7 +214,7 @@ function initializeMap(userLat, userLng, nearestStations) {
              onmouseout="this.style.background='rgba(40, 163, 145, 0.1)'">
             📍 ${station.address}
           </a>
-          <a href="tel:${station.phone.replace(/[^\d]/g, '')}"
+          <a href="${phoneUrl}"
              style="
                color: #28a391;
                text-decoration: none;
@@ -229,9 +232,7 @@ function initializeMap(userLat, userLng, nearestStations) {
             📞 ${station.phone}
           </a>
         </div>
-      `, {
-        className: 'custom-popup'
-      });
+      `);
   });
 
   // Fit map to show all displayed stations with less padding (zoom closer)
