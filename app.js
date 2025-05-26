@@ -20,11 +20,13 @@ const HAWAIIAN_ISLANDS_BOUNDS = {
 let safetyStations = [];
 let userLocation = null;
 let map = null;
+let currentStationCount = 4; // Track how many stations are currently shown
 
 // DOM elements
 const locateBtn = document.getElementById('locateBtn');
 const searchBtn = document.getElementById('searchBtn');
 const addressInput = document.getElementById('addressInput');
+const changeLocationBtn = document.getElementById('changeLocationBtn');
 const statusEl = document.getElementById('status');
 const resultsEl = document.getElementById('results');
 const stationListEl = document.getElementById('stationList');
@@ -93,7 +95,7 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
 }
 
 // Find nearest stations with smart filtering
-function findNearestStations(userLat, userLng) {
+function findNearestStations(userLat, userLng, limit = 4) {
   const stationsWithDistance = safetyStations.map(station => ({
     name: station['Station Name'],
     address: station.Address,
@@ -107,9 +109,9 @@ function findNearestStations(userLat, userLng) {
   // Sort by distance
   const sortedStations = stationsWithDistance.sort((a, b) => a.distance - b.distance);
   
-  // Logic: Show closest 4 stations within 25 miles
+  // Logic: Show closest stations within 25 miles
   const stationsWithin25Miles = sortedStations.filter(s => s.distance <= 25);
-  return stationsWithin25Miles.slice(0, 4);
+  return stationsWithin25Miles.slice(0, limit);
 }
 
 // Initialize map
@@ -154,7 +156,7 @@ function initializeMap(userLat, userLng, nearestStations) {
     const stationNumber = index + 1; // 1, 2, 3, 4
     
     // Color scheme for markers
-    const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1']; // Green, Orange, Red, Purple
+    const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1', '#17a2b8', '#ffc107', '#e83e8c', '#6c757d']; // 8 colors
     const markerColor = colors[index] || '#6c757d'; // Fallback to grey
     
     // Responsive marker size
@@ -266,7 +268,7 @@ function displayStationsList(stations) {
   stationListEl.appendChild(warningDiv);
   
   // Color scheme for card numbers (matching map markers)
-  const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1']; // Green, Orange, Red, Purple
+  const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1', '#17a2b8', '#ffc107', '#e83e8c', '#6c757d']; // 8 colors
   
   stations.forEach((station, index) => {
     const stationNumber = index + 1; // 1, 2, 3, 4
@@ -309,6 +311,71 @@ function displayStationsList(stations) {
     `;
     stationListEl.appendChild(stationCard);
   });
+  
+  // Add "Show More" button if showing 4 stations and more are available
+  if (stations.length === 4 && currentStationCount === 4) {
+    const totalAvailable = findNearestStations(userLocation.lat, userLocation.lng, 8).length;
+    if (totalAvailable > 4) {
+      const showMoreContainer = document.createElement('div');
+      showMoreContainer.className = 'show-more-container';
+      showMoreContainer.innerHTML = `
+        <button class="show-more-btn" id="showMoreBtn">
+          Show More Stations (${totalAvailable - 4} more)
+        </button>
+      `;
+      stationListEl.appendChild(showMoreContainer);
+      
+      // Add click handler
+      document.getElementById('showMoreBtn').addEventListener('click', showMoreStations);
+    }
+  }
+}
+
+// Go back to search
+function changeLocation() {
+  // Reset state
+  currentStationCount = 4;
+  userLocation = null;
+  
+  // Remove map if it exists
+  if (map) {
+    map.remove();
+    map = null;
+  }
+  
+  // Hide results and show hero
+  resultsEl.setAttribute('hidden', '');
+  document.querySelector('.hero').style.display = 'block';
+  
+  // Clear address input
+  addressInput.value = '';
+  
+  // Reset button states
+  locateBtn.disabled = false;
+  locateBtn.textContent = '📍 Use My Location';
+  searchBtn.disabled = false;
+  searchBtn.innerHTML = `
+    <span class="desktop-text">🔍 Find Stations</span>
+    <span class="mobile-text">🔍</span>
+  `;
+  
+  // Scroll to top smoothly
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function showMoreStations() {
+  if (currentStationCount >= 8) return; // Max 8 stations
+  
+  currentStationCount = 8;
+  const nearestStations = findNearestStations(userLocation.lat, userLocation.lng, 8);
+  
+  // Update map
+  if (map) {
+    map.remove(); // Remove existing map
+  }
+  initializeMap(userLocation.lat, userLocation.lng, nearestStations);
+  
+  // Update station list
+  displayStationsList(nearestStations);
 }
 
 // Free geocoding with multiple fallbacks
@@ -448,13 +515,13 @@ async function getUserLocationAndFindStations() {
       }
 
       // Find nearest stations
-      const nearestStations = findNearestStations(userLocation.lat, userLocation.lng);
+      const nearestStations = findNearestStations(userLocation.lat, userLocation.lng, currentStationCount);
       console.log('Found nearest stations:', nearestStations.length);
 
-      // Hide status and button
+      // Hide hero section and show results
+      document.querySelector('.hero').style.display = 'none';
       statusEl.setAttribute('hidden', '');
-      document.querySelector('.location-options').style.display = 'none';
-
+      
       // Show results
       resultsEl.removeAttribute('hidden');
       
@@ -499,9 +566,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get the button elements
   const locateButton = document.getElementById('locateBtn');
   const searchButton = document.getElementById('searchBtn');
+  const changeLocationButton = document.getElementById('changeLocationBtn');
   const addressField = document.getElementById('addressInput');
   
-  if (!locateButton || !searchButton || !addressField) {
+  if (!locateButton || !searchButton || !changeLocationButton || !addressField) {
     console.error('Required elements not found!');
     return;
   }
@@ -518,6 +586,13 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     console.log('Search button clicked!');
     searchByAddress();
+  });
+  
+  // Add click handler for change location button
+  changeLocationBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('Change location clicked!');
+    changeLocation();
   });
   
   // Add enter key handler for address input

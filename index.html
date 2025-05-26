@@ -26,11 +26,18 @@
     }
     .hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:.75em;line-height:1.1;}
     .hero p{max-width:min(800px, 85%);margin:0 auto 2.2em;font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.5;}
+    .cta{
+      background:var(--brand-teal);
+      color:#fff;border:0;border-radius:8px;
+      padding:1rem 2.6rem;font-size:1.125rem;
+      cursor:pointer;transition:filter .2s;
+    }
+    .cta:hover{filter:brightness(1.1);}
     .location-options{
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
       margin-bottom: 3rem;
     }
     .or-divider{
@@ -52,12 +59,13 @@
     .or-divider::after{right: -70px;}
     .address-input-section{
       display: flex;
-      flex-direction: column;
       gap: 0.75rem;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
+      align-items: center;
     }
     .address-input{
+      flex: 1;
       padding: 0.875rem 1rem;
       border: 2px solid rgba(255,255,255,0.2);
       border-radius: 8px;
@@ -78,6 +86,8 @@
     .cta-secondary{
       background: rgba(40, 163, 145, 0.8);
       border: 1px solid var(--brand-teal);
+      padding: 0.875rem 1.5rem;
+      font-size: 1rem;
     }
     .cta-secondary:hover{
       background: var(--brand-teal);
@@ -153,7 +163,10 @@
       </div>
       <div class="address-input-section">
         <input type="text" id="addressInput" placeholder="Enter your address or ZIP code" class="address-input">
-        <button class="cta cta-secondary" id="searchBtn" type="button">🔍 Find Stations</button>
+        <button class="cta cta-secondary" id="searchBtn" type="button">
+          <span class="desktop-text">🔍 Find Stations</span>
+          <span class="mobile-text">🔍</span>
+        </button>
       </div>
     </div>
     
@@ -179,8 +192,11 @@
     </div>
   </header>
   <section id="results" hidden>
+    <div class="results-header">
+      <h3>Nearest Safety Check Stations</h3>
+      <a href="#" id="changeLocationBtn" class="change-location-link">📍 Change Location</a>
+    </div>
     <div id="map"></div>
-    <h3>Nearest Safety Check Stations</h3>
     <div id="stationList"></div>
   </section>
   <!-- Leaflet JavaScript for maps -->
