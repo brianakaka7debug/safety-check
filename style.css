@@ -100,6 +100,28 @@ body {
     line-height: 1.5;
   }
   
+  .hero {
+    padding: 12vh 1rem 8vh;
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+    line-height: 1.4;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+  
+  .cta {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+  }
+  
   #results {
     margin: 1rem auto 2rem;
     padding: 0 0.75rem;
@@ -150,6 +172,18 @@ body {
     height: 36px !important;
     line-height: 36px !important;
     font-size: 18px !important;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    padding: 16vh 2rem 12vh;
+  }
+  
+  .hero p {
+    max-width: 70%;
+    font-size: 1.125rem;
   }
 }
 
