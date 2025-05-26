@@ -298,7 +298,7 @@ function displayStationsList(stations) {
       </h4>
       <div class="card-buttons">
         <a href="${mapsUrl}" target="_blank" class="address-link">
-          📍 ${station.address}
+          📍 ${station.address}, ${station.city}
         </a>
         <a href="${phoneUrl}" class="phone-link">
           📞 ${station.phone}
