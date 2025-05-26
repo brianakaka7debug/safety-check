@@ -123,18 +123,22 @@ function initializeMap(userLat, userLng, nearestStations) {
   
   roadLayer.addTo(map);
 
-  // User location marker - blue circle with gradient/shine
+  // User location marker - blue circle with gradient/shine (responsive size)
+  const isMobile = window.innerWidth <= 768;
+  const userMarkerSize = isMobile ? 32 : 24;
+  const userIconSize = isMobile ? 38 : 30;
+  
   const userIcon = L.divIcon({
     html: `<div style="
-      width: 24px;
-      height: 24px;
+      width: ${userMarkerSize}px;
+      height: ${userMarkerSize}px;
       background: linear-gradient(135deg, #4a90e2 0%, #357abd 50%, #1e5f9a 100%);
       border: 3px solid white;
       border-radius: 50%;
       box-shadow: 0 3px 10px rgba(74, 144, 226, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
     "></div>`,
-    iconSize: [30, 30],
-    iconAnchor: [15, 15],
+    iconSize: [userIconSize, userIconSize],
+    iconAnchor: [userIconSize/2, userIconSize/2],
     className: 'user-marker'
   });
   
@@ -151,10 +155,16 @@ function initializeMap(userLat, userLng, nearestStations) {
     const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1']; // Green, Orange, Red, Purple
     const markerColor = colors[index] || '#6c757d'; // Fallback to grey
     
+    // Responsive marker size
+    const isMobile = window.innerWidth <= 768;
+    const markerSize = isMobile ? 28 : 22;
+    const iconSize = isMobile ? 32 : 26;
+    const fontSize = isMobile ? 16 : 12;
+    
     const stationIcon = L.divIcon({
       html: `<div style="
-        width: 22px;
-        height: 22px;
+        width: ${markerSize}px;
+        height: ${markerSize}px;
         background-color: ${markerColor};
         border: 2px solid white;
         border-radius: 4px;
@@ -164,11 +174,11 @@ function initializeMap(userLat, userLng, nearestStations) {
         justify-content: center;
         color: white;
         font-weight: bold;
-        font-size: 12px;
+        font-size: ${fontSize}px;
         font-family: system-ui, sans-serif;
       ">${stationNumber}</div>`,
-      iconSize: [26, 26],
-      iconAnchor: [13, 13],
+      iconSize: [iconSize, iconSize],
+      iconAnchor: [iconSize/2, iconSize/2],
       className: 'station-marker'
     });
     
