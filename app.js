@@ -525,6 +525,9 @@ async function getUserLocationAndFindStations() {
       // Show results
       resultsEl.removeAttribute('hidden');
       
+      // Snap to top to show results
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      
       // Initialize map and display results
       setTimeout(() => {
         initializeMap(userLocation.lat, userLocation.lng, nearestStations);
@@ -582,21 +585,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Add click handler for search button
-  searchBtn.addEventListener('click', function(e) {
+  searchButton.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('Search button clicked!');
     searchByAddress();
   });
   
   // Add click handler for change location button
-  changeLocationBtn.addEventListener('click', function(e) {
+  changeLocationButton.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('Change location clicked!');
     changeLocation();
   });
   
   // Add enter key handler for address input
-  addressInput.addEventListener('keypress', function(e) {
+  addressField.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
       e.preventDefault();
       searchByAddress();
