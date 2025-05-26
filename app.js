@@ -23,6 +23,8 @@ let map = null;
 
 // DOM elements
 const locateBtn = document.getElementById('locateBtn');
+const searchBtn = document.getElementById('searchBtn');
+const addressInput = document.getElementById('addressInput');
 const statusEl = document.getElementById('status');
 const resultsEl = document.getElementById('results');
 const stationListEl = document.getElementById('stationList');
@@ -297,11 +299,11 @@ function displayStationsList(stations) {
         ${station.name}
       </h4>
       <div class="card-buttons">
-        <a href="${mapsUrl}" target="_blank" class="address-link">
-          📍 ${station.address}, ${station.city}
-        </a>
         <a href="${phoneUrl}" class="phone-link">
           📞 ${station.phone}
+        </a>
+        <a href="${mapsUrl}" target="_blank" class="address-link">
+          📍 ${station.address}, ${station.city}
         </a>
       </div>
     `;
@@ -309,7 +311,54 @@ function displayStationsList(stations) {
   });
 }
 
-// Show error message
+// Free geocoding with multiple fallbacks
+async function geocodeAddress(address) {
+  // Add Hawaii context to improve results
+  const fullAddress = address.includes('Hawaii') || address.includes('HI') ? 
+    address : `${address}, Hawaii, USA`;
+  
+  const encodedAddress = encodeURIComponent(fullAddress);
+  
+  // Try multiple free services in order of reliability
+  const services = [
+    // Nominatim (OpenStreetMap) - most reliable free service
+    {
+      name: 'Nominatim',
+      url: `https://nominatim.openstreetmap.org/search?format=json&q=${encodedAddress}&limit=1&countrycodes=us`,
+      parser: (data) => data[0] ? { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon), formatted: data[0].display_name } : null
+    }
+  ];
+  
+  for (const service of services) {
+    try {
+      console.log(`Trying geocoding with ${service.name}...`);
+      const response = await fetch(service.url);
+      
+      if (!response.ok) continue;
+      
+      const data = await response.json();
+      const result = service.parser(data);
+      
+      if (result && result.lat && result.lng) {
+        console.log(`Geocoding successful with ${service.name}:`, result);
+        return {
+          success: true,
+          lat: result.lat,
+          lng: result.lng,
+          formatted_address: result.formatted || address
+        };
+      }
+    } catch (error) {
+      console.log(`${service.name} geocoding failed:`, error);
+      continue;
+    }
+  }
+  
+  return {
+    success: false,
+    error: 'Unable to find location. Please try a more specific address.'
+  };
+}
 function showError(message) {
   statusEl.innerHTML = `⚠️ ${message}`;
   statusEl.removeAttribute('hidden');
@@ -404,7 +453,7 @@ async function getUserLocationAndFindStations() {
 
       // Hide status and button
       statusEl.setAttribute('hidden', '');
-      locateBtn.style.display = 'none';
+      document.querySelector('.location-options').style.display = 'none';
 
       // Show results
       resultsEl.removeAttribute('hidden');
@@ -447,19 +496,36 @@ async function getUserLocationAndFindStations() {
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, setting up event listeners');
   
-  // Get the button element
-  const btn = document.getElementById('locateBtn');
+  // Get the button elements
+  const locateButton = document.getElementById('locateBtn');
+  const searchButton = document.getElementById('searchBtn');
+  const addressField = document.getElementById('addressInput');
   
-  if (!btn) {
-    console.error('Button not found!');
+  if (!locateButton || !searchButton || !addressField) {
+    console.error('Required elements not found!');
     return;
   }
   
-  // Add click handler
-  btn.addEventListener('click', function(e) {
+  // Add click handler for location button
+  locateBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    console.log('Button clicked!');
+    console.log('Location button clicked!');
     getUserLocationAndFindStations();
+  });
+  
+  // Add click handler for search button
+  searchBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('Search button clicked!');
+    searchByAddress();
+  });
+  
+  // Add enter key handler for address input
+  addressInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      searchByAddress();
+    }
   });
   
   // Start loading station data in the background (optional preload)

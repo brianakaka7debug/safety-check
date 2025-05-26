@@ -26,14 +26,62 @@
     }
     .hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:.75em;line-height:1.1;}
     .hero p{max-width:min(800px, 85%);margin:0 auto 2.2em;font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.5;}
-    .cta{
-      background:var(--brand-teal);
-      color:#fff;border:0;border-radius:8px;
-      padding:1rem 2.6rem;font-size:1.125rem;
-      cursor:pointer;transition:filter .2s;
+    .location-options{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 3rem;
     }
-    .cta:hover{filter:brightness(1.1);}
+    .or-divider{
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      position: relative;
+      padding: 0 1rem;
+    }
+    .or-divider::before,
+    .or-divider::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .or-divider::before{left: -70px;}
+    .or-divider::after{right: -70px;}
+    .address-input-section{
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 400px;
+    }
+    .address-input{
+      padding: 0.875rem 1rem;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      color: var(--font-light);
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+    .address-input::placeholder{
+      color: rgba(255,255,255,0.6);
+    }
+    .address-input:focus{
+      outline: none;
+      border-color: var(--brand-teal);
+      background: rgba(255,255,255,0.15);
+    }
+    .cta-secondary{
+      background: rgba(40, 163, 145, 0.8);
+      border: 1px solid var(--brand-teal);
+    }
+    .cta-secondary:hover{
+      background: var(--brand-teal);
+    }
     .about-section{
       max-width: 600px;
       margin: 0 auto;
@@ -96,7 +144,19 @@
   <header class="hero">
     <h1>Find Safety Check Stations<br>on Hawai'i Island</h1>
     <p>A free community resource to help locals and visitors easily find certified safety inspection stations across the Big Island. Get your annual vehicle safety check done quickly and conveniently.</p>
-    <button class="cta" id="locateBtn" type="button">Get&nbsp;My&nbsp;Location</button>
+    
+    <!-- Location Input Options -->
+    <div class="location-options">
+      <button class="cta" id="locateBtn" type="button">📍 Use My Location</button>
+      <div class="or-divider">
+        <span>or</span>
+      </div>
+      <div class="address-input-section">
+        <input type="text" id="addressInput" placeholder="Enter your address or ZIP code" class="address-input">
+        <button class="cta cta-secondary" id="searchBtn" type="button">🔍 Find Stations</button>
+      </div>
+    </div>
+    
     <div id="status" hidden>Finding nearby safety check stations…</div>
     
     <!-- About Section -->
