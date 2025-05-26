@@ -247,17 +247,7 @@ function displayStationsList(stations) {
   
   // Add warning message at the top
   const warningDiv = document.createElement('div');
-  warningDiv.style.cssText = `
-    background: rgba(255, 193, 7, 0.1);
-    border: 1px solid rgba(255, 193, 7, 0.3);
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    text-align: center;
-  `;
+  warningDiv.className = 'warning-message';
   warningDiv.innerHTML = `
     <strong>⚠️ Important:</strong> Please call ahead before driving to these locations, as business hours and availability may vary.
   `;
@@ -296,16 +286,14 @@ function displayStationsList(stations) {
         ">${stationNumber}</span>
         ${station.name}
       </h4>
-      <p style="margin-bottom:0.5rem;">
+      <div class="card-buttons">
         <a href="${mapsUrl}" target="_blank" class="address-link">
           📍 ${station.address}
         </a>
-      </p>
-      <p style="margin:0;">
         <a href="${phoneUrl}" class="phone-link">
           📞 ${station.phone}
         </a>
-      </p>
+      </div>
     `;
     stationListEl.appendChild(stationCard);
   });
