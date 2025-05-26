@@ -31,8 +31,61 @@
       color:#fff;border:0;border-radius:8px;
       padding:1rem 2.6rem;font-size:1.125rem;
       cursor:pointer;transition:filter .2s;
+      margin-bottom: 3rem;
     }
     .cta:hover{filter:brightness(1.1);}
+    .about-section{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .about-content h3{
+      color: var(--font-light);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .about-content p{
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .support-links{
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .support-item{
+      text-align: center;
+    }
+    .support-item strong{
+      display: block;
+      color: var(--font-light);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .donation-link, .contact-link{
+      color: var(--brand-teal);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: rgba(40, 163, 145, 0.2);
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(40, 163, 145, 0.3);
+    }
+    .donation-link:hover, .contact-link:hover{
+      background: rgba(40, 163, 145, 0.3);
+      transform: translateY(-1px);
+    }
   </style>
   <!--  Main stylesheet (everything below the fold)  -->
   <link rel="stylesheet" href="style.css">
@@ -45,8 +98,24 @@
     <p>A free community resource to help locals and visitors easily find certified safety inspection stations across the Big Island. Get your annual vehicle safety check done quickly and conveniently.</p>
     <button class="cta" id="locateBtn" type="button">Get&nbsp;My&nbsp;Location</button>
     <div id="status" hidden>Finding nearby safety check stations…</div>
-    <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">
-      Questions or suggestions? Contact us at <a href="mailto:akakabrian19@gmail.com" style="color: var(--font-light); text-decoration: underline;">akakabrian19@gmail.com</a>
+    
+    <!-- About Section -->
+    <div class="about-section">
+      <div class="about-content">
+        <h3>Why We Built This</h3>
+        <p>Finding a safety check station shouldn't be a hassle. We created this tool to help our Big Island community—locals and visitors alike—quickly locate certified stations without the frustration of outdated listings or unclear locations.</p>
+        
+        <div class="support-links">
+          <div class="support-item">
+            <strong>Support This Project</strong>
+            <a href="https://paypal.me/yourusername" target="_blank" class="donation-link">☕ Buy us a coffee</a>
+          </div>
+          <div class="support-item">
+            <strong>Get in Touch</strong>
+            <a href="mailto:akakabrian19@gmail.com" class="contact-link">akakabrian19@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <section id="results" hidden>
