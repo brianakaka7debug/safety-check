@@ -381,3 +381,29 @@ body {
 @media (min-width:600px){
   body{font-size:17px;}
 }
+
+/* Footer Styles */
+.page-footer {
+  background: rgba(0,0,0,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  backdrop-filter: blur(10px);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: var(--brand-teal);
+  text-decoration: underline;
+}

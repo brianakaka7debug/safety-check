@@ -120,9 +120,9 @@ function initializeMap(userLat, userLng, nearestStations) {
     attributionControl: false // Remove credits overlay
   });
   
-  // Clean road map only (no satellite layer)
-  const roadLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: ''
+  // Clean road map using Stadia Maps
+  const roadLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+    attribution: '' // Attribution moved to page footer
   });
   
   roadLayer.addTo(map);
