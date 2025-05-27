@@ -208,5 +208,113 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- Your logic, loaded last with defer so it never blocks rendering -->
   <script src="app.js" defer></script>
+  
+  <!-- Add the missing searchByAddress function -->
+  <script>
+    // Add the missing searchByAddress function
+    async function searchByAddress() {
+      const address = document.getElementById('addressInput').value.trim();
+      
+      if (!address) {
+        showError('Please enter an address or ZIP code.');
+        return;
+      }
+      
+      // Disable button and show loading state
+      const searchBtn = document.getElementById('searchBtn');
+      searchBtn.disabled = true;
+      searchBtn.textContent = 'Searching...';
+      
+      const statusEl = document.getElementById('status');
+      statusEl.removeAttribute('hidden');
+      statusEl.textContent = 'Finding your location...';
+      
+      try {
+        // Ensure stations data is loaded
+        if (safetyStations.length === 0) {
+          statusEl.textContent = 'Loading safety station data...';
+          await loadStationsData();
+        }
+        
+        // Geocode the address
+        statusEl.textContent = 'Looking up address...';
+        const geocodeResult = await geocodeAddress(address);
+        
+        if (!geocodeResult.success) {
+          showError(geocodeResult.error || 'Unable to find that location. Please try a different address.');
+          searchBtn.disabled = false;
+          searchBtn.textContent = '🔍 Find Stations';
+          return;
+        }
+        
+        const { lat, lng } = geocodeResult;
+        console.log('Geocoded address:', address, 'to coordinates:', lat, lng);
+        
+        // Check if the location is within Big Island bounds
+        if (!isWithinBigIsland(lat, lng)) {
+          showLocationError(lat, lng);
+          searchBtn.disabled = false;
+          searchBtn.textContent = '🔍 Find Stations';
+          return;
+        }
+        
+        // Set user location
+        userLocation = { lat, lng };
+        
+        // Find nearest stations
+        statusEl.textContent = 'Finding nearby safety check stations...';
+        const nearestStations = findNearestStations(lat, lng, currentStationCount);
+        console.log('Found nearest stations:', nearestStations.length);
+        
+        if (nearestStations.length === 0) {
+          showError('No safety check stations found within 25 miles of your location.');
+          searchBtn.disabled = false;
+          searchBtn.textContent = '🔍 Find Stations';
+          return;
+        }
+        
+        // Hide hero section and show results
+        document.querySelector('.hero').style.display = 'none';
+        statusEl.setAttribute('hidden', '');
+        
+        // Show results
+        document.getElementById('results').removeAttribute('hidden');
+        
+        // Scroll to top to show results
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Initialize map and display results
+        setTimeout(() => {
+          initializeMap(lat, lng, nearestStations);
+          displayStationsList(nearestStations);
+        }, 100);
+        
+      } catch (error) {
+        console.error('Search error:', error);
+        showError('An error occurred while searching. Please try again.');
+        searchBtn.disabled = false;
+        searchBtn.textContent = '🔍 Find Stations';
+      }
+    }
+    
+    // Helper function to show errors (if not already defined)
+    function showError(message) {
+      const statusEl = document.getElementById('status');
+      statusEl.innerHTML = `⚠️ ${message}`;
+      statusEl.removeAttribute('hidden');
+      
+      // Re-enable buttons
+      const locateBtn = document.getElementById('locateBtn');
+      const searchBtn = document.getElementById('searchBtn');
+      if (locateBtn) {
+        locateBtn.disabled = false;
+        locateBtn.textContent = '📍 Use My Location';
+      }
+      if (searchBtn) {
+        searchBtn.disabled = false;
+        searchBtn.textContent = '🔍 Find Stations';
+      }
+    }
+  </script>
 </body>
 </html>
