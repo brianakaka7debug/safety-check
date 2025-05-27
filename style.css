@@ -114,13 +114,13 @@ body {
   gap: 0.75rem;
 }
 
-/* Warning message styling */
+/* Warning message styling - reduced spacing */
 .warning-message {
   background: linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 100%);
   border: 1px solid rgba(255, 193, 7, 0.3);
   border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 1.5rem;
+  padding: 12px 16px;
+  margin-bottom: 0.75rem;
   color: #fff;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -301,8 +301,9 @@ body {
   
   .warning-message {
     font-size: 1.1rem;
-    padding: 20px 24px;
+    padding: 16px 20px;
     line-height: 1.6;
+    margin-bottom: 1rem;
   }
   
   .card {
