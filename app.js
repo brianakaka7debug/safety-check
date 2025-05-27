@@ -354,10 +354,7 @@ function changeLocation() {
   locateBtn.disabled = false;
   locateBtn.textContent = '📍 Use My Location';
   searchBtn.disabled = false;
-  searchBtn.innerHTML = `
-    <span class="desktop-text">🔍 Find Stations</span>
-    <span class="mobile-text">🔍</span>
-  `;
+  searchBtn.textContent = '🔍 Find Stations';
   
   // Scroll to top smoothly
   window.scrollTo({ top: 0, behavior: 'smooth' });
