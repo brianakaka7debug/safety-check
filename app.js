@@ -114,33 +114,57 @@ function findNearestStations(userLat, userLng, limit = 4) {
   return stationsWithin25Miles.slice(0, limit);
 }
 
-// Initialize map
+// Initialize map with improved styling
 function initializeMap(userLat, userLng, nearestStations) {
   map = L.map('map', {
     attributionControl: false // Remove credits overlay
   });
   
-  // Clean road map using Stadia Maps
-  const roadLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-    attribution: '' // Attribution moved to page footer
+  // Create a vibrant, colorful map style using Stadia Maps Outdoors
+  // This provides rich colors, topography, and better visual appeal
+  const outdoorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+    attribution: '', // Attribution moved to page footer
+    maxZoom: 18
   });
   
-  roadLayer.addTo(map);
+  outdoorLayer.addTo(map);
 
-  // User location marker - blue circle with gradient/shine (responsive size)
+  // Custom CSS for enhanced map appearance
+  const mapContainer = document.getElementById('map');
+  mapContainer.style.filter = 'contrast(1.05) saturate(1.1) brightness(1.02)';
+  mapContainer.style.borderRadius = '12px';
+  mapContainer.style.overflow = 'hidden';
+  mapContainer.style.boxShadow = '0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1)';
+
+  // User location marker - enhanced blue circle with gradient/shine
   const isMobile = window.innerWidth <= 768;
-  const userMarkerSize = isMobile ? 32 : 24;
-  const userIconSize = isMobile ? 38 : 30;
+  const userMarkerSize = isMobile ? 36 : 28;
+  const userIconSize = isMobile ? 42 : 34;
   
   const userIcon = L.divIcon({
     html: `<div style="
       width: ${userMarkerSize}px;
       height: ${userMarkerSize}px;
-      background: linear-gradient(135deg, #4a90e2 0%, #357abd 50%, #1e5f9a 100%);
+      background: radial-gradient(circle at 30% 30%, #5ba3f5 0%, #4a90e2 40%, #357abd 70%, #2c5aa0 100%);
       border: 3px solid white;
       border-radius: 50%;
-      box-shadow: 0 3px 10px rgba(74, 144, 226, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
-    "></div>`,
+      box-shadow: 
+        0 4px 12px rgba(74, 144, 226, 0.5), 
+        inset 0 2px 4px rgba(255,255,255,0.4),
+        0 0 0 2px rgba(74, 144, 226, 0.2);
+      position: relative;
+    ">
+      <div style="
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: ${Math.round(userMarkerSize * 0.3)}px;
+        height: ${Math.round(userMarkerSize * 0.3)}px;
+        background: rgba(255,255,255,0.6);
+        border-radius: 50%;
+        filter: blur(1px);
+      "></div>
+    </div>`,
     iconSize: [userIconSize, userIconSize],
     iconAnchor: [userIconSize/2, userIconSize/2],
     className: 'user-marker'
@@ -148,31 +172,56 @@ function initializeMap(userLat, userLng, nearestStations) {
   
   L.marker([userLat, userLng], { icon: userIcon })
    .addTo(map)
-   .bindPopup('<strong style="color: #4a90e2;">Your Location</strong>')
+   .bindPopup(`
+     <div style="
+       background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+       color: white;
+       padding: 12px 16px;
+       border-radius: 8px;
+       text-align: center;
+       font-weight: 600;
+       box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+       border: none;
+     ">
+       📍 Your Location
+     </div>
+   `)
    .openPopup();
 
-  // Station markers - numbered colored squares (1, 2, 3, 4 based on proximity)
+  // Enhanced station markers with better colors and styling
   nearestStations.forEach((station, index) => {
-    const stationNumber = index + 1; // 1, 2, 3, 4
+    const stationNumber = index + 1;
     
-    // Color scheme for markers
-    const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1', '#17a2b8', '#ffc107', '#e83e8c', '#6c757d']; // 8 colors
-    const markerColor = colors[index] || '#6c757d'; // Fallback to grey
+    // Enhanced color palette with more vibrant, distinctive colors
+    const colorPalette = [
+      { bg: '#e74c3c', shadow: 'rgba(231, 76, 60, 0.4)' },    // Vibrant Red
+      { bg: '#f39c12', shadow: 'rgba(243, 156, 18, 0.4)' },   // Orange
+      { bg: '#9b59b6', shadow: 'rgba(155, 89, 182, 0.4)' },   // Purple  
+      { bg: '#1abc9c', shadow: 'rgba(26, 188, 156, 0.4)' },   // Teal
+      { bg: '#3498db', shadow: 'rgba(52, 152, 219, 0.4)' },   // Blue
+      { bg: '#e67e22', shadow: 'rgba(230, 126, 34, 0.4)' },   // Dark Orange
+      { bg: '#e91e63', shadow: 'rgba(233, 30, 99, 0.4)' },    // Pink
+      { bg: '#795548', shadow: 'rgba(121, 85, 72, 0.4)' }     // Brown
+    ];
+    
+    const colors = colorPalette[index] || { bg: '#6c757d', shadow: 'rgba(108, 117, 125, 0.4)' };
     
     // Responsive marker size
-    const isMobile = window.innerWidth <= 768;
-    const markerSize = isMobile ? 28 : 22;
-    const iconSize = isMobile ? 32 : 26;
-    const fontSize = isMobile ? 16 : 12;
+    const markerSize = isMobile ? 32 : 26;
+    const iconSize = isMobile ? 36 : 30;
+    const fontSize = isMobile ? 18 : 14;
     
     const stationIcon = L.divIcon({
       html: `<div style="
         width: ${markerSize}px;
         height: ${markerSize}px;
-        background-color: ${markerColor};
-        border: 2px solid white;
-        border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        background: linear-gradient(135deg, ${colors.bg} 0%, ${colors.bg}dd 100%);
+        border: 3px solid white;
+        border-radius: 6px;
+        box-shadow: 
+          0 3px 10px ${colors.shadow}, 
+          inset 0 1px 0 rgba(255,255,255,0.3),
+          0 0 0 1px rgba(0,0,0,0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -180,7 +229,20 @@ function initializeMap(userLat, userLng, nearestStations) {
         font-weight: bold;
         font-size: ${fontSize}px;
         font-family: system-ui, sans-serif;
-      ">${stationNumber}</div>`,
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        position: relative;
+      ">${stationNumber}
+        <div style="
+          position: absolute;
+          top: 2px;
+          left: 3px;
+          width: 4px;
+          height: 4px;
+          background: rgba(255,255,255,0.6);
+          border-radius: 50%;
+          filter: blur(0.5px);
+        "></div>
+      </div>`,
       iconSize: [iconSize, iconSize],
       iconAnchor: [iconSize/2, iconSize/2],
       className: 'station-marker'
@@ -193,68 +255,73 @@ function initializeMap(userLat, userLng, nearestStations) {
       .addTo(map)
       .bindPopup(`
         <div style="
-          background: white;
-          border-radius: 8px;
-          padding: 16px;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-          border: none;
+          background: linear-gradient(135deg, ${colors.bg}15 0%, ${colors.bg}08 100%);
+          border: 2px solid ${colors.bg}40;
+          border-radius: 12px;
+          padding: 18px;
+          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
           font-family: system-ui, -apple-system, sans-serif;
-          min-width: 220px;
+          min-width: 240px;
+          backdrop-filter: blur(10px);
         ">
           <h3 style="
             color: #333; 
-            font-size: 16px; 
-            margin: 0 0 12px 0;
+            font-size: 17px; 
+            margin: 0 0 14px 0;
             font-weight: 600;
             line-height: 1.3;
+            text-align: center;
           ">${station.name}</h3>
           <a href="${mapsUrl}" 
              target="_blank"
              style="
-               color: #28a391;
+               color: ${colors.bg};
                text-decoration: none;
                font-weight: 500;
-               padding: 8px 12px;
-               border-radius: 6px;
-               background: rgba(40, 163, 145, 0.1);
+               padding: 10px 14px;
+               border-radius: 8px;
+               background: ${colors.bg}15;
+               border: 1px solid ${colors.bg}30;
                display: block;
-               margin-bottom: 8px;
+               margin-bottom: 10px;
                font-size: 14px;
                line-height: 1.4;
                text-align: center;
-               transition: background 0.2s ease;
+               transition: all 0.2s ease;
              "
-             onmouseover="this.style.background='rgba(40, 163, 145, 0.2)'"
-             onmouseout="this.style.background='rgba(40, 163, 145, 0.1)'">
+             onmouseover="this.style.background='${colors.bg}25'; this.style.borderColor='${colors.bg}50'"
+             onmouseout="this.style.background='${colors.bg}15'; this.style.borderColor='${colors.bg}30'">
             📍 ${station.address}
           </a>
           <a href="${phoneUrl}"
              style="
-               color: #28a391;
+               color: ${colors.bg};
                text-decoration: none;
                font-weight: 600;
-               padding: 10px 16px;
-               border-radius: 6px;
-               background: rgba(40, 163, 145, 0.1);
+               padding: 12px 16px;
+               border-radius: 8px;
+               background: ${colors.bg}20;
+               border: 1px solid ${colors.bg}40;
                display: block;
-               font-size: 14px;
+               font-size: 15px;
                text-align: center;
-               transition: background 0.2s ease;
+               transition: all 0.2s ease;
              "
-             onmouseover="this.style.background='rgba(40, 163, 145, 0.2)'"
-             onmouseout="this.style.background='rgba(40, 163, 145, 0.1)'">
+             onmouseover="this.style.background='${colors.bg}30'; this.style.borderColor='${colors.bg}60'"
+             onmouseout="this.style.background='${colors.bg}20'; this.style.borderColor='${colors.bg}40'">
             📞 ${station.phone}
           </a>
         </div>
       `);
   });
 
-  // Fit map to show all displayed stations with less padding (zoom closer)
+  // Fit map to show all displayed stations with optimal padding
   const allPoints = [[userLat, userLng], ...nearestStations.map(s => [s.lat, s.lng])];
   const markers = [L.marker([userLat, userLng]), ...nearestStations.map(s => L.marker([s.lat, s.lng]))];
   const group = new L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.075)); // Reduced padding by half for closer zoom
+  map.fitBounds(group.getBounds().pad(0.1)); // Slightly more padding for better framing
 }
+
 // Display stations list
 function displayStationsList(stations) {
   stationListEl.innerHTML = '';
@@ -267,12 +334,21 @@ function displayStationsList(stations) {
   `;
   stationListEl.appendChild(warningDiv);
   
-  // Color scheme for card numbers (matching map markers)
-  const colors = ['#28a745', '#fd7e14', '#dc3545', '#6f42c1', '#17a2b8', '#ffc107', '#e83e8c', '#6c757d']; // 8 colors
+  // Enhanced color scheme for card numbers (matching map markers)
+  const colorPalette = [
+    '#e74c3c', // Vibrant Red
+    '#f39c12', // Orange
+    '#9b59b6', // Purple  
+    '#1abc9c', // Teal
+    '#3498db', // Blue
+    '#e67e22', // Dark Orange
+    '#e91e63', // Pink
+    '#795548'  // Brown
+  ];
   
   stations.forEach((station, index) => {
-    const stationNumber = index + 1; // 1, 2, 3, 4
-    const markerColor = colors[index] || '#6c757d'; // Fallback to grey
+    const stationNumber = index + 1;
+    const markerColor = colorPalette[index] || '#6c757d';
     
     // Create Google Maps URL for address
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`;
@@ -288,15 +364,17 @@ function displayStationsList(stations) {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 24px;
-          height: 24px;
-          background-color: ${markerColor};
+          width: 28px;
+          height: 28px;
+          background: linear-gradient(135deg, ${markerColor} 0%, ${markerColor}dd 100%);
           color: white;
           font-weight: bold;
-          font-size: 14px;
-          border-radius: 4px;
+          font-size: 16px;
+          border-radius: 6px;
           margin-right: 12px;
           flex-shrink: 0;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);
+          text-shadow: 0 1px 1px rgba(0,0,0,0.3);
         ">${stationNumber}</span>
         ${station.name}
       </h4>
@@ -359,6 +437,7 @@ function changeLocation() {
   // Scroll to top smoothly
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 function showMoreStations() {
   if (currentStationCount >= 8) return; // Max 8 stations
   
@@ -423,6 +502,7 @@ async function geocodeAddress(address) {
     error: 'Unable to find location. Please try a more specific address.'
   };
 }
+
 function showError(message) {
   statusEl.innerHTML = `⚠️ ${message}`;
   statusEl.removeAttribute('hidden');
@@ -557,6 +637,92 @@ async function getUserLocationAndFindStations() {
       maximumAge: 300000 // 5 minutes
     }
   );
+}
+
+// Add the missing searchByAddress function
+async function searchByAddress() {
+  const address = document.getElementById('addressInput').value.trim();
+  
+  if (!address) {
+    showError('Please enter an address or ZIP code.');
+    return;
+  }
+  
+  // Disable button and show loading state
+  const searchBtn = document.getElementById('searchBtn');
+  searchBtn.disabled = true;
+  searchBtn.textContent = 'Searching...';
+  
+  const statusEl = document.getElementById('status');
+  statusEl.removeAttribute('hidden');
+  statusEl.textContent = 'Finding your location...';
+  
+  try {
+    // Ensure stations data is loaded
+    if (safetyStations.length === 0) {
+      statusEl.textContent = 'Loading safety station data...';
+      await loadStationsData();
+    }
+    
+    // Geocode the address
+    statusEl.textContent = 'Looking up address...';
+    const geocodeResult = await geocodeAddress(address);
+    
+    if (!geocodeResult.success) {
+      showError(geocodeResult.error || 'Unable to find that location. Please try a different address.');
+      searchBtn.disabled = false;
+      searchBtn.textContent = '🔍 Find Stations';
+      return;
+    }
+    
+    const { lat, lng } = geocodeResult;
+    console.log('Geocoded address:', address, 'to coordinates:', lat, lng);
+    
+    // Check if the location is within Big Island bounds
+    if (!isWithinBigIsland(lat, lng)) {
+      showLocationError(lat, lng);
+      searchBtn.disabled = false;
+      searchBtn.textContent = '🔍 Find Stations';
+      return;
+    }
+    
+    // Set user location
+    userLocation = { lat, lng };
+    
+    // Find nearest stations
+    statusEl.textContent = 'Finding nearby safety check stations...';
+    const nearestStations = findNearestStations(lat, lng, currentStationCount);
+    console.log('Found nearest stations:', nearestStations.length);
+    
+    if (nearestStations.length === 0) {
+      showError('No safety check stations found within 25 miles of your location.');
+      searchBtn.disabled = false;
+      searchBtn.textContent = '🔍 Find Stations';
+      return;
+    }
+    
+    // Hide hero section and show results
+    document.querySelector('.hero').style.display = 'none';
+    statusEl.setAttribute('hidden', '');
+    
+    // Show results
+    document.getElementById('results').removeAttribute('hidden');
+    
+    // Scroll to top to show results
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Initialize map and display results
+    setTimeout(() => {
+      initializeMap(lat, lng, nearestStations);
+      displayStationsList(nearestStations);
+    }, 100);
+    
+  } catch (error) {
+    console.error('Search error:', error);
+    showError('An error occurred while searching. Please try again.');
+    searchBtn.disabled = false;
+    searchBtn.textContent = '🔍 Find Stations';
+  }
 }
 
 // Event listeners and initialization
