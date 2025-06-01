@@ -3,36 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Big Island Safety Check Finder</title>
+  <title>Hawaiʻi Island Safety Check Locator Map</title>
   <!-- Preload hero image for faster first paint -->
   <link rel="preload" as="image" href="lava-texture.jpg">
+  <!-- Google Fonts for softer, more organic feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Critical CSS (just the first viewport) is inlined via <style>. 
        The rest sits in style.css so browsers can cache it aggressively. -->
   <style>
     :root{
       --brand-teal:#28a391;
+      --volcanic-black:#2c2c2c;
+      --forest-green:#4a7c59;
+      --ocean-blue:#4a90e2;
+      --lava-red:#e74c3c;
       --font-light:#ffffff;
       --font-dark:#1e1e1e;
     }
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{font:16px/1.5 system-ui,Segoe UI,Helvetica,Arial,sans-serif;color:var(--font-dark);}
+    body{
+      font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--font-dark);
+    }
     .hero{
       background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
         url('lava-texture.jpg') center 45%/cover no-repeat;
       color:var(--font-light);
       text-align:center;
       padding:15vh 1.5rem 10vh;
     }
-    .hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:.75em;line-height:1.1;}
-    .hero p{max-width:min(800px, 85%);margin:0 auto 2.2em;font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.5;}
+    .hero h1{
+      font-size:clamp(2rem,5vw,3rem);
+      margin-bottom:.75em;
+      line-height:1.1;
+      font-weight: 600;
+    }
+    .hero p{
+      max-width:min(800px, 85%);
+      margin:0 auto 2.2em;
+      font-size:clamp(1rem,2.5vw,1.2rem);
+      line-height:1.5;
+      font-weight: 400;
+    }
+    .source-note {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
     .cta{
       background:var(--brand-teal);
       color:#fff;border:0;border-radius:8px;
       padding:1rem 2.6rem;font-size:1.125rem;
-      cursor:pointer;transition:filter .2s;
+      cursor:pointer;transition:all .2s;
+      font-family: inherit;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
     }
-    .cta:hover{filter:brightness(1.1);}
+    .cta:hover{
+      filter:brightness(1.1);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(40, 163, 145, 0.3);
+    }
+    .cta:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .cta .button-icon {
+      font-size: 1.2em;
+      margin-right: 8px;
+      display: inline-block;
+    }
     .location-options{
       display: flex;
       flex-direction: column;
@@ -74,6 +122,7 @@
       font-size: 1rem;
       backdrop-filter: blur(10px);
       transition: all 0.2s ease;
+      font-family: inherit;
     }
     .address-input::placeholder{
       color: rgba(255,255,255,0.6);
@@ -92,6 +141,25 @@
     .cta-secondary:hover{
       background: var(--brand-teal);
     }
+    .privacy-note {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    .loading-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
     .about-section{
       max-width: 600px;
       margin: 0 auto;
@@ -106,11 +174,12 @@
       font-size: 1.25rem;
       margin-bottom: 1rem;
       text-align: center;
+      font-weight: 600;
     }
     .about-content p{
       color: rgba(255,255,255,0.9);
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 1.5rem;
       text-align: center;
     }
@@ -128,6 +197,7 @@
       color: var(--font-light);
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
+      font-weight: 600;
     }
     .donation-link, .contact-link{
       color: var(--brand-teal);
@@ -152,19 +222,29 @@
 </head>
 <body>
   <header class="hero">
-    <h1>Find Safety Check Stations<br>on Hawai'i Island</h1>
-    <p>A free community resource to help locals and visitors easily find certified safety inspection stations across the Big Island. Get your annual vehicle safety check done quickly and conveniently.</p>
+    <h1>Easily Find Nearby Vehicle Safety Check<br>Stations in Hawaiʻi</h1>
+    <p>This is a free community resource to help folks find the nearest certified vehicle safety check locations—fast, easy, and no hassle.</p>
+    <p class="source-note">(Locations are from Hawaii Department of Transportation website)</p>
     
     <!-- Location Input Options -->
     <div class="location-options">
-      <button class="cta" id="locateBtn" type="button">📍 Use My Location</button>
+      <button class="cta" id="locateBtn" type="button">
+        <span class="loading-spinner" id="locationSpinner"></span>
+        <span class="button-icon">📍</span>
+        <span class="button-text">Use My Location</span>
+      </button>
       <div class="or-divider">
         <span>or</span>
       </div>
       <div class="address-input-section">
         <input type="text" id="addressInput" placeholder="Enter your address or ZIP code" class="address-input">
-        <button class="cta cta-secondary" id="searchBtn" type="button">🔍 Find Stations</button>
+        <button class="cta cta-secondary" id="searchBtn" type="button">
+          <span class="loading-spinner" id="searchSpinner"></span>
+          <span class="button-icon">🔍</span>
+          <span class="button-text">Find Stations</span>
+        </button>
       </div>
+      <p class="privacy-note">Your location is only used to find nearby stations. We don't store or share it.</p>
     </div>
     
     <div id="status" hidden>Finding nearby safety check stations…</div>
@@ -173,7 +253,7 @@
     <div class="about-section">
       <div class="about-content">
         <h3>Why We Built This</h3>
-        <p>Finding a safety check station shouldn't be a hassle. We created this tool to help our Big Island community—locals and visitors alike—quickly locate certified stations without the frustration of outdated listings or unclear locations.</p>
+        <p>Hi, I'm Brian Akaka. I built this to make life easier: Finding local safety check places is harder than it should be, especially since it's required. We should have something simple, fast, and accurate.</p>
         
         <div class="support-links">
           <div class="support-item">
@@ -197,10 +277,11 @@
     <div id="stationList"></div>
   </section>
   
-  <!-- Footer with map attribution -->
+  <!-- Footer with map attribution and local pride -->
   <footer class="page-footer">
     <div class="footer-content">
       <p>Map data © <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, © <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a>, © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a></p>
+      <p style="margin-top: 0.5rem; font-size: 0.65rem; color: rgba(255,255,255,0.5);">Proudly built in Puna District on Moku O Keawe 🌺</p>
     </div>
   </footer>
   
@@ -209,8 +290,25 @@
   <!-- Your logic, loaded last with defer so it never blocks rendering -->
   <script src="app.js" defer></script>
   
-  <!-- Add the missing searchByAddress function -->
+  <!-- Add the missing searchByAddress function with improved UX -->
   <script>
+    // Enhanced button state management
+    function setButtonLoading(buttonId, spinnerId, isLoading, loadingText, normalText) {
+      const button = document.getElementById(buttonId);
+      const spinner = document.getElementById(spinnerId);
+      const buttonText = button.querySelector('.button-text');
+      
+      if (isLoading) {
+        button.disabled = true;
+        spinner.style.display = 'inline-block';
+        buttonText.textContent = loadingText;
+      } else {
+        button.disabled = false;
+        spinner.style.display = 'none';
+        buttonText.textContent = normalText;
+      }
+    }
+    
     // Add the missing searchByAddress function
     async function searchByAddress() {
       const address = document.getElementById('addressInput').value.trim();
@@ -220,10 +318,8 @@
         return;
       }
       
-      // Disable button and show loading state
-      const searchBtn = document.getElementById('searchBtn');
-      searchBtn.disabled = true;
-      searchBtn.textContent = 'Searching...';
+      // Show loading state
+      setButtonLoading('searchBtn', 'searchSpinner', true, 'Searching...', 'Find Stations');
       
       const statusEl = document.getElementById('status');
       statusEl.removeAttribute('hidden');
@@ -242,8 +338,7 @@
         
         if (!geocodeResult.success) {
           showError(geocodeResult.error || 'Unable to find that location. Please try a different address.');
-          searchBtn.disabled = false;
-          searchBtn.textContent = '🔍 Find Stations';
+          setButtonLoading('searchBtn', 'searchSpinner', false, 'Searching...', 'Find Stations');
           return;
         }
         
@@ -253,8 +348,7 @@
         // Check if the location is within Big Island bounds
         if (!isWithinBigIsland(lat, lng)) {
           showLocationError(lat, lng);
-          searchBtn.disabled = false;
-          searchBtn.textContent = '🔍 Find Stations';
+          setButtonLoading('searchBtn', 'searchSpinner', false, 'Searching...', 'Find Stations');
           return;
         }
         
@@ -268,8 +362,7 @@
         
         if (nearestStations.length === 0) {
           showError('No safety check stations found within 25 miles of your location.');
-          searchBtn.disabled = false;
-          searchBtn.textContent = '🔍 Find Stations';
+          setButtonLoading('searchBtn', 'searchSpinner', false, 'Searching...', 'Find Stations');
           return;
         }
         
@@ -292,29 +385,124 @@
       } catch (error) {
         console.error('Search error:', error);
         showError('An error occurred while searching. Please try again.');
-        searchBtn.disabled = false;
-        searchBtn.textContent = '🔍 Find Stations';
+        setButtonLoading('searchBtn', 'searchSpinner', false, 'Searching...', 'Find Stations');
       }
     }
     
-    // Helper function to show errors (if not already defined)
+    // Enhanced showError function
     function showError(message) {
       const statusEl = document.getElementById('status');
-      statusEl.innerHTML = `⚠️ ${message}`;
+      statusEl.innerHTML = `<span style="color: #ff6b6b;">⚠️ ${message}</span>`;
       statusEl.removeAttribute('hidden');
       
-      // Re-enable buttons
-      const locateBtn = document.getElementById('locateBtn');
-      const searchBtn = document.getElementById('searchBtn');
-      if (locateBtn) {
-        locateBtn.disabled = false;
-        locateBtn.textContent = '📍 Use My Location';
-      }
-      if (searchBtn) {
-        searchBtn.disabled = false;
-        searchBtn.textContent = '🔍 Find Stations';
-      }
+      // Reset all button states
+      setButtonLoading('locateBtn', 'locationSpinner', false, 'Getting Location...', 'Use My Location');
+      setButtonLoading('searchBtn', 'searchSpinner', false, 'Searching...', 'Find Stations');
     }
+    
+    // Enhanced getUserLocationAndFindStations function
+    async function getUserLocationAndFindStationsEnhanced() {
+      console.log('Location button clicked');
+      
+      setButtonLoading('locateBtn', 'locationSpinner', true, 'Getting Location...', 'Use My Location');
+      
+      const statusEl = document.getElementById('status');
+      statusEl.removeAttribute('hidden');
+      statusEl.textContent = 'Getting your location...';
+
+      // Check if we're on HTTPS or localhost
+      const isSecure = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+      
+      if (!isSecure) {
+        showError('Location access requires HTTPS. Please use a secure hosting service.');
+        return;
+      }
+
+      if (!navigator.geolocation) {
+        showError('Geolocation is not supported by this browser.');
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        async function(position) {
+          console.log('Location received:', position.coords.latitude, position.coords.longitude);
+          
+          userLocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          // Check if user is within Big Island bounds
+          if (!isWithinBigIsland(userLocation.lat, userLocation.lng)) {
+            showLocationError(userLocation.lat, userLocation.lng);
+            return;
+          }
+
+          // Now ensure stations data is loaded before showing results
+          if (safetyStations.length === 0) {
+            statusEl.textContent = 'Loading safety station data…';
+            try {
+              await loadStationsData();
+            } catch (error) {
+              showError('Unable to load safety station data. Please try again.');
+              return;
+            }
+          }
+
+          // Find nearest stations
+          statusEl.textContent = 'Finding nearby safety check stations…';
+          const nearestStations = findNearestStations(userLocation.lat, userLocation.lng, currentStationCount);
+          console.log('Found nearest stations:', nearestStations.length);
+
+          // Hide hero section and show results
+          document.querySelector('.hero').style.display = 'none';
+          statusEl.setAttribute('hidden', '');
+          
+          // Show results
+          document.getElementById('results').removeAttribute('hidden');
+          
+          // Snap to top to show results
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          
+          // Initialize map and display results
+          setTimeout(() => {
+            initializeMap(userLocation.lat, userLocation.lng, nearestStations);
+            displayStationsList(nearestStations);
+          }, 100);
+        },
+        function(error) {
+          console.error('Geolocation error:', error);
+          let errorMessage = 'Unable to retrieve your location. ';
+          switch(error.code) {
+            case error.PERMISSION_DENIED:
+              errorMessage += 'Please allow location access in your browser settings.';
+              break;
+            case error.POSITION_UNAVAILABLE:
+              errorMessage += 'Location information is unavailable. Please check your GPS/location services.';
+              break;
+            case error.TIMEOUT:
+              errorMessage += 'Location request timed out. Please try again.';
+              break;
+            default:
+              errorMessage += `An unknown error occurred (Code: ${error.code}). Make sure you're using HTTPS.`;
+              break;
+          }
+          
+          showError(errorMessage);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 300000 // 5 minutes
+        }
+      );
+    }
+    
+    // Override the original function when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Replace the getUserLocationAndFindStations function
+      window.getUserLocationAndFindStations = getUserLocationAndFindStationsEnhanced;
+    });
   </script>
 </body>
 </html>
